@@ -1,0 +1,35 @@
+[project]
+name = "project"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "ivinayaks", email = "ivinayaksrivastava@gmail.com" }
+]
+dependencies = [
+    "scikit-learn>=1, <2",
+    "metaflow==2.10.3",
+    "metaphone==0.6",
+    "tensorflow==2.14.0",
+    "pandas==2.1.2",
+    "matplotlib==3.4.3",
+    "tensorflow_decision_forests==1.6.0",
+    "setuptools>=68.2.2",
+    "comet-ml==3.35.1",
+    "datasets==2.14.5",
+    "streamlit==1.28.1",
+    "nltk==3.8.1",
+    "jupyterlab>=4, <5",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
