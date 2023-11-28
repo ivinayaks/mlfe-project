@@ -8,7 +8,7 @@
 
 -e file:.
 absl-py==2.0.0
-aiohttp==3.9.0
+aiohttp==3.9.1
 aiosignal==1.3.1
 altair==5.1.2
 anyio==4.1.0
@@ -101,7 +101,7 @@ nbformat==5.9.2
 nest-asyncio==1.5.8
 nltk==3.8.1
 notebook-shim==0.2.3
-numpy==1.26.2
+numpy==1.26.1
 oauthlib==3.2.2
 opt-einsum==3.3.0
 overrides==7.4.0
@@ -161,7 +161,6 @@ tensorflow==2.14.0
 tensorflow-decision-forests==1.6.0
 tensorflow-estimator==2.14.0
 tensorflow-io-gcs-filesystem==0.34.0
-tensorflow-macos==2.14.0
 termcolor==2.3.0
 terminado==0.18.0
 threadpoolctl==3.2.0
@@ -183,8 +182,8 @@ webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.3.3
 werkzeug==3.0.1
-wheel==0.41.3
-wrapt==1.14.1
+wheel==0.42.0
+wrapt==1.12.1
 wurlitzer==3.0.3
 xxhash==3.4.1
 yarl==1.9.3

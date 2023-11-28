@@ -1,0 +1,48 @@
+[MFLOG|0|2023-11-28T15:02:38.665552Z|runtime|825fbff7-d2f8-4908-a469-be3bb20f840b]<flow LoanFlow step load_data> failed:
+[MFLOG|0|2023-11-28T15:02:38.675038Z|runtime|21435838-df6c-4f4b-9e71-92284a6ca517]    Internal error
+[MFLOG|0|2023-11-28T15:02:38.678793Z|runtime|58a73f2b-214c-4add-9478-5e32c652ca1f]Traceback (most recent call last):
+[MFLOG|0|2023-11-28T15:02:38.898152Z|runtime|6192820c-ba58-4430-88bb-a2f810c11d26]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 1172, in main
+[MFLOG|0|2023-11-28T15:02:38.898529Z|runtime|247da3eb-d878-4a40-84e9-4138ad016c85]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-11-28T15:02:38.898637Z|runtime|d4ebeb39-de9e-45fa-bd11-08ba3eeac7d4]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-11-28T15:02:38.898738Z|runtime|53e1f17d-49a5-464d-ae57-971ebd4ac36e]    return self.main(args, kwargs)
+[MFLOG|0|2023-11-28T15:02:38.898837Z|runtime|ae87f825-7e65-4f8f-b7cb-c095832aca0b]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.898970Z|runtime|3641fb47-83a1-4be1-b7e7-41af138a15b4]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-11-28T15:02:38.899073Z|runtime|0f734743-576d-47a5-832c-c348609214b3]    rv = self.invoke(ctx)
+[MFLOG|0|2023-11-28T15:02:38.899156Z|runtime|3ef95ccc-a940-46ca-b160-4a2df7cceb44]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.899242Z|runtime|8cb7068d-a8bd-4f89-82cc-be9d7e671601]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-11-28T15:02:38.899329Z|runtime|89677ba2-d11d-4838-af8c-f432eff8e20a]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-11-28T15:02:38.899505Z|runtime|8715848f-0ae6-48b1-a51e-e84289ee4062]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.899626Z|runtime|e6485582-fc94-48ce-beae-fd524a2d5f24]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-11-28T15:02:38.899732Z|runtime|73ca9d9f-ed58-46b1-b7e3-e9ac631973e6]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-11-28T15:02:38.899823Z|runtime|86e2602a-ca51-42aa-b048-67147d829f5a]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.899905Z|runtime|a5f7ae9a-2fdb-4cd5-9fe8-931507224c01]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-11-28T15:02:38.899982Z|runtime|bce2047e-31fd-475c-83e0-055070d581a6]    return callback(args, kwargs)
+[MFLOG|0|2023-11-28T15:02:38.900053Z|runtime|d26d44bd-4da0-4d1b-bd94-69e0fd7eb3c1]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.900127Z|runtime|79f96b27-b18f-43d0-9745-81c9dd66c10c]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-11-28T15:02:38.900203Z|runtime|394cb8fe-1b56-4008-956a-64e0af3977df]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-11-28T15:02:38.900282Z|runtime|e94bf0d7-6fd9-4eb7-a873-5d171caf27bf]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.900354Z|runtime|98cada70-2292-4236-8e61-bc66aec97d8a]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 581, in step
+[MFLOG|0|2023-11-28T15:02:38.900429Z|runtime|b7f52760-3aef-472d-bfe1-2b82d00ce0fd]    task.run_step(
+[MFLOG|0|2023-11-28T15:02:38.900501Z|runtime|579b7812-a4f8-4959-abb8-b02deb06f5ed]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 583, in run_step
+[MFLOG|0|2023-11-28T15:02:38.900576Z|runtime|20ccf485-f324-4243-abeb-b7273a99aa07]    self._exec_step_function(step_func)
+[MFLOG|0|2023-11-28T15:02:38.900717Z|runtime|3c36a208-88c8-4f2b-a6fe-bd1bc39b0e0a]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-11-28T15:02:38.900866Z|runtime|a2a42d18-b606-4f7a-82ee-0089211cac5d]    step_function()
+[MFLOG|0|2023-11-28T15:02:38.901071Z|runtime|b66ede6e-5573-4c3d-b309-9979fabf801a]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/src/project/loan.py", line 42, in load_data
+[MFLOG|0|2023-11-28T15:02:38.901183Z|runtime|10e910c2-31bd-4467-9049-86d372878b36]    self.raw_data = pd.read_csv(StringIO(self.DATA), encoding='latin-1')
+[MFLOG|0|2023-11-28T15:02:38.901307Z|runtime|0052e8bc-f7b6-4732-88c5-24dd4d76ae21]                                         ^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.901397Z|runtime|da780285-eb54-4d5f-b639-9f0efed8dabf]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 91, in property_setter
+[MFLOG|0|2023-11-28T15:02:38.901492Z|runtime|ba15f735-2bbc-4d93-8cce-b7b80a5fa9f1]    v = param.load_parameter(parameter_ds[var])
+[MFLOG|0|2023-11-28T15:02:38.901569Z|runtime|a91c52a9-1575-48f2-a16b-650cb5f7e314]        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.901733Z|runtime|5d922831-5d08-43ac-8509-f9f938416c3c]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/includefile.py", line 317, in load_parameter
+[MFLOG|0|2023-11-28T15:02:38.901979Z|runtime|43a46b1f-7dbd-4dd5-8579-e1c3cf3c7967]    return v.decode(self.name, var_type="Parameter")
+[MFLOG|0|2023-11-28T15:02:38.902189Z|runtime|8377cc7f-574e-4afc-acec-4a340e9b74cc]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.902381Z|runtime|edf11c04-f430-4b1d-baaa-983ad1a30176]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/includefile.py", line 99, in decode
+[MFLOG|0|2023-11-28T15:02:38.902516Z|runtime|4239d85c-e981-4d75-814e-9eed2b35549b]    return handler.load(self._descriptor)
+[MFLOG|0|2023-11-28T15:02:38.902639Z|runtime|895b145a-2ba2-47b8-b5ea-494c4f5d0fd7]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.902810Z|runtime|1b9f23f7-a700-46c3-a64d-d2859ac7f412]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/includefile.py", line 490, in load
+[MFLOG|0|2023-11-28T15:02:38.903056Z|runtime|34c77c02-42c1-4be3-b623-3be42fa563d6]    ).read()
+[MFLOG|0|2023-11-28T15:02:38.903345Z|runtime|7af4e19e-12ee-4345-978b-843736c642c6]      ^^^^^^
+[MFLOG|0|2023-11-28T15:02:38.903499Z|runtime|dbc9cd76-9523-41f2-9e24-24f8d83e3ac7]  File "<frozen codecs>", line 322, in decode
+[MFLOG|0|2023-11-28T15:02:38.903761Z|runtime|2dc55f02-640d-4584-8a15-8a4c2c8a4202]UnicodeDecodeError: 'utf-8' codec can't decode byte 0xd5 in position 537691: invalid continuation byte
+[MFLOG|0|2023-11-28T15:02:38.903906Z|runtime|24abd21d-9df4-414e-952b-4dc5661d8d71]
+[MFLOG|0|2023-11-28T15:02:38.905123Z|runtime|23c07c58-98f4-4343-96f7-158d2c157221]Task failed.
