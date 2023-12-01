@@ -1,0 +1,1 @@
+{"flow_id": "PreLoanFlow", "run_number": "1701465118972042", "step_name": "load_data", "task_id": "2", "field_name": "ds-root", "type": "ds-root", "value": "/Users/cameronwalcott/Desktop/mlfe-project/project/src/project/.metaflow", "tags": ["attempt_id:0"], "user_name": "cameronwalcott", "ts_epoch": 1701465122428}

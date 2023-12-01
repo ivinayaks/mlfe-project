@@ -1,0 +1,35 @@
+[MFLOG|0|2023-12-01T21:16:43.520130Z|runtime|59adcd8a-2e71-4bfb-af88-f8e3f0ee7f88]<flow PreLoanFlow step prepare_dataset> failed:
+[MFLOG|0|2023-12-01T21:16:45.509031Z|runtime|31a5771e-0ce3-4c39-b2c1-ae67604ca1ec]    Internal error
+[MFLOG|0|2023-12-01T21:16:45.515134Z|runtime|164974d2-47f3-4e7d-8371-8dc4e76c4e45]Traceback (most recent call last):
+[MFLOG|0|2023-12-01T21:16:45.515462Z|runtime|04ddaea2-7607-4b6a-93eb-e7a68d9949cc]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 1172, in main
+[MFLOG|0|2023-12-01T21:16:45.515726Z|runtime|850c830e-e8af-4175-9ca6-5903682cbcdc]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-12-01T21:16:45.515902Z|runtime|54d8bf49-65c3-4054-b9fd-e76e315ddd79]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-12-01T21:16:45.516176Z|runtime|11ee784e-2c04-44f3-8daf-4210af77f652]    return self.main(args, kwargs)
+[MFLOG|0|2023-12-01T21:16:46.280137Z|runtime|ad6f2e6b-e649-4ebd-ae13-10b1436620a3]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-01T21:16:46.280531Z|runtime|f76650ea-f531-4e8f-bb1f-5f8512947623]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-12-01T21:16:46.280629Z|runtime|c3fe7c2d-39ca-4d53-ac09-d377444c470d]    rv = self.invoke(ctx)
+[MFLOG|0|2023-12-01T21:16:46.280767Z|runtime|3afcfe5d-71dd-4576-ad4d-a8db86786f84]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-01T21:16:46.280916Z|runtime|126ce86a-035b-409c-812a-576eedcdbc32]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-12-01T21:16:46.281265Z|runtime|dfb6fedf-8766-4d12-b8be-99baf03a476c]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-12-01T21:16:46.281437Z|runtime|f1c0e366-f03e-4b5d-89af-f029eac76813]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-01T21:16:46.281532Z|runtime|68e0894d-8003-49d8-b46e-732e60cdda33]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-12-01T21:16:46.281717Z|runtime|332b59b2-3295-4545-b8db-1630ab89995d]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-12-01T21:16:46.281841Z|runtime|3f815103-066f-40c5-8eb5-a99a0b1a8aac]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-01T21:16:46.281933Z|runtime|7108808a-cd11-4daf-a3b8-272019ed5620]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-12-01T21:16:46.282003Z|runtime|fe9321cf-cd03-4588-8180-70282ee62cb9]    return callback(args, kwargs)
+[MFLOG|0|2023-12-01T21:16:46.282110Z|runtime|15a7229d-0994-4966-9e49-c242007d5d34]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-01T21:16:46.282303Z|runtime|aaf295ea-5858-42fb-a59f-c645d6db9698]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-12-01T21:16:46.282456Z|runtime|05eaa13c-b6c1-402d-8822-5ad31fc2a3bc]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-12-01T21:16:46.282755Z|runtime|4aa47260-9af1-422f-b58c-7e4e6b176112]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-01T21:16:46.282916Z|runtime|56370506-1a76-451f-9039-c36dbdc55f32]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 581, in step
+[MFLOG|0|2023-12-01T21:16:46.283024Z|runtime|5f2262cd-1ae2-41bb-8909-fcaf918ce3b5]    task.run_step(
+[MFLOG|0|2023-12-01T21:16:46.283186Z|runtime|2f35ae5c-2803-4ff2-909c-ea64767bb11e]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 583, in run_step
+[MFLOG|0|2023-12-01T21:16:46.283358Z|runtime|c09b3fb8-6cf8-4259-b443-a4dd3746c0ec]    self._exec_step_function(step_func)
+[MFLOG|0|2023-12-01T21:16:46.283629Z|runtime|4dcecd97-f0e1-4910-8a12-2833b08aa76d]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-12-01T21:16:46.283781Z|runtime|8a666286-0a6c-40df-9e81-4a115016d7c2]    step_function()
+[MFLOG|0|2023-12-01T21:16:46.284007Z|runtime|587ca1c4-5e6f-4598-8983-ef95ca449cfe]  File "/Users/cameronwalcott/Desktop/mlfe-project/project/src/project/preloan.py", line 87, in prepare_dataset
+[MFLOG|0|2023-12-01T21:16:46.284169Z|runtime|5f60f7e2-5cc2-45b3-a5d1-d5539675cf89]    pickle.dump(X_train, file)
+[MFLOG|0|2023-12-01T21:16:46.284349Z|runtime|3a1b6848-6f7e-46d5-a389-aa2dceb21726]                ^^^^^^^
+[MFLOG|0|2023-12-01T21:16:46.284467Z|runtime|b27a9ce2-0fa6-4177-8a43-1c5d1cc05c9e]NameError: name 'X_train' is not defined
+[MFLOG|0|2023-12-01T21:16:46.284686Z|runtime|34a1e261-6d33-4d3a-ba48-19e36e5fd2fb]
+[MFLOG|0|2023-12-01T21:16:46.285727Z|runtime|3927899e-f61c-43ec-8824-e94486028853]Task failed.

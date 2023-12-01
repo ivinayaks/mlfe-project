@@ -3,7 +3,6 @@ from metaflow import FlowSpec, step, Parameter, IncludeFile, current, JSONType
 from datetime import datetime
 import os
 from io import StringIO
-import pylint
 assert os.environ.get('METAFLOW_DEFAULT_DATASTORE', 'local') == 'local'
 assert os.environ.get('METAFLOW_DEFAULT_ENVIRONMENT', 'local') == 'local'
 import pandas as pd
@@ -41,70 +40,40 @@ class LoanFlow(FlowSpec):
         """
         Read the data in from the static file
         """
-        self.raw_data = pd.read_csv(StringIO(self.DATA))
-
-        print(self.raw_data)
-        self.next(self.preprocess)
-
-
-    @step
-    def preprocess(self):
-        df = self.raw_data
-        status_mapping = {
-            'Fully Paid': 0,
-            'Current': 0,
-            'Charged Off': 1,
-            'In Grace Period': 1,
-            'Late (16-30 days)': 1,
-            'Late (31-120 days)': 1,
-            'Default': 1
-        }
+        import pickle
+        # with open('X_train.pkl', 'rb') as file:
+        #         self. pickle.load(X_train, file)
         
-        df['status'] = df['status'].map(status_mapping).fillna(0).astype(int)
+        with open('setsnmodels/X_test.pkl', 'rb') as file:
+                self.X_test = pickle.load(file)
 
-        df.dropna(inplace=True)
-        self.preprocessed_data = df
-        self.next(self.prepare_dataset)
+        # with open('y_train.pkl', 'rb') as file:
+        #         pickle.load(y_train, file)
+
+        with open('setsnmodels/y_test.pkl', 'rb') as file:
+                self.y_test = pickle.load(file)
+        
+        self.next(self.load_model)
         
     @step
-    def prepare_dataset(self):
-        from sklearn.model_selection import train_test_split
-        df = self.preprocessed_data
+    def load_model(self):
+        import pickle
+        with open('setsnmodels/best_model.pkl', 'rb') as file:
+            self.model = pickle.load(file)
         
-        self.num_columns = list(df.select_dtypes(include='number').columns)
-        self.cat_columns = list(df.select_dtypes(include='object').columns) 
-        
-        y = df['status']
-        df.drop(columns=['status'],axis=1,inplace=True)
-        X = df.copy()
-
-        X = pd.get_dummies(X,columns=self.cat_columns,sparse=True)
-
-        self.X_train,self.X_test,self.y_train,self.y_test = train_test_split(X,y,test_size=0.2)
-        
-        self.next(self.logreg, self.randforest)
-        
-    @step
-    def logreg(self):
-        from sklearn.linear_model import LogisticRegression
-        model = LogisticRegression()
-        self.model = model.fit(self.X_train,self.y_train)
         self.next(self.predict)
-    
+        
     @step
-    def randforest(self):
-        from sklearn.ensemble import RandomForestClassifier
-        model = RandomForestClassifier()
-        self.model = model.fit(self.X_train, self.y_train)
-        self.next(self.predict)
+    def predict(self):
+        from sklearn.metrics import roc_auc_score, classification_report
 
-    @step
-    def predict(self, inputs):
-        from sklearn.metrics import roc_auc_score
-        y_pred = self.model.predict_proba(X_test)[:,1]
-        roc_auc_score(y_test,y_pred)
+        y_pred = self.model.predict(self.X_test)
+        print(classification_report(self.y_test,y_pred))
+        score = roc_auc_score(self.y_test,self.model.predict_proba(self.X_test)[:,1])
+        print("ROC AUC Score: ", score)
+
         self.next(self.end)
-
+        
     @step
     def end(self):
         # all done, just print goodbye
