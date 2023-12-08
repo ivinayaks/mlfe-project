@@ -51,21 +51,21 @@ class LoanFlow(FlowSpec):
     #         "max_features": [None,"sqrt","log2"],
     # }
 
-    # hyperparams = {
-    #         "n_estimators": [50,100,200,300,400],
-    #         "criterion": ["gini","entropy","log_loss"],
-    #         "max_depth": [None,5,10],
-    #         "max_features": [None,"sqrt","log2"],
-    #         # "min_samples_split": [1,2,5,10],
-    #         # "min_samples_leaf": [1,2,3,4]   
-    #     }
-
     hyperparams = {
-            "n_estimators": [100,200],
+            "n_estimators": [50,100,200,300,500,1000],
             "criterion": ["gini","entropy","log_loss"],
-            "max_depth": [3,6],
-            "max_features": ["sqrt","log2"],
-    }
+            "max_depth": [None,3,6],
+            "max_features": [None,"sqrt","log2"],
+            "min_samples_split": [1,2,5,10],
+            "min_samples_leaf": [1,2,3,4]   
+        }
+
+    # hyperparams = {
+    #         "n_estimators": [100,200],
+    #         "criterion": ["gini","entropy","log_loss"],
+    #         "max_depth": [3,6],
+    #         "max_features": ["sqrt","log2"],
+    # }
 
     param_grid = list(ParameterGrid(hyperparams))
 
@@ -162,7 +162,7 @@ class LoanFlow(FlowSpec):
             experiment.log_parameters(params)
             experiment.log_metric("ROC AUC Score", self.score)
             
-            if score > self.best_score:
+            if self.score > self.best_score:
                 self.best_score = self.score
                 self.best_params = input.params
                 self.best_model = input.model
@@ -185,6 +185,12 @@ class LoanFlow(FlowSpec):
         from sklearn.metrics import RocCurveDisplay
         from sklearn.ensemble import RandomForestClassifier
 
+        experiment = Experiment(
+          api_key="TJq3FJTapE0fH1ke6liHFpEZa",
+          project_name="final-project",
+          workspace="noremac19"
+        )
+        
         self.X_test = pd.read_csv(StringIO(self.X_testing))
         self.y_test = pd.read_csv(StringIO(self.y_testing))
         self.X_train = pd.read_csv(StringIO(self.X_training))
@@ -196,6 +202,13 @@ class LoanFlow(FlowSpec):
             max_depth = self.best_params[1],
             max_features = self.best_params[2],   
         )
+
+        params = {
+                "n_estimators": self.best_params[3],
+                "criterion": self.best_params[0],
+                "max_depth": self.best_params[1],
+                "max_features": self.best_params[2],  
+        }
         
         model.fit(self.X_train, self.y_train)
         self.best_model = model
@@ -207,12 +220,13 @@ class LoanFlow(FlowSpec):
         
         score = roc_auc_score(self.y_test, y_pred_proba)
         print("ROC AUC Score: ", score)
-
+        
         experiment.log_parameters(params)
         experiment.log_metric("ROC AUC Score", self.score)
             
-        # Seamlessly log your SKLearn model
-        log_model(experiment, "TheModel", clf)
+        experiment.log_confusion_matrix(y_true=self.y_test, y_predicted=y_pred,
+            title="Confusion Matrix", row_label="Actual Category",
+            column_label="Predicted Category")
 
         curve = RocCurveDisplay.from_predictions(self.y_test, y_pred_proba) 
         
