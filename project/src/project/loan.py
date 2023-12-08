@@ -6,7 +6,7 @@ from io import StringIO
 assert os.environ.get('METAFLOW_DEFAULT_DATASTORE', 'local') == 'local'
 assert os.environ.get('METAFLOW_DEFAULT_ENVIRONMENT', 'local') == 'local'
 import pandas as pd
-# from comet_ml import Experiment
+from comet_ml import Experiment
 # from comet_ml.integration.metaflow import comet_flow
 # assert 'COMET_API_KEY' in os.environ and os.environ['COMET_API_KEY']
 # assert 'MY_PROJECT_NAME' in os.environ and os.environ['MY_PROJECT_NAME']
