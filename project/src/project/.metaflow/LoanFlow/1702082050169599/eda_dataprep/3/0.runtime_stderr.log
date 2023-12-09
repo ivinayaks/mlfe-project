@@ -1,0 +1,59 @@
+[MFLOG|0|2023-12-09T00:35:14.032083Z|runtime|ba0d7d36-b1a3-4985-ac7f-ae32ea747225]<flow LoanFlow step eda_dataprep> failed:
+[MFLOG|0|2023-12-09T00:35:14.061437Z|runtime|4de8346e-8fcd-418f-8942-809c19e254b5]    Internal error
+[MFLOG|0|2023-12-09T00:35:14.064684Z|runtime|b91b786d-1fd5-44ea-95bd-897b6381603e]Traceback (most recent call last):
+[MFLOG|0|2023-12-09T00:35:14.064778Z|runtime|0d357d72-a039-4da8-a829-249a4bd4052a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 1172, in main
+[MFLOG|0|2023-12-09T00:35:14.064877Z|runtime|57d7088c-e356-47a9-944b-879ff8932859]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-12-09T00:35:14.064954Z|runtime|3c71dbf1-7123-4a18-bb40-61a75405e525]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-12-09T00:35:14.065034Z|runtime|8093a697-a9fb-4ed1-9c9e-c264de60d1e3]    return self.main(args, kwargs)
+[MFLOG|0|2023-12-09T00:35:14.314286Z|runtime|82a34b44-5769-4a8e-80b8-8c0cbeeb0c04]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.314611Z|runtime|9edbeb25-ff58-488b-914f-5715d227f681]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-12-09T00:35:14.314660Z|runtime|09b6a8fe-192b-4fea-9891-4912b85154d9]    rv = self.invoke(ctx)
+[MFLOG|0|2023-12-09T00:35:14.314692Z|runtime|3840c116-f5ec-4f20-b0bc-31c95192bf5f]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.314720Z|runtime|c770dc3d-4827-41a3-9175-bbec6ddaf450]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-12-09T00:35:14.314748Z|runtime|9a73bd4b-5b37-41e8-b6fd-ba3ce1b92013]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-12-09T00:35:14.314775Z|runtime|9b679bc4-d987-4604-914c-90b5a1b5e6c9]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.314801Z|runtime|4eb44e42-2a18-42ef-8455-25dbdcd6d2dc]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-12-09T00:35:14.314826Z|runtime|35ec07fa-5ff4-4625-b884-730c473e3ac9]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-12-09T00:35:14.314851Z|runtime|67ad06ae-1cee-40aa-a7ef-3a2fc44adbe3]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.314876Z|runtime|596b3235-0c3b-4827-ba71-5a23d6670ac8]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-12-09T00:35:14.314901Z|runtime|cd9c6514-0603-4ef2-b760-5ee1927be1c0]    return callback(args, kwargs)
+[MFLOG|0|2023-12-09T00:35:14.314926Z|runtime|8551cf13-2ed3-4fdd-beb4-7914a3ba7bb8]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.314952Z|runtime|36c799c3-275f-421c-a95e-dff0549c52a6]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-12-09T00:35:14.314978Z|runtime|e51ac9fc-ffeb-4bc1-ae28-9ee2a51c9f88]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-12-09T00:35:14.315003Z|runtime|af767b91-2136-43ee-838b-d906f3796272]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.315028Z|runtime|8c2546aa-3696-4216-85e9-fa4b660eb499]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 581, in step
+[MFLOG|0|2023-12-09T00:35:14.315053Z|runtime|2703454d-6fae-4092-a512-5bd5f08cbc89]    task.run_step(
+[MFLOG|0|2023-12-09T00:35:14.315077Z|runtime|f70264a5-5ca5-4d1e-9057-c053ad60b47a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 583, in run_step
+[MFLOG|0|2023-12-09T00:35:14.315103Z|runtime|c1c9795b-4264-4dbe-8249-1c41ba39bfc8]    self._exec_step_function(step_func)
+[MFLOG|0|2023-12-09T00:35:14.315129Z|runtime|dc24f985-dc23-42b1-802d-fed20d5bb5b0]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-12-09T00:35:14.315155Z|runtime|a793a2eb-b191-4ff5-b07a-6329103190c8]    step_function()
+[MFLOG|0|2023-12-09T00:35:14.315181Z|runtime|198827ff-8f43-4658-bee5-236a0370ddb2]  File "/Users/devanshjoshi/mlfe-project/project/src/project/eda_dataprep.py", line 203, in eda_dataprep
+[MFLOG|0|2023-12-09T00:35:14.315222Z|runtime|21ebc2c9-5a18-4aa4-9e96-64b5054b0c0f]    plot_numerical_distributions(self.df,num_columns,'status')
+[MFLOG|0|2023-12-09T00:35:14.315249Z|runtime|bd40f067-f3e5-4a88-93ea-c2fab225e907]  File "/Users/devanshjoshi/mlfe-project/project/src/project/eda_dataprep.py", line 198, in plot_numerical_distributions
+[MFLOG|0|2023-12-09T00:35:14.315276Z|runtime|a93c5bb2-6701-4922-99a7-4b2254b80060]    sns.distplot(df[df[target_column] == 1][column].to_numpy(), hist=False, label="1")
+[MFLOG|0|2023-12-09T00:35:14.315303Z|runtime|84771ba5-f9a0-4c2e-9f0a-31c4ee33338f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/seaborn/distributions.py", line 2496, in distplot
+[MFLOG|0|2023-12-09T00:35:14.315329Z|runtime|94bc0d9e-13af-4ddc-8dab-9fb680ba60f9]    kdeplot({axis: a}, ax=ax, color=kde_color, kde_kws)
+[MFLOG|0|2023-12-09T00:35:14.315356Z|runtime|d969bebd-4bbe-4c66-b983-eb883b9425d2]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/seaborn/distributions.py", line 1701, in kdeplot
+[MFLOG|0|2023-12-09T00:35:14.315383Z|runtime|ff906752-476e-44b8-9fde-895ab6e06c02]    p.plot_univariate_density(
+[MFLOG|0|2023-12-09T00:35:14.315409Z|runtime|6d5ccb32-d694-4de4-b8c3-0a7cfaebc694]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/seaborn/distributions.py", line 991, in plot_univariate_density
+[MFLOG|0|2023-12-09T00:35:14.315436Z|runtime|210d20aa-d25d-44fb-8e15-13d2582e4277]    artist, = ax.plot(support, density, artist_kws)
+[MFLOG|0|2023-12-09T00:35:14.315462Z|runtime|3982f4f1-6127-4c11-9eb7-2ff4099fe6d9]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.315486Z|runtime|0b5879b9-a546-4c44-aca7-65ac2a7a3811]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/axes/_axes.py", line 1605, in plot
+[MFLOG|0|2023-12-09T00:35:14.315512Z|runtime|8b33404d-26bd-4d28-b19c-27b069c2a500]    lines = [self._get_lines(args, data=data, kwargs)]
+[MFLOG|0|2023-12-09T00:35:14.315537Z|runtime|94a8796b-350b-409d-826b-782db0a77376]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.315562Z|runtime|bc37a0c0-e575-4ad0-b072-f6393a1acf8e]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/axes/_base.py", line 315, in __call__
+[MFLOG|0|2023-12-09T00:35:14.315587Z|runtime|5afd7801-fecb-42dc-aa5c-5bf351e71a0e]    yield from self._plot_args(this, kwargs)
+[MFLOG|0|2023-12-09T00:35:14.315612Z|runtime|5d0b9a59-0ba1-4d59-bb44-558d3f6a912b]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.315636Z|runtime|2ab47fc6-7f13-4fcc-a017-17697314009a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/axes/_base.py", line 490, in _plot_args
+[MFLOG|0|2023-12-09T00:35:14.315661Z|runtime|c61b3f82-31ba-40b2-9dd7-4cb7dc33cdd1]    x = _check_1d(xy[0])
+[MFLOG|0|2023-12-09T00:35:14.315686Z|runtime|b2365a76-aab5-4e5f-b6e5-bf2a5544c62d]        ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.315710Z|runtime|48ef2bd6-e2d4-4b5a-a77d-3193a7d34a92]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/cbook/__init__.py", line 1362, in _check_1d
+[MFLOG|0|2023-12-09T00:35:14.315735Z|runtime|6c4ad099-795b-43c1-b632-34aa39099b98]    ndim = x[:, None].ndim
+[MFLOG|0|2023-12-09T00:35:14.315760Z|runtime|59f2eb7b-b590-4844-ad08-347c39cb3cbc]           ~^^^^^^^^^
+[MFLOG|0|2023-12-09T00:35:14.315784Z|runtime|a81913fb-a607-47fb-8d4b-8845d859ecef]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 5385, in __getitem__
+[MFLOG|0|2023-12-09T00:35:14.315809Z|runtime|8b8f27c8-5ffc-4a3b-9a99-770fbf517fe7]    disallow_ndim_indexing(result)
+[MFLOG|0|2023-12-09T00:35:14.315841Z|runtime|94e321e7-c011-4526-b5d2-c6c386005519]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/pandas/core/indexers/utils.py", line 341, in disallow_ndim_indexing
+[MFLOG|0|2023-12-09T00:35:14.315867Z|runtime|b837656b-3930-4b81-8f60-578ae8ec33ca]    raise ValueError(
+[MFLOG|0|2023-12-09T00:35:14.315892Z|runtime|7b1e82e7-2cb8-4264-9a28-88a1c6cc9a63]ValueError: Multi-dimensional indexing (e.g. `obj[:, None]`) is no longer supported. Convert to a numpy array before indexing instead.
+[MFLOG|0|2023-12-09T00:35:14.315916Z|runtime|edad3595-7184-45fe-92ad-5b924be4d116]
+[MFLOG|0|2023-12-09T00:35:14.316862Z|runtime|baf939d3-2075-4bf5-9cd9-cbf394d6745c]Task failed.
