@@ -1,25 +1,27 @@
+# Import necessary libraries
 import metaflow 
 from metaflow import FlowSpec, step, Parameter, IncludeFile, current, JSONType
 from datetime import datetime
 import os
 from io import StringIO
-assert os.environ.get('METAFLOW_DEFAULT_DATASTORE', 'local') == 'local'
-assert os.environ.get('METAFLOW_DEFAULT_ENVIRONMENT', 'local') == 'local'
 import pandas as pd
 from comet_ml import Experiment
 from comet_ml.integration.metaflow import comet_flow
-# assert 'COMET_API_KEY' in os.environ and os.environ['COMET_API_KEY']
-# assert 'MY_PROJECT_NAME' in os.environ and os.environ['MY_PROJECT_NAME']
 from sklearn.model_selection import ParameterGrid
 
+# Check and assert necessary environment variables
+assert os.environ.get('METAFLOW_DEFAULT_DATASTORE', 'local') == 'local'
+assert os.environ.get('METAFLOW_DEFAULT_ENVIRONMENT', 'local') == 'local'
+assert 'COMET_API_KEY' in os.environ and os.environ['COMET_API_KEY']
 
+# Class definition for the Metaflow flow
 class LoanFlow(FlowSpec):
     """
-    SampleRegressionFlow is a minimal DAG showcasing reading data from a file
-    and training a model successfully.
+    LoanFlow is a DAG showcasing reading data from files
+    and training, validating, and testing a model successfully.
     """
     
-    
+    # Include file parameters for input data
     X_testing = IncludeFile(
         'X_testing',
         default='X_test.csv',
@@ -43,37 +45,24 @@ class LoanFlow(FlowSpec):
         default='y_train.csv',
         encoding='latin-1'
     )
-        
-    # hyperparams = {
-    #         "n_estimators": [100,200,300,500,1000],
-    #         "criterion": ["gini","entropy","log_loss"],
-    #         "max_depth": [None,3,6],
-    #         "max_features": [None,"sqrt","log2"],
-    # }
-
+    
+    # Hyperparameter grid for RandomForestClassifier
     hyperparams = {
-            "n_estimators": [50,100,200,300,500,1000],
-            "criterion": ["gini","entropy","log_loss"],
-            "max_depth": [None,3,6],
-            "max_features": [None,"sqrt","log2"],
-            "min_samples_split": [1,2,5,10],
-            "min_samples_leaf": [1,2,3,4]   
-        }
-
-    # hyperparams = {
-    #         "n_estimators": [100,200],
-    #         "criterion": ["gini","entropy","log_loss"],
-    #         "max_depth": [3,6],
-    #         "max_features": ["sqrt","log2"],
-    # }
+        "n_estimators": [100,200,300,500,1000],
+        "criterion": ["gini","entropy","log_loss"],
+        "max_depth": [None,3,6],
+        "max_features": [None,"sqrt","log2"],
+    }
 
     param_grid = list(ParameterGrid(hyperparams))
 
+    # Parameter for hyperparameters with default as the hyperparameter grid
     hyperparameters = Parameter('hyperparameters',
                       help='list of min_example values',
                       type=JSONType,
                       default=param_grid)
 
+    # Step 1: Starting point of the flow
     @step
     def start(self):
         print("Starting up at {}".format(datetime.utcnow()))
@@ -82,6 +71,7 @@ class LoanFlow(FlowSpec):
         print("username: %s" % current.username)
         self.next(self.load_data)
 
+    # Step 2: Load data from CSV files
     @step
     def load_data(self): 
         """
@@ -91,25 +81,20 @@ class LoanFlow(FlowSpec):
         self.y_train = pd.read_csv(StringIO(self.y_training))
         self.next(self.validation_split)
 
-    
+    # Step 3: Split data into training subset and validation set
     @step
     def validation_split(self):
         from sklearn.model_selection import train_test_split
-        #self.X_train, self.X_valid, self.y_train, self.y_valid = train_test_split(self.X_train_data, self.y_train_data, test_size=0.1, random_state=42)
         self.X_subset, _, self.y_subset, _ = train_test_split(self.X_train, self.y_train, train_size=0.2, random_state=42)
-
-        # Step 2: Set aside a validation set
         self.X_subset, self.X_valid, self.y_subset, self.y_valid = train_test_split(self.X_subset, self.y_subset, test_size=0.2, random_state=42)
-
-
         self.next(self.foreach)
 
-
+    # Step 4: Iterate over hyperparameter grid
     @step
     def foreach(self):
         self.next(self.validate_model, foreach='hyperparameters')
 
-    
+    # Step 5: Train and validate the model with specified hyperparameters
     @step
     def validate_model(self):
         """
@@ -132,7 +117,7 @@ class LoanFlow(FlowSpec):
         
         self.next(self.model_selection)
 
-    
+    # Step 6: Select the best model based on validation performance
     @step
     def model_selection(self, inputs):
         from sklearn.ensemble import RandomForestClassifier
@@ -142,7 +127,7 @@ class LoanFlow(FlowSpec):
         self.best_model = None
     
         experiment = Experiment(
-          api_key="wTi6lnFLwxEXgt3I27nbS0PU3",
+          api_key=os.environ['COMET_API_KEY'],
           project_name="final-project",
           workspace="noremac"
         )
@@ -167,18 +152,9 @@ class LoanFlow(FlowSpec):
                 self.best_params = input.params
                 self.best_model = input.model
             
-        
-        # self.next(self.train_model)
         self.next(self.predict)
 
-    
-    # @step
-    # def train_model(self):
-        
-        
-    #     self.next(self.predict)
-        
-
+    # Step 7: Predict using the best model on the test set
     @step
     def predict(self):
         from sklearn.metrics import roc_auc_score, classification_report
@@ -186,16 +162,18 @@ class LoanFlow(FlowSpec):
         from sklearn.ensemble import RandomForestClassifier
 
         experiment = Experiment(
-          api_key="TJq3FJTapE0fH1ke6liHFpEZa",
+          api_key=os.environ['COMET_API_KEY'],
           project_name="final-project",
           workspace="noremac19"
         )
         
+        # Read testing data
         self.X_test = pd.read_csv(StringIO(self.X_testing))
         self.y_test = pd.read_csv(StringIO(self.y_testing))
         self.X_train = pd.read_csv(StringIO(self.X_training))
         self.y_train = pd.read_csv(StringIO(self.y_training))
         
+        # Create and train the best model
         model = RandomForestClassifier(
             n_estimators = self.best_params[3],
             criterion = self.best_params[0],
@@ -213,10 +191,11 @@ class LoanFlow(FlowSpec):
         model.fit(self.X_train, self.y_train)
         self.best_model = model
 
+        # Make predictions and evaluate performance
         y_pred = self.best_model.predict(self.X_test)
         y_pred_proba = self.best_model.predict_proba(self.X_test)[:,1]
         
-        print(classification_report(self.y_test,y_pred))
+        print(classification_report(self.y_test, y_pred))
         
         score = roc_auc_score(self.y_test, y_pred_proba)
         print("ROC AUC Score: ", score)
@@ -232,6 +211,7 @@ class LoanFlow(FlowSpec):
         
         self.next(self.save_model)
 
+    # Step 8: Save the best model to a file using pickle
     @step
     def save_model(self):
         import pickle
@@ -242,16 +222,12 @@ class LoanFlow(FlowSpec):
 
         self.next(self.end)
         
+    # Step 9: End step, print a completion message
     @step
     def end(self):
         # all done, just print goodbye
         print("All done at {}!".format(datetime.utcnow()))
 
-
-
+# Main block: Execute the Metaflow flow
 if __name__ == '__main__':
     LoanFlow()
-    
-
-
-
