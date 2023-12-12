@@ -344,22 +344,29 @@ class LoanFlow(FlowSpec):
     @step
     def model_selection(self, inputs):
         from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import roc_auc_score
+        from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score
         self.best_score = 0
         self.best_params = None
         self.best_model = None
-    
-        experiment = Experiment(
-          api_key=os.environ['COMET_API_KEY'],
-          project_name="final-project",
-          workspace="noremac"
-        )
         
-        for input in inputs:            
+        def calculate_additional_metrics(y_true, y_pred, y_pred_proba):
+            precision = precision_score(y_true, y_pred)
+            recall = recall_score(y_true, y_pred)
+            f1 = f1_score(y_true, y_pred)
+            roc_auc = roc_auc_score(y_true, y_pred_proba)
+            return precision, recall, f1, roc_auc
+
+        experiment = Experiment(
+            api_key=os.environ['COMET_API_KEY'],
+            project_name="final-project",
+            workspace="noremac"
+        )
+
+        for input in inputs:
             y_pred = input.model.predict(input.X_valid)  
-            y_pred_proba = input.model.predict_proba(input.X_valid)[:,1]
-            self.score = roc_auc_score(input.y_valid, y_pred_proba)
-            
+            y_pred_proba = input.model.predict_proba(input.X_valid)[:, 1]
+            precision, recall, f1, roc_auc = calculate_additional_metrics(input.y_valid, y_pred, y_pred_proba)
+
             params = {
                 "n_estimators": input.params[3],
                 "criterion": input.params[0],
@@ -367,35 +374,46 @@ class LoanFlow(FlowSpec):
                 "max_features": input.params[2],  
             }
             
-            experiment.log_parameters(params)
-            experiment.log_metric("ROC AUC Score", self.score)
+            # Log metrics using Comet ML
+            experiment.log_metric("Precision", precision)
+            experiment.log_metric("Recall", recall)
+            experiment.log_metric("F1-Score", f1)
+            experiment.log_metric("ROC AUC Score", roc_auc)
             
-            if self.score > self.best_score:
-                self.best_score = self.score
+            # Check and update the best model
+            if roc_auc > self.best_score:
+                self.best_score = roc_auc
                 self.best_params = input.params
                 self.best_model = input.model
             
         self.next(self.predict)
 
+
+
     # Step 7: Predict using the best model on the test set
     @step
     def predict(self):
-        from sklearn.metrics import roc_auc_score, classification_report
+        from sklearn.metrics import roc_auc_score, classification_report, confusion_matrix
         from sklearn.metrics import RocCurveDisplay
         from sklearn.ensemble import RandomForestClassifier
+        import matplotlib.pyplot as plt
         import pickle
         
         experiment = Experiment(
-          api_key=os.environ['COMET_API_KEY'],
-          project_name="final-project",
-          workspace="noremac"
+        api_key=os.environ['COMET_API_KEY'],
+        project_name="final-project",
+        workspace="noremac"
         )
         
-        # # Read testing data
-        # self.X_test = pd.read_csv(StringIO(self.X_testing))
-        # self.y_test = pd.read_csv(StringIO(self.y_testing))
-        # self.X_train = pd.read_csv(StringIO(self.X_training))
-        # self.y_train = pd.read_csv(StringIO(self.y_training))
+        # Load the datasets
+        with open('setsnmodels/X_train.pkl', 'rb') as file:
+            self.X_train = pickle.load(file)
+        with open('setsnmodels/y_train.pkl', 'rb') as file:
+            self.y_train = pickle.load(file)
+        with open('setsnmodels/X_test.pkl', 'rb') as file:
+            self.X_test = pickle.load(file)
+        with open('setsnmodels/y_test.pkl', 'rb') as file:
+            self.y_test = pickle.load(file)
         
         # Create and train the best model
         model = RandomForestClassifier(
@@ -404,7 +422,7 @@ class LoanFlow(FlowSpec):
             max_depth = self.best_params[1],
             max_features = self.best_params[2],   
         )
-
+        
         params = {
                 "n_estimators": self.best_params[3],
                 "criterion": self.best_params[0],
@@ -412,17 +430,6 @@ class LoanFlow(FlowSpec):
                 "max_features": self.best_params[2],  
         }
 
-        with open('setsnmodels/X_train.pkl', 'rb') as file:
-            self.X_train = pickle.load(file)
-
-        with open('setsnmodels/y_train.pkl', 'rb') as file:
-            self.y_train = pickle.load(file)
-
-        with open('setsnmodels/X_test.pkl', 'rb') as file:
-            self.X_test = pickle.load(file)
-
-        with open('setsnmodels/y_test.pkl', 'rb') as file:
-            self.y_test = pickle.load(file)
         
         model.fit(self.X_train, self.y_train)
         self.best_model = model
@@ -431,23 +438,91 @@ class LoanFlow(FlowSpec):
         y_pred = self.best_model.predict(self.X_test)
         y_pred_proba = self.best_model.predict_proba(self.X_test)[:,1]
         
-        print(classification_report(self.y_test, y_pred))
+        # Print and log classification report
+        report = classification_report(self.y_test, y_pred)
+        print(report)
+        experiment.log_text("Classification Report", report)
         
+        # Calculate ROC AUC Score
         score = roc_auc_score(self.y_test, y_pred_proba)
         print("ROC AUC Score: ", score)
         
+        # Log parameters and metrics
         experiment.log_parameters(params)
-        experiment.log_metric("ROC AUC Score", self.score)
-            
-        experiment.log_confusion_matrix(y_true=self.y_test, y_predicted=y_pred,
-            title="Confusion Matrix", row_label="Actual Category",
-            column_label="Predicted Category")
-
-        curve = RocCurveDisplay.from_predictions(self.y_test, y_pred_proba) 
+        experiment.log_metric("ROC AUC Score", score)  # Corrected here
         
+        # Confusion Matrix
+        conf_matrix = confusion_matrix(self.y_test, y_pred)
+        sns.heatmap(conf_matrix, annot=True, fmt='g')
+        plt.title("Confusion Matrix")
+        plt.xlabel('Predicted')
+        plt.ylabel('Actual')
+        plt.show()
+        # Log confusion matrix using Comet ML
+        experiment.log_confusion_matrix(y_true=self.y_test, y_predicted=y_pred,
+                                        title="Confusion Matrix", row_label="Actual",
+                                        column_label="Predicted")
+        
+        curve = RocCurveDisplay.from_predictions(self.y_test, y_pred_proba) 
+        curve.plot()
+        plt.show()
+        
+        self.next(self.behavioral_tests)
+
+
+
+    # Step 8: Testing (Qualitative and Slice) and Robustness Check
+    @step
+    def behavioral_tests(self):
+        """
+        Perform qualitative checks, data slice performance analysis, and robustness checks.
+        """
+        # Qualitative Check: Review some random predictions
+        self.qualitative_check()
+
+        # Data Slice Analysis: Check model performance on different segments of data
+        self.data_slice_analysis()
+
+        # Robustness Check: Evaluate model performance on perturbed data
+        self.robustness_check()
+
         self.next(self.save_model)
 
-    # Step 8: Save the best model to a file using pickle
+    def qualitative_check(self):
+        import random
+        print("\n--- Qualitative Check ---")
+        sample_indices = random.sample(range(len(self.X_test)), 5)
+        for i in sample_indices:
+            print(f"Test Sample {i}:")
+            print(f"Features: {self.X_test.iloc[i]}")
+            print(f"Actual Label: {self.y_test.iloc[i]}, Predicted Label: {self.best_model.predict([self.X_test.iloc[i]])}\n")
+
+    def data_slice_analysis(self):
+        from sklearn.metrics import accuracy_score, classification_report
+        print("\n--- Data Slice Analysis on 'grade' ---")
+        # Analyze performance based on a categorical feature like 'grade'
+        if 'grade' in self.X_test.columns:
+            for grade in self.X_test['grade'].unique():
+                mask = self.X_test['grade'] == grade
+                print(f"Performance for loan grade {grade}:")
+                print(classification_report(self.y_test[mask], self.best_model.predict(self.X_test[mask])))
+                print("Accuracy:", accuracy_score(self.y_test[mask], self.best_model.predict(self.X_test[mask])), "\n")
+
+    def robustness_check(self):
+        from sklearn.metrics import accuracy_score, classification_report
+        print("\n--- Robustness Check on 'rate' ---")
+        # Add random noise to a numerical feature like 'rate'
+        perturbed_X_test = self.X_test.copy()
+        if 'rate' in perturbed_X_test.columns:
+            noise = np.random.normal(0, 1, perturbed_X_test['rate'].shape)
+            perturbed_X_test['rate'] += noise
+            print("Performance on perturbed 'loan_amount' data:")
+            print(classification_report(self.y_test, self.best_model.predict(perturbed_X_test)))
+            print("Accuracy:", accuracy_score(self.y_test, self.best_model.predict(perturbed_X_test)), "\n")
+
+
+
+    # Step 9: Save the best model to a file using pickle
     @step
     def save_model(self):
         import pickle
@@ -458,7 +533,7 @@ class LoanFlow(FlowSpec):
 
         self.next(self.end)
         
-    # Step 9: End step, print a completion message
+    # Step 10: End step, print a completion message
     @step
     def end(self):
         # all done, just print goodbye

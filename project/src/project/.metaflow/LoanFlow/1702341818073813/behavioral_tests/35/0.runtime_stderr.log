@@ -1,0 +1,37 @@
+[MFLOG|0|2023-12-12T00:45:07.827418Z|runtime|f9b83322-ac32-4786-941d-ceec686cccf9]<flow LoanFlow step behavioral_tests> failed:
+[MFLOG|0|2023-12-12T00:45:07.832151Z|runtime|1180ffd6-d4f4-4220-923c-7d66b87f9595]    Internal error
+[MFLOG|0|2023-12-12T00:45:07.834292Z|runtime|6c54a1b3-a809-43a5-b1b2-1e5418a1d0fd]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T00:45:07.834332Z|runtime|105a12be-04e9-4677-a3e5-a803332025a5]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 1172, in main
+[MFLOG|0|2023-12-12T00:45:07.834367Z|runtime|34ff965e-b4a4-4543-aa4b-5d31b967ca0c]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-12-12T00:45:07.834389Z|runtime|c2197b62-acfb-4507-bed2-3b1161c09791]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-12-12T00:45:07.834415Z|runtime|9c39eebe-9e4d-42cc-86b4-0cfce13dbb3e]    return self.main(args, kwargs)
+[MFLOG|0|2023-12-12T00:45:08.058826Z|runtime|35379a95-298f-4526-80a5-ae421d848b10]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:45:08.058965Z|runtime|5e5fcfed-fee6-45ef-a4d7-d29501aead31]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-12-12T00:45:08.059005Z|runtime|3d2a7912-02e6-477a-a3d2-35b33de0328e]    rv = self.invoke(ctx)
+[MFLOG|0|2023-12-12T00:45:08.059043Z|runtime|f71e3381-f704-4a59-915c-8d45ccf033e6]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:45:08.059061Z|runtime|35bdc73d-7cc9-4e6d-b745-3480904a82a9]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-12-12T00:45:08.059079Z|runtime|11f50075-65dd-4d6f-9ec2-601ed9bac407]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-12-12T00:45:08.059098Z|runtime|d11269c6-0d42-4c2b-aefc-fd7466d8a123]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:45:08.059115Z|runtime|b772e33f-8cd7-44c3-a4d3-f384a504dd8b]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-12-12T00:45:08.059138Z|runtime|901a3d71-64ef-4ffb-96c9-87c970587ba0]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-12-12T00:45:08.059156Z|runtime|f99466fd-07ee-4eef-9bdf-cdfbf236bbdb]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:45:08.059174Z|runtime|9031a398-69e6-43fe-b688-0619e5f0c8da]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-12-12T00:45:08.059191Z|runtime|0680ac9e-055b-47ed-aaf9-72306e984ce6]    return callback(args, kwargs)
+[MFLOG|0|2023-12-12T00:45:08.059208Z|runtime|f80c41d5-ddac-423b-b552-6785bcc3850c]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:45:08.059225Z|runtime|6a616b94-a719-4271-abba-5e05b0c523ba]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-12-12T00:45:08.059242Z|runtime|9d20c09e-5277-4d2d-80e3-16a5f83b636a]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-12-12T00:45:08.059258Z|runtime|1d6f4f26-2cba-47c5-96d8-41e52f9e637d]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:45:08.059275Z|runtime|b20eef8b-25a7-4dce-ae48-a6699d224789]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 581, in step
+[MFLOG|0|2023-12-12T00:45:08.059292Z|runtime|f7cecff4-bf4f-4517-a38d-608399f5e112]    task.run_step(
+[MFLOG|0|2023-12-12T00:45:08.059308Z|runtime|be58e4fe-4eaf-4a40-aec7-70c295ef94f1]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 583, in run_step
+[MFLOG|0|2023-12-12T00:45:08.059325Z|runtime|2a2a88bf-6773-4f66-8734-f10c4fdd33c5]    self._exec_step_function(step_func)
+[MFLOG|0|2023-12-12T00:45:08.059341Z|runtime|5f1cf77b-f726-4def-b657-7c793d81d47d]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-12-12T00:45:08.059358Z|runtime|26836f01-a4b7-44ae-9dd9-8862a12a46f2]    step_function()
+[MFLOG|0|2023-12-12T00:45:08.059375Z|runtime|afe60373-9a8f-40f5-a859-3a068e05fcdf]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/src/project/loanv3.py", line 483, in behavioral_tests
+[MFLOG|0|2023-12-12T00:45:08.059392Z|runtime|540e525f-4ab3-4250-8319-610c59d26e8e]    self.qualitative_check()
+[MFLOG|0|2023-12-12T00:45:08.059409Z|runtime|2bb20d63-4148-4f20-87f6-6d52957f233e]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/src/project/loanv3.py", line 495, in qualitative_check
+[MFLOG|0|2023-12-12T00:45:08.059426Z|runtime|15e37b4b-7a18-4f30-bed4-0c77a713fe1f]    sample_indices = random.sample(range(len(self.X_test)), 5)
+[MFLOG|0|2023-12-12T00:45:08.059444Z|runtime|c06b8ad3-da6b-42f8-9850-095632939370]                     ^^^^^^
+[MFLOG|0|2023-12-12T00:45:08.059460Z|runtime|972d923c-891b-4e27-8934-ac61cfb76dd7]NameError: name 'random' is not defined
+[MFLOG|0|2023-12-12T00:45:08.059477Z|runtime|34a26d97-336d-417b-a1b1-d816e49b7e27]
+[MFLOG|0|2023-12-12T00:45:08.059826Z|runtime|b2add615-8bc8-4036-bfb6-49149ff97fd8]Task failed.

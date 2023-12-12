@@ -1,0 +1,74 @@
+[MFLOG|0|2023-12-12T00:36:49.901059Z|runtime|c5fe57f2-24cd-47a1-b6de-b406f2136b04]COMET INFO: Experiment is live on comet.com https://www.comet.com/noremac/final-project/13c7b3211a06481b9b134dfcc9cd3fd7
+[MFLOG|0|2023-12-12T00:36:57.933102Z|runtime|fffbad51-b6e8-4aa2-8e32-8e49a1da9d47]
+[MFLOG|0|2023-12-12T00:36:57.933168Z|runtime|2c931a0c-af27-4909-a6a6-1e0dc5cd89c4]COMET WARNING: Passed step value '              precision    recall  f1-score   support\n\n           0       0.81      0.95      0.87      6463\n           1       0.47      0.16      0.24      1745\n\n    accuracy                           0.78      8208\n   macro avg       0.64      0.56      0.56      8208\nweighted avg       0.74      0.78      0.74      8208\n' is not a number, ignoring it
+[MFLOG|0|2023-12-12T00:36:57.938336Z|runtime|0f13c504-251b-4921-ac93-5a76b6985049]<flow LoanFlow step predict> failed:
+[MFLOG|0|2023-12-12T00:36:58.759824Z|runtime|39c0d2d1-7082-4e13-a4fe-0a7a60e4df59]    Internal error
+[MFLOG|0|2023-12-12T00:36:58.760808Z|runtime|e57d63b9-3133-4323-8444-36d4295c0b0f]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T00:36:58.761201Z|runtime|0ddc0b2c-655b-4054-b283-13c2459bdccd]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 1172, in main
+[MFLOG|0|2023-12-12T00:36:58.761248Z|runtime|4de68a89-a24a-4511-abc9-7d7e5ec24e2b]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-12-12T00:36:58.761277Z|runtime|776587de-0f6a-48f3-b37b-e5a0a62f6765]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-12-12T00:36:58.761571Z|runtime|cd9969d3-b710-4a19-9eac-45a412d96639]    return self.main(args, kwargs)
+[MFLOG|0|2023-12-12T00:36:58.761945Z|runtime|5ff50432-acfd-4071-8b61-1391d0b8390f]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:36:58.761969Z|runtime|32345d7e-ef2c-4087-890f-0abb317dc6ff]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-12-12T00:36:58.761990Z|runtime|2bd0f405-6cee-4345-9dce-fed12225a05c]    rv = self.invoke(ctx)
+[MFLOG|0|2023-12-12T00:36:58.762010Z|runtime|aabec2e3-d8f5-467f-9d83-b3421ad28ccd]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:36:58.762029Z|runtime|64c28267-eb30-424f-bbf2-7de766a6d9c0]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-12-12T00:36:58.762060Z|runtime|abb78db3-c058-4481-8e9c-d86814d40e50]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-12-12T00:36:58.762095Z|runtime|2a4dc5da-e079-4686-b8e4-d1f4bb97ed0a]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:36:58.762146Z|runtime|7dfe57ed-e031-4dcf-8ea2-6b6e829d8d71]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-12-12T00:36:58.762183Z|runtime|05ba9aff-6616-49b6-a604-d890acc101b6]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-12-12T00:36:58.762333Z|runtime|812247be-60f6-4f3a-9cd5-148eb9884632]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:36:58.762361Z|runtime|8f25cb76-7b98-470d-b676-9d9efb1a4ae6]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-12-12T00:36:58.762654Z|runtime|ab3fc358-ee78-4138-98d5-070ab1e55c17]    return callback(args, kwargs)
+[MFLOG|0|2023-12-12T00:36:58.762968Z|runtime|a39fad4c-fb6a-4400-b3ca-3b94b5f53a31]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:36:58.762991Z|runtime|4cc48878-4708-4960-96f7-f845c6561656]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-12-12T00:36:58.763286Z|runtime|3bd5bb54-0b00-4e2f-9d59-0bb8ba823cb9]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-12-12T00:36:58.763581Z|runtime|96a0915e-9cd1-43c0-97e2-cfb40a30ad9c]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T00:36:58.763602Z|runtime|e1115b10-b80c-4ecd-9ec5-22dfc3b1e2af]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 581, in step
+[MFLOG|0|2023-12-12T00:36:58.763637Z|runtime|e1a98537-837f-43a8-8c2c-0c1308658eab]    task.run_step(
+[MFLOG|0|2023-12-12T00:36:58.763666Z|runtime|e9f70245-860e-47c6-b027-91f40813c655]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 583, in run_step
+[MFLOG|0|2023-12-12T00:36:58.763688Z|runtime|495d0612-0361-4477-9164-780f2bc08d7d]    self._exec_step_function(step_func)
+[MFLOG|0|2023-12-12T00:36:58.763708Z|runtime|97f3663d-cc0f-4338-942c-5b3401dd0492]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-12-12T00:36:58.763728Z|runtime|534ea9f1-096a-414e-b7ac-0e724bfb987d]    step_function()
+[MFLOG|0|2023-12-12T00:36:58.763748Z|runtime|b8963543-9944-4832-a79f-d277f2220eb8]  File "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/src/project/loanv3.py", line 442, in predict
+[MFLOG|0|2023-12-12T00:36:58.763768Z|runtime|ee44cd01-68b4-407e-807a-8dd9996f78ba]    experiment.log_parameters(params)
+[MFLOG|0|2023-12-12T00:36:58.763786Z|runtime|4934545a-07b7-43de-854b-c91d43782733]                              ^^^^^^
+[MFLOG|0|2023-12-12T00:36:58.763805Z|runtime|4aa6e09c-e007-4e68-9966-de70f6459c69]NameError: name 'params' is not defined
+[MFLOG|0|2023-12-12T00:36:58.763824Z|runtime|98286525-6a51-45d1-bd9a-963b33ba3d98]
+[MFLOG|0|2023-12-12T00:36:58.764545Z|runtime|06a70641-5279-45c5-a342-897ecc21f19e]COMET INFO: ---------------------------------------------------------------------------------------
+[MFLOG|0|2023-12-12T00:36:58.765094Z|runtime|57c21e0a-4573-400e-9c01-e7f203d115ff]COMET INFO: Comet.ml Experiment Summary
+[MFLOG|0|2023-12-12T00:36:58.765423Z|runtime|6f2434c2-cb0d-4100-ba0a-8339f5e98739]COMET INFO: ---------------------------------------------------------------------------------------
+[MFLOG|0|2023-12-12T00:36:58.765756Z|runtime|ae55f185-1d71-4b3d-b8d9-7179fe72b1d0]COMET INFO:   Data:
+[MFLOG|0|2023-12-12T00:36:58.766152Z|runtime|4da07207-b003-43fc-ba66-92f4f8464236]COMET INFO:     display_summary_level : 1
+[MFLOG|0|2023-12-12T00:36:58.766441Z|runtime|af03b60f-f41f-48ec-85e5-4a74493c95d2]COMET INFO:     url                   : https://www.comet.com/noremac/final-project/13c7b3211a06481b9b134dfcc9cd3fd7
+[MFLOG|0|2023-12-12T00:36:58.766720Z|runtime|5ec45d4a-506e-448a-aef7-8850e2ab06f7]COMET INFO:   Parameters:
+[MFLOG|0|2023-12-12T00:36:58.767017Z|runtime|22a8ebd2-a136-4cfc-be2d-8f69f1caf2d0]COMET INFO:     bootstrap                : True
+[MFLOG|0|2023-12-12T00:36:58.767305Z|runtime|7e541481-7090-4429-8db8-48670d723b1c]COMET INFO:     ccp_alpha                : 0.0
+[MFLOG|0|2023-12-12T00:36:58.767590Z|runtime|27ac02c1-8527-4989-9063-c459696d1b76]COMET INFO:     class_weight             : 1
+[MFLOG|0|2023-12-12T00:36:58.767852Z|runtime|fe4e1c36-cbf1-4ff1-8932-2757126b4988]COMET INFO:     criterion                : log_loss
+[MFLOG|0|2023-12-12T00:36:58.768117Z|runtime|b52df688-d9bf-4cdd-8571-a44d59d84d88]COMET INFO:     max_depth                : 1
+[MFLOG|0|2023-12-12T00:36:58.768393Z|runtime|2a54b6d8-e35e-4db8-b592-408d8e3027d5]COMET INFO:     max_features             : sqrt
+[MFLOG|0|2023-12-12T00:36:58.768724Z|runtime|34399ac8-655b-4190-9fc4-d28d2e586fa5]COMET INFO:     max_leaf_nodes           : 1
+[MFLOG|0|2023-12-12T00:36:58.768983Z|runtime|2c08b704-8e9e-42e2-a5ed-44ce5f836b3f]COMET INFO:     max_samples              : 1
+[MFLOG|0|2023-12-12T00:36:58.769290Z|runtime|1227f334-0c4a-4baf-919b-2238540bbadb]COMET INFO:     min_impurity_decrease    : 0.0
+[MFLOG|0|2023-12-12T00:36:58.769571Z|runtime|e8a6c165-e2bc-4e04-86aa-9f8ebaf7603b]COMET INFO:     min_samples_leaf         : 1
+[MFLOG|0|2023-12-12T00:36:58.769854Z|runtime|434a02b4-76b4-468e-846d-95504a1d122a]COMET INFO:     min_samples_split        : 2
+[MFLOG|0|2023-12-12T00:36:58.770126Z|runtime|c69baf6b-163b-4216-bf9f-b57e53a8dc52]COMET INFO:     min_weight_fraction_leaf : 0.0
+[MFLOG|0|2023-12-12T00:36:58.770378Z|runtime|adc61706-11c0-460b-8f2f-703a59dcd277]COMET INFO:     n_estimators             : 100
+[MFLOG|0|2023-12-12T00:36:58.770645Z|runtime|44f8eb04-b7be-49d2-ae4f-8982c36742d0]COMET INFO:     n_jobs                   : 1
+[MFLOG|0|2023-12-12T00:36:58.770900Z|runtime|fada9287-c05c-4774-8f1d-c0e9aa1e70d7]COMET INFO:     oob_score                : False
+[MFLOG|0|2023-12-12T00:36:58.771191Z|runtime|86eddd51-a5ae-4be7-bad1-ca04bcdab812]COMET INFO:     random_state             : 102
+[MFLOG|0|2023-12-12T00:36:58.771447Z|runtime|43e58c52-1a6f-4ee5-950b-5cd1f01ba22d]COMET INFO:     splitter                 : best
+[MFLOG|0|2023-12-12T00:36:58.771721Z|runtime|c3fc8c70-1ea8-47b5-93c2-8fa4062f1620]COMET INFO:     verbose                  : 0
+[MFLOG|0|2023-12-12T00:36:58.771993Z|runtime|6ac83a18-a5ce-414e-9168-ee2ddff7399f]COMET INFO:     warm_start               : False
+[MFLOG|0|2023-12-12T00:36:58.772262Z|runtime|ae501471-cc41-487d-9022-9e0d1e829393]COMET INFO:   Uploads:
+[MFLOG|0|2023-12-12T00:36:58.772526Z|runtime|bda914bb-848f-4979-a3a5-cb29c8d5a3d3]COMET INFO:     environment details      : 1
+[MFLOG|0|2023-12-12T00:36:58.772783Z|runtime|03347de2-7539-4ab5-90dd-84d48c84598e]COMET INFO:     filename                 : 1
+[MFLOG|0|2023-12-12T00:36:58.773043Z|runtime|f002515f-007e-4017-ae2b-1feec1dfa300]COMET INFO:     git metadata             : 1
+[MFLOG|0|2023-12-12T00:36:58.773310Z|runtime|669cdcee-f3fe-4f7b-89a8-51d94cba19a0]COMET INFO:     git-patch (uncompressed) : 1 (10.13 KB)
+[MFLOG|0|2023-12-12T00:36:58.773575Z|runtime|bebf33aa-66c6-4fb0-90a2-8b28789b0aca]COMET INFO:     installed packages       : 1
+[MFLOG|0|2023-12-12T00:36:58.773840Z|runtime|6e88e360-09ec-49a3-b88f-eda0372641f7]COMET INFO:     source_code              : 1 (20.28 KB)
+[MFLOG|0|2023-12-12T00:36:58.774126Z|runtime|769f2e01-58be-4b96-a181-1ba57f178a87]COMET INFO:     text-sample              : 1
+[MFLOG|0|2023-12-12T00:36:58.774433Z|runtime|dc30f0d6-a778-4804-b85e-b6400bd25325]COMET INFO: 
+[MFLOG|0|2023-12-12T00:36:59.790610Z|runtime|e15ef1e6-9c1d-4d86-9854-2edb23c3207b]COMET INFO: Please wait for metadata to finish uploading (timeout is 3600 seconds)
+[MFLOG|0|2023-12-12T00:37:00.591792Z|runtime|e21c4c65-4cf7-4683-b09b-e5ef0065949f]Task failed.

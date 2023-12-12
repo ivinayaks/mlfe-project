@@ -1,0 +1,22 @@
+[MFLOG|0|2023-12-12T00:38:45.249737Z|runtime|d9489b52-ce35-4f49-8938-1941a124642d]COMET INFO: Experiment is live on comet.com https://www.comet.com/noremac/final-project/b4bc3bcc4d1d4c7ead7c1e58051d0129
+[MFLOG|0|2023-12-12T00:38:49.071224Z|runtime|ef8b14e3-fe5d-47eb-aa89-1c4dde56912c]
+[MFLOG|0|2023-12-12T00:38:49.071341Z|runtime|dd0be414-824d-4c54-977d-cace3f72934f]COMET INFO: ---------------------------------------------------------------------------------------
+[MFLOG|0|2023-12-12T00:38:49.071726Z|runtime|c6760616-0aab-4674-bc2d-aae74e0ac3f6]COMET INFO: Comet.ml Experiment Summary
+[MFLOG|0|2023-12-12T00:38:49.072223Z|runtime|fc3e7b78-bbff-4b29-9814-b56c62a8f65f]COMET INFO: ---------------------------------------------------------------------------------------
+[MFLOG|0|2023-12-12T00:38:49.072764Z|runtime|ced873e0-1575-47ff-b7c9-42969072b2b9]COMET INFO:   Data:
+[MFLOG|0|2023-12-12T00:38:49.073220Z|runtime|8f14368b-6f7e-453a-9d5f-3b9adf1a626d]COMET INFO:     display_summary_level : 1
+[MFLOG|0|2023-12-12T00:38:49.073555Z|runtime|dbecb20f-2788-4cd8-9c1b-8bdc71dddfa7]COMET INFO:     url                   : https://www.comet.com/noremac/final-project/b4bc3bcc4d1d4c7ead7c1e58051d0129
+[MFLOG|0|2023-12-12T00:38:49.073874Z|runtime|341e87be-1698-4c01-85bf-52ce748f5336]COMET INFO:   Metrics [count] (min, max):
+[MFLOG|0|2023-12-12T00:38:49.074225Z|runtime|567f1769-7d5e-46f3-9be1-46bd0f309c60]COMET INFO:     F1-Score [27]      : (0.7437916414294368, 0.8411892675852067)
+[MFLOG|0|2023-12-12T00:38:49.074522Z|runtime|6d2f914f-c656-4c68-9c8d-f132957bf5a0]COMET INFO:     Precision [27]     : (0.6701791359325606, 0.9250398724082934)
+[MFLOG|0|2023-12-12T00:38:49.074826Z|runtime|95e1083c-5c9c-4aa6-9345-7b0f8d340745]COMET INFO:     ROC AUC Score [27] : (0.8461278540956776, 0.9152675672775079)
+[MFLOG|0|2023-12-12T00:38:49.075140Z|runtime|3579dfb2-1a46-46ca-9d7c-fac03f5df239]COMET INFO:     Recall [27]        : (0.7686170212765957, 0.8457446808510638)
+[MFLOG|0|2023-12-12T00:38:49.075413Z|runtime|b76afa9e-a607-4c00-8f53-970d0002121d]COMET INFO:   Uploads:
+[MFLOG|0|2023-12-12T00:38:49.075703Z|runtime|443777a3-751c-4d81-801b-3be72ef7e13a]COMET INFO:     environment details      : 1
+[MFLOG|0|2023-12-12T00:38:49.075954Z|runtime|75327daf-3278-44b0-97cd-922f86c4ee8e]COMET INFO:     filename                 : 1
+[MFLOG|0|2023-12-12T00:38:49.076216Z|runtime|5dd5763d-66e4-47f8-959c-6e6cfdba1dad]COMET INFO:     git metadata             : 1
+[MFLOG|0|2023-12-12T00:38:49.076498Z|runtime|e600c252-9aec-4321-b91d-1e25d3a4448a]COMET INFO:     git-patch (uncompressed) : 1 (10.11 KB)
+[MFLOG|0|2023-12-12T00:38:49.076789Z|runtime|d543e4e0-171d-49e6-a5a6-fac3b4df5c35]COMET INFO:     installed packages       : 1
+[MFLOG|0|2023-12-12T00:38:49.077050Z|runtime|e69ab1c3-4e48-4584-9e8b-16b789bfe3f8]COMET INFO:     source_code              : 1 (20.53 KB)
+[MFLOG|0|2023-12-12T00:38:49.077323Z|runtime|02b6763a-7dce-4eef-8e4e-f6ff3dbc54e4]COMET INFO: 
+[MFLOG|0|2023-12-12T00:38:51.115416Z|runtime|b0f134f8-1f55-4565-a5fb-b6247a8dcde6]COMET INFO: Please wait for metadata to finish uploading (timeout is 3600 seconds)

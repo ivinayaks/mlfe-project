@@ -1,0 +1,1 @@
+{"flow_id": "LoanFlow", "run_number": "1702264170246647", "step_name": "validate_model", "task_id": "31", "field_name": "metaflow_version", "type": "metaflow_version", "value": "2.10.3", "tags": ["attempt_id:0"], "user_name": "vinayak", "ts_epoch": 1702264223294}
