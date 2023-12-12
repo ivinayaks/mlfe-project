@@ -1,0 +1,1 @@
+[MFLOG|0|2023-12-12T22:24:34.643400Z|runtime|9aa3d35c-1f7f-4c2f-807a-e148d1e7453e]2023-12-12 17:24:34.641 python[48914:25428292] +[CATransaction synchronize] called within transaction

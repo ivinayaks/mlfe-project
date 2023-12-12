@@ -548,17 +548,17 @@ class LoanFlow(FlowSpec):
         print("\n--- Data Slice Analysis on 'grade' ---")
 
         # List of grade columns
-        grade_columns = [col for col in self.X_test.columns if col.startswith('grade_')]
+        grade_columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
         for grade_col in grade_columns:
             # Only consider rows where the grade column is 1 (i.e., the grade is applicable)
             mask = self.X_test[grade_col] == 1
             if mask.any():  # Check if there is any data for this grade
-                print(f"Performance for {grade_col}:")
+                print(f"Performance for grade {grade_col}:")
                 print(classification_report(self.y_test[mask], self.best_model.predict(self.X_test[mask])))
                 print("Accuracy:", accuracy_score(self.y_test[mask], self.best_model.predict(self.X_test[mask])), "\n")
             else:
-                print(f"No data available for {grade_col}")
+                print(f"No data available for grade {grade_col}")
 
 
     def robustness_check(self):
