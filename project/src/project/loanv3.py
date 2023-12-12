@@ -91,6 +91,19 @@ class LoanFlow(FlowSpec):
         print("Columns of type object are:",col_object)   
         self.col_object=col_object
 
+        num_columns=[]
+        cat_columns=[]
+        for col in self.df.columns:
+            if(col=='status'):
+                continue
+            if(self.df[col].dtype ==np.int64 or self.df[col].dtype==np.float64):
+                num_columns.append(col)
+            else:
+                cat_columns.append(col)
+
+        pickle_path='setsnmodels/pickle_path.pkl'
+        pickled_encoders=[]
+
         print("COL:term")
         print('-------------')
         print("Number of NaNs:",self.df['term'].isnull().sum())
@@ -100,10 +113,12 @@ class LoanFlow(FlowSpec):
         plt.title("COL:term")
         plt.bar(term_counts.index,term_counts.values)
         plt.show()
-        le=LabelEncoder()
-        self.df['term']=le.fit_transform(self.df['term'])
+        le_term=LabelEncoder()
+        self.df['term']=le_term.fit_transform(self.df['term'])
         term_counts=self.df['term'].value_counts()
         print(term_counts)
+        pickled_encoders.append(le_term)
+
 
         print("COL:grade")
         print('-------------')
@@ -113,7 +128,15 @@ class LoanFlow(FlowSpec):
         plt.title("COL:grade")
         plt.bar(grade_counts.index,grade_counts.values)
         plt.show()
-        self.df=pd.get_dummies(self.df,columns=['grade'])
+        oe_grade= OneHotEncoder()
+        onehot = oe_grade.fit_transform(self.df[['grade']])
+        feature_names = oe_grade.categories_[0]
+        onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
+        self.df.reset_index(drop=True, inplace=True)
+        onehot_df.reset_index(drop=True, inplace=True)
+        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df.drop(columns=['grade'], axis=1, inplace=True)
+        pickled_encoders.append(oe_grade)
 
         print("COL:employment")
         print('-------------')
@@ -132,15 +155,15 @@ class LoanFlow(FlowSpec):
         length_counts=self.df['length'].value_counts()
         print(length_counts)
         print(length_counts.index)
-        oe= OrdinalEncoder(categories=[[None,'< 1 year','1 year','2 years','3 years','4 years','5 years',
-                                    '6 years','7 years','8 years','9 years','10+ years']])
-        oe.fit(asarray(self.df['length']).reshape(-1,1))
-        self.df['length'] = oe.transform(asarray(self.df['length']).reshape(-1,1))
+        oe_length= OrdinalEncoder(categories=[[None,'< 1 year','1 year','2 years','3 years','4 years','5 years',
+                             '6 years','7 years','8 years','9 years','10+ years']])
+        oe_length.fit(asarray(self.df['length']).reshape(-1,1))
+        self.df['length'] = oe_length.transform(asarray(self.df['length']).reshape(-1,1))
         length_counts=self.df['length'].value_counts()
-        plt.title("COL:length")
         plt.bar(length_counts.index,length_counts.values)
         plt.figure(figsize=(10,6))
         plt.show()
+        pickled_encoders.append(oe_length)
 
         print("COL:home")
         print('-------------')
@@ -150,7 +173,15 @@ class LoanFlow(FlowSpec):
         plt.title("COL:home")
         plt.bar(home_counts.index,home_counts.values)
         plt.show()
-        self.df=pd.get_dummies(self.df,columns=['home'])
+        oe_home= OneHotEncoder()
+        onehot = oe_home.fit_transform(self.df[['home']])
+        feature_names = oe_home.categories_[0]
+        onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
+        self.df.reset_index(drop=True, inplace=True)
+        onehot_df.reset_index(drop=True, inplace=True)
+        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df.drop(columns=['home'], axis=1, inplace=True)
+        pickled_encoders.append(oe_home)
 
         print("COL:verified")
         print('-------------')
@@ -160,7 +191,15 @@ class LoanFlow(FlowSpec):
         plt.title("COL:verified")
         plt.bar(verified_counts.index,verified_counts.values)
         plt.show()
-        self.df=pd.get_dummies(self.df,columns=['verified'])
+        oe_verified= OneHotEncoder()
+        onehot = oe_verified.fit_transform(self.df[['verified']])
+        feature_names = oe_verified.categories_[0]
+        onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
+        self.df.reset_index(drop=True, inplace=True)
+        onehot_df.reset_index(drop=True, inplace=True)
+        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df.drop(columns=['verified'], axis=1, inplace=True)
+        pickled_encoders.append(oe_verified)
 
         print("Number of NaNs:",self.df['status'].isnull().sum())
         counts=self.df['status'].value_counts()
@@ -189,24 +228,35 @@ class LoanFlow(FlowSpec):
         plt.title("COL:reason")
         plt.bar(counts.index,counts.values)
         plt.show()
-        self.df=pd.get_dummies(self.df,columns=['reason'])
+        oe_reason= OneHotEncoder()
+        onehot = oe_reason.fit_transform(self.df[['reason']])
+        feature_names = oe_reason.categories_[0]
+        onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
+        self.df.reset_index(drop=True, inplace=True)
+        onehot_df.reset_index(drop=True, inplace=True)
+        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df.drop(columns=['reason'], axis=1, inplace=True)
+        pickled_encoders.append(oe_reason)
 
         print("COL:state")
         print('-------------')
         print("Number of NaNs:",self.df['state'].isnull().sum())
         counts=self.df['state'].value_counts()
         print(counts)
-        self.df=pd.get_dummies(self.df,columns=['state'])
+        oe_state= OneHotEncoder()
+        onehot = oe_state.fit_transform(self.df[['state']])
+        feature_names = oe_state.categories_[0]
+        onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
+        self.df.reset_index(drop=True, inplace=True)
+        onehot_df.reset_index(drop=True, inplace=True)
+        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df.drop(columns=['state'], axis=1, inplace=True)
+        pickled_encoders.append(oe_state)
 
-        num_columns=[]
-        cat_columns=[]
-        for col in self.df.columns:
-            if(col=='status'):
-                continue
-            if(self.df[col].dtype in (np.dtype("int64"), np.dtype("float64"))):
-                num_columns.append(col)
-            else:
-                cat_columns.append(col)
+        with open(pickle_path,'wb') as file:
+            pickle.dump(pickled_encoders,file)
+
+      
 
         nan_columns=[]
         for col in num_columns:
@@ -220,11 +270,6 @@ class LoanFlow(FlowSpec):
         for col in nan_columns:
             self.df[col]=imputer.fit_transform(self.df[col].values.reshape(-1,1))[:,0]
 
-        # fig , axes = plt.subplots(nrows=6, ncols=4,constrained_layout=True)       
-        # fig.subplots_adjust(left= 0, bottom=0, right=3, top=12, wspace=0.09, hspace=0.3)
-        # for ax, column in zip(axes.flatten(),num_columns):
-        #     sns.boxplot(self.df[column],ax=ax)
-        # plt.show()
 
         def plot_boxplots(df,colums):
             fig , axes = plt.subplots(nrows=3, ncols=2, constrained_layout=True)       
@@ -254,22 +299,11 @@ class LoanFlow(FlowSpec):
 
 
         self.df_=self.df.copy()
-        self.df_.drop(columns=cat_columns,axis=1,inplace=True)
+        # self.df_.drop(columns=cat_columns,axis=1,inplace=True)
        
         plt.figure(figsize=(10,10))
         plt.title("Heatmap of correlations")
         sns.heatmap(self.df_.corr())
-
-        corrs=self.df.corr()['status']
-        corrs_index=corrs.index
-        corrs_values=corrs.values
-        imp_cols=[]
-        for i in range(len(corrs)):
-            if(corrs_index[i]=='status'): 
-                continue
-            if(corrs_index[i] in num_columns and corrs_values[i]>0.1):
-                imp_cols.append(corrs_index[i])
-        print("Possibly pivotal columns:",imp_cols)
 
         labels=['defaults','no defaults']
         show=[self.df['status'].value_counts().values[1]/self.df['status'].value_counts().values.sum(),
@@ -288,6 +322,14 @@ class LoanFlow(FlowSpec):
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.25, random_state=26)
         sm = SMOTE()
         self.X_train, self.y_train = sm.fit_resample(self.X_train, self.y_train)
+
+        from sklearn.ensemble import RandomForestClassifier
+        model = RandomForestClassifier()
+        model.fit(self.X_train,self.y_train)
+        feat_importances = pd.Series(model.feature_importances_, index=self.X_train.columns)
+        feat_importances.nlargest(10).plot(kind='barh')
+        plt.title("Feature Importances")
+        plt.show()
 
         # serialize datasets
         with open('setsnmodels/X_train.pkl', 'wb') as file:

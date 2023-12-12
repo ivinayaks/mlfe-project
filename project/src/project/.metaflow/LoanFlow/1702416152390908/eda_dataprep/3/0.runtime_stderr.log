@@ -1,0 +1,38 @@
+[MFLOG|0|2023-12-12T21:22:49.262230Z|runtime|4a1d18b3-0a0c-426d-bfdc-67b9b9bc464e]<flow LoanFlow step eda_dataprep> failed:
+[MFLOG|0|2023-12-12T21:22:49.561710Z|runtime|8f9f4981-08c3-48d8-b36d-61980554c483]    Internal error
+[MFLOG|0|2023-12-12T21:22:49.563984Z|runtime|4e3c7829-8627-450c-9d9e-2bbba955e59c]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T21:22:49.564084Z|runtime|8691ad1f-e93c-4a1f-98b3-36246e72827f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 1172, in main
+[MFLOG|0|2023-12-12T21:22:49.564155Z|runtime|f48b9a1a-12fb-4e15-bab7-431862940093]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-12-12T21:22:49.564200Z|runtime|b167efe4-15d2-4df6-a878-6c42a2aaa8b9]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-12-12T21:22:49.564248Z|runtime|2573f19a-58c6-4a5d-8ee9-d19b61afbdff]    return self.main(args, kwargs)
+[MFLOG|0|2023-12-12T21:22:49.564286Z|runtime|c89a8989-423a-4402-84ab-6bddfafd55d9]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.564316Z|runtime|70319c98-6fa6-409f-b024-d611302c072c]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-12-12T21:22:49.564346Z|runtime|70a1036a-ebc9-4b26-96dc-4928376e1f89]    rv = self.invoke(ctx)
+[MFLOG|0|2023-12-12T21:22:49.564375Z|runtime|180ec33d-388b-4136-aeea-0c397834f097]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.564403Z|runtime|6b97c2ae-86cd-4a3e-b82a-9c78814d0428]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-12-12T21:22:49.564433Z|runtime|1597f2e4-8714-4366-adfa-7c7e143254aa]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-12-12T21:22:49.564461Z|runtime|475748cd-b927-4f53-ac68-ad00b27d810f]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.564489Z|runtime|d26ca662-ce6f-4ae1-8a27-538db558f45a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-12-12T21:22:49.564519Z|runtime|ac1e2e09-6a55-46e5-b73f-cab5a0183caa]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-12-12T21:22:49.878613Z|runtime|802c7226-29a7-4099-bd8d-5ad2c98d6ace]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.878872Z|runtime|5f739258-d029-4c8c-bb40-1465fa74e67c]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-12-12T21:22:49.878919Z|runtime|00c95f06-9d13-4f28-845b-56f3e4c1755a]    return callback(args, kwargs)
+[MFLOG|0|2023-12-12T21:22:49.878954Z|runtime|6e93f7c5-677f-4bd6-8820-5a89faf9264b]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.878983Z|runtime|014013da-ba71-40d1-b838-09c49a8c8de6]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-12-12T21:22:49.879012Z|runtime|675f2acf-e25c-4cce-8e4f-2a357bf42c14]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-12-12T21:22:49.879038Z|runtime|9b1f4cf0-82ba-47a4-af65-3e3412846a42]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.879064Z|runtime|f56f5987-d423-4f34-a4f2-b84d970ff323]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/cli.py", line 581, in step
+[MFLOG|0|2023-12-12T21:22:49.879098Z|runtime|6b4b407c-73ce-4e0a-9527-f2b96c0ef796]    task.run_step(
+[MFLOG|0|2023-12-12T21:22:49.879177Z|runtime|9c9ffae2-00f1-44bc-a3e9-c8b1b6dd2ece]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 583, in run_step
+[MFLOG|0|2023-12-12T21:22:49.879241Z|runtime|91476532-30da-4317-b45e-e2b6b05aff92]    self._exec_step_function(step_func)
+[MFLOG|0|2023-12-12T21:22:49.879271Z|runtime|2684a12c-9f30-4c4c-8428-64444a690019]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-12-12T21:22:49.879305Z|runtime|de6896af-3f58-40ac-8a1a-38b67c7c4baf]    step_function()
+[MFLOG|0|2023-12-12T21:22:49.879335Z|runtime|04499d7b-bab9-4060-a859-0e5ac7abeb9a]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 244, in eda_dataprep
+[MFLOG|0|2023-12-12T21:22:49.879365Z|runtime|2e241188-90e0-4a3e-982c-2365e23cad45]    if(self.df[col].dtype in (np.dtype("int64"), np.dtype("float64"))):
+[MFLOG|0|2023-12-12T21:22:49.879392Z|runtime|f4151102-581f-433f-b5d1-bd581e428ab4]       ^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.879420Z|runtime|ac7b66c0-8774-49ec-b509-9bd587abc68e]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/pandas/core/generic.py", line 6204, in __getattr__
+[MFLOG|0|2023-12-12T21:22:49.879455Z|runtime|3cce95c2-6247-48aa-9594-9260608503fa]    return object.__getattribute__(self, name)
+[MFLOG|0|2023-12-12T21:22:49.879481Z|runtime|62139faf-4e66-4ed3-af65-159df2d4980d]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:22:49.879506Z|runtime|3ae6c4b1-1496-47a1-a6b7-b10d29791d57]AttributeError: 'DataFrame' object has no attribute 'dtype'
+[MFLOG|0|2023-12-12T21:22:49.879532Z|runtime|25298ba3-49e1-41dc-8f67-f1a419076dfe]
+[MFLOG|0|2023-12-12T21:22:49.881818Z|runtime|7c0f9a1c-6f77-4a87-82f9-ee1874048e70]Task failed.

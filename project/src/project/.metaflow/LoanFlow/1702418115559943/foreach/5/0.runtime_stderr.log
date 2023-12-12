@@ -1,0 +1,38 @@
+[MFLOG|0|2023-12-12T21:56:18.957117Z|runtime|8393bcec-7709-4693-9457-6ccb431f97da][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T21:56:19.212096Z|runtime|426f8025-eb8b-4509-b8c8-1ed0139c473c]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T21:56:19.212196Z|runtime|8cd5f798-4f93-4e95-b3e1-38429e1eee50]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 21, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212256Z|runtime|b89d3579-a4a2-4040-b64d-c58986664f00]    from imblearn.over_sampling import SMOTE
+[MFLOG|0|2023-12-12T21:56:19.212297Z|runtime|9b1c6a40-3b94-4166-8b68-b8f9c6f0052d]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/imblearn/__init__.py", line 52, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212349Z|runtime|21dbe95f-eb2e-4c41-8bf0-2bd72713c2af]    from . import (
+[MFLOG|0|2023-12-12T21:56:19.212387Z|runtime|76fecca7-b7e5-4d8e-b619-d191b8497534]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/imblearn/combine/__init__.py", line 5, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212420Z|runtime|d6214992-908d-4459-8cf8-376bb750a685]    from ._smote_enn import SMOTEENN
+[MFLOG|0|2023-12-12T21:56:19.212447Z|runtime|0966be5d-ed53-47e0-868d-bd2171139213]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/imblearn/combine/_smote_enn.py", line 13, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212490Z|runtime|bfed9b4a-5618-4997-aa35-9506f8f81ef4]    from ..over_sampling import SMOTE
+[MFLOG|0|2023-12-12T21:56:19.212515Z|runtime|36d86a44-bd23-4fc1-af09-0db2a6e5086f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/imblearn/over_sampling/__init__.py", line 8, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212541Z|runtime|1347ff5b-ab5d-41ee-8cd6-e90674e97191]    from ._smote import SMOTE, SMOTEN, SMOTENC, SVMSMOTE, BorderlineSMOTE, KMeansSMOTE
+[MFLOG|0|2023-12-12T21:56:19.212572Z|runtime|bd7a3a5e-d16b-479c-a392-7a5450336eed]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/imblearn/over_sampling/_smote/__init__.py", line 2, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212598Z|runtime|29b609b2-c25d-4d6d-b3bd-bfcdc845ea16]    from .cluster import KMeansSMOTE
+[MFLOG|0|2023-12-12T21:56:19.212626Z|runtime|1f5fb3e0-2ad4-4be4-ac05-7a58aba45482]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/imblearn/over_sampling/_smote/cluster.py", line 14, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212654Z|runtime|9fd54a80-0037-44e5-8a75-a58d94dad4f4]    from sklearn.cluster import MiniBatchKMeans
+[MFLOG|0|2023-12-12T21:56:19.212679Z|runtime|db52f102-8619-45a0-8be1-b006a0e784f1]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/cluster/__init__.py", line 26, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212704Z|runtime|aaefae44-435f-4a5f-b6ec-f3d02baa6c1f]    from ._spectral import SpectralClustering, spectral_clustering
+[MFLOG|0|2023-12-12T21:56:19.212734Z|runtime|d56ffa2f-8fca-4675-91ac-9159d7ff8bf7]  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+[MFLOG|0|2023-12-12T21:56:19.212758Z|runtime|3c34f706-86f3-4e1f-8a73-53624e4a6185]  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+[MFLOG|0|2023-12-12T21:56:19.212787Z|runtime|fa483938-1bf8-4e8d-a88f-975699928415]  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+[MFLOG|0|2023-12-12T21:56:19.212811Z|runtime|72cc4226-4892-4386-ae7b-cd66a55c1637]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/monkey_patching.py", line 82, in exec_module
+[MFLOG|0|2023-12-12T21:56:19.212837Z|runtime|dfc2f3ec-157e-4243-837a-a3c584e73829]    self.loader.exec_module(module)
+[MFLOG|0|2023-12-12T21:56:19.212861Z|runtime|d7d6347c-a48c-410a-9587-41b6ae2b1421]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/cluster/_spectral.py", line 17, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212897Z|runtime|13315fc8-01a1-4df5-a7de-b95f141319bb]    from ..manifold import spectral_embedding
+[MFLOG|0|2023-12-12T21:56:19.212928Z|runtime|ef08a256-8ce4-457c-86fc-86b3bf3a8c4a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/manifold/__init__.py", line 9, in <module>
+[MFLOG|0|2023-12-12T21:56:19.212952Z|runtime|2d23ff21-5f8e-433c-99b4-5e2082681c90]    from ._t_sne import TSNE, trustworthiness
+[MFLOG|0|2023-12-12T21:56:19.212977Z|runtime|011628bb-3084-4c11-958f-28935a6cf184]  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+[MFLOG|0|2023-12-12T21:56:19.213008Z|runtime|d386859e-dd3b-4749-87e0-a2100935bc3a]  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+[MFLOG|0|2023-12-12T21:56:19.213033Z|runtime|7cf2ffce-419d-416b-858b-1a05b97646ec]  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+[MFLOG|0|2023-12-12T21:56:19.213068Z|runtime|83125d89-82d7-48d4-9eb1-a4f1a3df6c1c]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/monkey_patching.py", line 82, in exec_module
+[MFLOG|0|2023-12-12T21:56:19.213093Z|runtime|44dbe249-436f-42ac-8654-ec30a1d09524]    self.loader.exec_module(module)
+[MFLOG|0|2023-12-12T21:56:19.213118Z|runtime|bc13b203-6984-4ad9-906f-1cd5d7ddc3f3]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/manifold/_t_sne.py", line 35, in <module>
+[MFLOG|0|2023-12-12T21:56:19.213142Z|runtime|4bd58f4d-f5ab-4b56-8cf9-d2049d3a9db0]    from . import _barnes_hut_tsne, _utils  # type: ignore
+[MFLOG|0|2023-12-12T21:56:19.213173Z|runtime|7385fe8b-b2e5-495b-8a4e-b8a13e4c0cf0]    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T21:56:19.213206Z|runtime|82550976-a363-4c07-b332-4999e4e6425e]  File "<frozen importlib._bootstrap>", line 405, in parent
+[MFLOG|0|2023-12-12T21:56:19.213232Z|runtime|aaf53df9-9b49-4e5a-8dc0-8a9a8f80b243]KeyboardInterrupt
+[MFLOG|0|2023-12-12T21:56:19.213681Z|runtime|f00aa25a-808b-43eb-9ab8-0a91d795696e]Task failed.
