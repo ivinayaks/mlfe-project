@@ -1,0 +1,43 @@
+[MFLOG|0|2023-12-12T22:32:53.315998Z|runtime|da8d7366-00df-4667-bcb1-7a7016b4f0ea][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.135927Z|runtime|3ec98ef2-86cb-4918-b55a-f62f8ae50363]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.135967Z|runtime|9fa3a022-dea6-4058-ab5e-46c86a78b020]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 11, in <module>
+[MFLOG|0|2023-12-12T22:32:55.135999Z|runtime|b4fa54b0-6401-43e6-a16e-133c75ef593c]    from sklearn.model_selection import ParameterGrid
+[MFLOG|0|2023-12-12T22:32:55.136028Z|runtime|8eb2cc66-e9c9-42f7-9031-9136d2944884]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/__init__.py", line 83, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136058Z|runtime|8c373a40-ce9b-4a6e-8951-1ddef591fa64]    from .base import clone
+[MFLOG|0|2023-12-12T22:32:55.136093Z|runtime|ded6ec37-9679-4ac3-8a58-be334e8b3965]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/base.py", line 19, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136128Z|runtime|21d4a9aa-4f05-48e9-9e44-14b6bd9f04c8]    from .utils import _IS_32BIT
+[MFLOG|0|2023-12-12T22:32:55.136157Z|runtime|dd996a1c-ddde-4ff8-b458-b419da424b5a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/__init__.py", line 22, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136187Z|runtime|46f8f865-f2eb-477d-82ee-93f789705be1]    from ._param_validation import Interval, validate_params
+[MFLOG|0|2023-12-12T22:32:55.136215Z|runtime|815aaeea-02cf-4550-a622-10208ace6dd9]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 15, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136244Z|runtime|08fdc4b0-59a8-4b2b-a4a3-c79a4014f829]    from .validation import _is_arraylike_not_scalar
+[MFLOG|0|2023-12-12T22:32:55.136272Z|runtime|c0a49d8e-f331-481a-88ce-ea3e952c0743]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/validation.py", line 25, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136309Z|runtime|da37d96d-5312-4808-8c5a-4b1734526d83]    from ..utils._array_api import _asarray_with_order, _is_numpy_namespace, get_namespace
+[MFLOG|0|2023-12-12T22:32:55.136337Z|runtime|94625b39-22e1-4fb2-8278-3d6b6166183f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 9, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136366Z|runtime|16a2736e-76a7-4016-9273-2e18789cc618]    from .fixes import parse_version
+[MFLOG|0|2023-12-12T22:32:55.136394Z|runtime|6552edd7-69ef-4e99-b085-7db4e694ebaa]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/fixes.py", line 19, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136422Z|runtime|eb25df11-1f62-4c9a-9ca4-a4db1699c1a4]    import scipy.stats
+[MFLOG|0|2023-12-12T22:32:55.136457Z|runtime|7f2d2da1-4a42-4289-b477-0d3ddcf43ad4]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/stats/__init__.py", line 608, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136493Z|runtime|0bf402b9-ac55-4cfe-8856-5f281d784eed]    from ._stats_py import *
+[MFLOG|0|2023-12-12T22:32:55.136522Z|runtime|4fb448ec-adfa-41cb-9c29-398b67e71f55]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/stats/_stats_py.py", line 53, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136551Z|runtime|384ad41d-49cc-4cef-8174-3a1d7394714a]    from ._hypotests import _all_partitions
+[MFLOG|0|2023-12-12T22:32:55.136579Z|runtime|66412059-26e1-4eb4-bfa2-2263c6f98701]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/stats/_hypotests.py", line 13, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136607Z|runtime|845021f0-b205-4e8a-aa5d-18e3b4adfb07]    from scipy.fft import ifft
+[MFLOG|0|2023-12-12T22:32:55.136635Z|runtime|e7ddf4a4-f7b4-4c49-8866-6e51fb86ab72]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/fft/__init__.py", line 89, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136663Z|runtime|16348074-dc65-47df-ad3e-82303279c332]    from ._realtransforms import dct, idct, dst, idst, dctn, idctn, dstn, idstn
+[MFLOG|0|2023-12-12T22:32:55.136691Z|runtime|283cf94e-bed5-4ede-a54b-4ca4c17b019b]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/fft/_realtransforms.py", line 268, in <module>
+[MFLOG|0|2023-12-12T22:32:55.136718Z|runtime|06628d5d-9afb-4d57-9754-95972822631d]    @_dispatch
+[MFLOG|0|2023-12-12T22:32:55.136746Z|runtime|789d1c99-d3da-457d-8226-56cb8042b01c]     ^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.136773Z|runtime|4c298ed2-b1c7-46b3-ad94-f23431a59454]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/fft/_basic.py", line 20, in _dispatch
+[MFLOG|0|2023-12-12T22:32:55.136801Z|runtime|bb938633-608e-4878-9c5f-c4c90b46ce04]    return generate_multimethod(func, _x_replacer, domain="numpy.scipy.fft")
+[MFLOG|0|2023-12-12T22:32:55.136829Z|runtime|5a6d8922-4feb-4e0b-896f-7d8b1a2ad653]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.136856Z|runtime|c667ab63-124c-4bb9-ac25-989e20d73b5a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/_lib/_uarray/_backend.py", line 235, in generate_multimethod
+[MFLOG|0|2023-12-12T22:32:55.136884Z|runtime|47952d28-43cd-4b88-8c7d-28c2aac408d3]    kw_defaults, arg_defaults, opts = get_defaults(argument_extractor)
+[MFLOG|0|2023-12-12T22:32:55.136912Z|runtime|06f7b191-aff8-4d38-b5cd-a5c91bd1f702]                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.136940Z|runtime|e6dacba3-2c7d-44b0-9982-b432cad6b1b0]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/_lib/_uarray/_backend.py", line 318, in get_defaults
+[MFLOG|0|2023-12-12T22:32:55.136967Z|runtime|44a1130e-4963-41d7-ac68-3da202f1af3d]    arg_defaults.append(v.default)
+[MFLOG|0|2023-12-12T22:32:55.136995Z|runtime|78051897-c198-4138-b22e-7b131c203b47]                        ^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.137023Z|runtime|0d8c91f2-5ad7-4746-896c-93c1a8038ab9]  File "/Users/devanshjoshi/.rye/py/cpython@3.11.5/install/lib/python3.11/inspect.py", line 2743, in default
+[MFLOG|0|2023-12-12T22:32:55.137053Z|runtime|ffe1a839-9e63-4132-b58c-44dcd3e4f3c5]    @property
+[MFLOG|0|2023-12-12T22:32:55.137082Z|runtime|c00dc27f-a0b8-4953-b583-d6c4db17a11c]
+[MFLOG|0|2023-12-12T22:32:55.137112Z|runtime|95f4c761-41dc-4982-814b-f835a0598bb7]KeyboardInterrupt
+[MFLOG|0|2023-12-12T22:32:55.137341Z|runtime|bee607e2-6798-4e23-bf59-cc7e728e5bd0]Task failed.

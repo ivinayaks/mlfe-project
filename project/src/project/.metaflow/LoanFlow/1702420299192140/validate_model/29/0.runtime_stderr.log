@@ -1,0 +1,17 @@
+[MFLOG|0|2023-12-12T22:32:53.315931Z|runtime|552d315b-5b1a-4a1c-9ecf-5bbb59b6cbf8][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.130987Z|runtime|5d65bff2-72e2-44e4-9f3f-17da2c5392b0]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.131028Z|runtime|7133d97a-33b9-4633-b96b-4305c9dceb15]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 7, in <module>
+[MFLOG|0|2023-12-12T22:32:55.131060Z|runtime|37a09487-5662-4706-b934-6451ea3cf0a6]    import pandas as pd
+[MFLOG|0|2023-12-12T22:32:55.131090Z|runtime|2e3923fe-98fd-4e86-aa70-5d21f050d748]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/pandas/__init__.py", line 23, in <module>
+[MFLOG|0|2023-12-12T22:32:55.131129Z|runtime|c0ae850e-c849-4c41-b72d-24188ab88f2b]    from pandas.compat import (
+[MFLOG|0|2023-12-12T22:32:55.131158Z|runtime|aeb5a329-ea18-438d-a3f9-76ac83c97df8]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/pandas/compat/__init__.py", line 27, in <module>
+[MFLOG|0|2023-12-12T22:32:55.131186Z|runtime|bfab8cff-85e6-4347-a3e2-91c14e9e323b]    from pandas.compat.pyarrow import (
+[MFLOG|0|2023-12-12T22:32:55.131219Z|runtime|34eaf941-ff0a-42d3-9606-331a1f6c70ef]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/pandas/compat/pyarrow.py", line 8, in <module>
+[MFLOG|0|2023-12-12T22:32:55.131253Z|runtime|4b8e63cb-a515-4a37-bb31-9c2fce7f58a6]    import pyarrow as pa
+[MFLOG|0|2023-12-12T22:32:55.131287Z|runtime|024290d6-8f50-4f23-877b-155d57f5e10e]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/pyarrow/__init__.py", line 65, in <module>
+[MFLOG|0|2023-12-12T22:32:55.131316Z|runtime|932ea05a-4039-43e2-b7c2-a1787126bb73]    import pyarrow.lib as _lib
+[MFLOG|0|2023-12-12T22:32:55.131344Z|runtime|e55d8ba3-0d62-4f9e-9a59-2a695ebeed9d]  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+[MFLOG|0|2023-12-12T22:32:55.131371Z|runtime|a11e842b-bc36-41bc-92cd-cbe6e4ec854e]  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+[MFLOG|0|2023-12-12T22:32:55.131399Z|runtime|fa1ac60a-ff27-4482-bfa7-702ab1e5662e]  File "<frozen importlib._bootstrap>", line 666, in _load_unlocked
+[MFLOG|0|2023-12-12T22:32:55.131427Z|runtime|2d0f88c4-efb9-4448-ae87-82771c718f13]KeyboardInterrupt
+[MFLOG|0|2023-12-12T22:32:55.133497Z|runtime|cf7dd9db-9742-412b-8a5f-83ca1ca05803]Task failed.

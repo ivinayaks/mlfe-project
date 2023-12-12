@@ -1,0 +1,33 @@
+[MFLOG|0|2023-12-12T22:32:53.315794Z|runtime|a869b971-d72d-479a-bf3c-cba5f502341e][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.129645Z|runtime|fac84760-5f72-4f5a-8de7-c0c3cf251804]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.129685Z|runtime|c20fa754-a50e-4358-9c99-82887a8a2f82]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 11, in <module>
+[MFLOG|0|2023-12-12T22:32:55.129718Z|runtime|4c66bf52-efd8-4eab-b01d-f38bbddc4bd2]    from sklearn.model_selection import ParameterGrid
+[MFLOG|0|2023-12-12T22:32:55.129766Z|runtime|17e220b7-0c7c-4a0f-b23f-2cdb6ca87b1b]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/__init__.py", line 83, in <module>
+[MFLOG|0|2023-12-12T22:32:55.129796Z|runtime|283f239f-6f07-4fed-9acd-6b4314d33fa8]    from .base import clone
+[MFLOG|0|2023-12-12T22:32:55.129832Z|runtime|12b2c96b-2c7c-49ff-ab6f-1065a35eb9fb]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/base.py", line 19, in <module>
+[MFLOG|0|2023-12-12T22:32:55.129861Z|runtime|b9fd7e42-939b-4ee1-a913-29d2b85519c9]    from .utils import _IS_32BIT
+[MFLOG|0|2023-12-12T22:32:55.129889Z|runtime|3e968121-1482-467c-81ea-f0f7e0efbba3]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/__init__.py", line 22, in <module>
+[MFLOG|0|2023-12-12T22:32:55.129917Z|runtime|ec054816-931a-4156-a96b-d509b7c89abf]    from ._param_validation import Interval, validate_params
+[MFLOG|0|2023-12-12T22:32:55.129945Z|runtime|8cfc4e04-d84f-4bb5-9c2a-0064e7acee03]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 15, in <module>
+[MFLOG|0|2023-12-12T22:32:55.129973Z|runtime|340a4ca3-6cd3-407c-8db7-c4ebb127faf2]    from .validation import _is_arraylike_not_scalar
+[MFLOG|0|2023-12-12T22:32:55.130001Z|runtime|dc4bfed1-4c08-4e9c-8376-09d37a012ee3]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/validation.py", line 25, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130028Z|runtime|e4684b23-ced3-4f08-8318-50e551a5e04a]    from ..utils._array_api import _asarray_with_order, _is_numpy_namespace, get_namespace
+[MFLOG|0|2023-12-12T22:32:55.130056Z|runtime|0edbfa5d-f848-45dd-9676-96fa0417d566]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_array_api.py", line 9, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130084Z|runtime|e073fe2a-f64f-4f4c-9fee-b5851f9b5219]    from .fixes import parse_version
+[MFLOG|0|2023-12-12T22:32:55.130112Z|runtime|48169e08-40bb-4be3-af18-5906d08f3a2f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/fixes.py", line 19, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130139Z|runtime|1f50d720-65f7-4690-be1a-9d943dca280c]    import scipy.stats
+[MFLOG|0|2023-12-12T22:32:55.130167Z|runtime|cec38d11-8aae-43ca-b825-5e1f8009ce08]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/stats/__init__.py", line 608, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130194Z|runtime|ca4d8c0a-0bd0-4716-92c7-4176e8578ce7]    from ._stats_py import *
+[MFLOG|0|2023-12-12T22:32:55.130223Z|runtime|371902c2-4b33-4937-9760-e0721a9e41b3]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/stats/_stats_py.py", line 46, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130252Z|runtime|66a0ad30-1df7-446a-bd25-c8456ed5ee88]    from . import distributions
+[MFLOG|0|2023-12-12T22:32:55.130280Z|runtime|8da098e5-0dc4-433d-ba5f-74c2c277b696]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/stats/distributions.py", line 11, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130308Z|runtime|6e0deb87-15c9-494e-8dcc-025b30eb3473]    from . import _discrete_distns
+[MFLOG|0|2023-12-12T22:32:55.130336Z|runtime|c48053ca-8591-4172-b28d-3234fa11c025]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/stats/_discrete_distns.py", line 10, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130364Z|runtime|1880af7f-39ec-483a-ab4e-cb04d0deb4e3]    from scipy.interpolate import interp1d
+[MFLOG|0|2023-12-12T22:32:55.130392Z|runtime|1d217e17-5453-4eb6-a1fa-31ea0422102c]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/interpolate/__init__.py", line 167, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130421Z|runtime|b6679d66-1646-466b-a114-32a63759f312]    from ._interpolate import *
+[MFLOG|0|2023-12-12T22:32:55.130448Z|runtime|f1f2ca34-a849-4afb-ac2e-86f99510c549]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/interpolate/_interpolate.py", line 16, in <module>
+[MFLOG|0|2023-12-12T22:32:55.130476Z|runtime|565dbd29-5e72-421e-abdb-bdde74102bfe]    from .interpnd import _ndim_coords_from_arrays
+[MFLOG|0|2023-12-12T22:32:55.130504Z|runtime|7ffa27a7-44ef-43f2-971d-7541e0ebd969]  File "<frozen importlib._bootstrap>", line 405, in parent
+[MFLOG|0|2023-12-12T22:32:55.130532Z|runtime|c37bc633-0462-4d63-98e3-d40dcfc9b9ed]KeyboardInterrupt
+[MFLOG|0|2023-12-12T22:32:55.130701Z|runtime|bc5f6117-2cd2-4150-96f8-a1237ed44ab0]Task failed.

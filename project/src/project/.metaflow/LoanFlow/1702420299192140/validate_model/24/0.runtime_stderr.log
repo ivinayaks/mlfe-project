@@ -1,0 +1,28 @@
+[MFLOG|0|2023-12-12T22:32:53.315220Z|runtime|9c7c53b0-2b0e-4d9e-9f32-221b7c71ef24][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.126200Z|runtime|67539ce3-7bfa-40f3-adfc-58cdebe81333]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.126246Z|runtime|a55ecc66-ed94-406d-b32b-1b35d57ce1d3]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 11, in <module>
+[MFLOG|0|2023-12-12T22:32:55.126290Z|runtime|cbe8429b-b414-49fd-8af0-8e0534dc790a]    from sklearn.model_selection import ParameterGrid
+[MFLOG|0|2023-12-12T22:32:55.126578Z|runtime|b4917303-7a83-4c6c-981d-1dec7cb8b9f7]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/model_selection/__init__.py", line 4, in <module>
+[MFLOG|0|2023-12-12T22:32:55.126671Z|runtime|efb65a5e-0ca9-47fb-a98d-7691cb65e656]    from ._search import GridSearchCV, ParameterGrid, ParameterSampler, RandomizedSearchCV
+[MFLOG|0|2023-12-12T22:32:55.126718Z|runtime|d511b44c-c9d0-4e10-b1cd-705fad3c981a]  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+[MFLOG|0|2023-12-12T22:32:55.126752Z|runtime|63bba4ad-b076-4ac9-b23f-1e9b56439fb6]  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+[MFLOG|0|2023-12-12T22:32:55.126783Z|runtime|6a395f2f-c35c-47a8-b6d5-eea01396221c]  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+[MFLOG|0|2023-12-12T22:32:55.126813Z|runtime|57e4dc85-6c4b-4faf-a786-d33f0f7b347f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/monkey_patching.py", line 82, in exec_module
+[MFLOG|0|2023-12-12T22:32:55.126843Z|runtime|ab59261f-ed11-4ede-b378-bef8ff2091f2]    self.loader.exec_module(module)
+[MFLOG|0|2023-12-12T22:32:55.126874Z|runtime|f4c7f210-931c-4e67-8ac5-fe85dd2daee3]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/model_selection/_search.py", line 1425, in <module>
+[MFLOG|0|2023-12-12T22:32:55.126904Z|runtime|a41ffe59-4489-4f82-ade7-ae3b7dc73e3c]    class RandomizedSearchCV(BaseSearchCV):
+[MFLOG|0|2023-12-12T22:32:55.126933Z|runtime|55748a39-18d3-4429-8736-56a739f11968]  File "<frozen abc>", line 106, in __new__
+[MFLOG|0|2023-12-12T22:32:55.126961Z|runtime|21f285bf-bd5a-44bf-ab78-ab0b4780d02a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_metadata_requests.py", line 1121, in __init_subclass__
+[MFLOG|0|2023-12-12T22:32:55.126991Z|runtime|6b062bdd-e10c-4472-946d-80e3d8e5584a]    requests = cls._get_default_requests()
+[MFLOG|0|2023-12-12T22:32:55.127022Z|runtime|3e507065-80a4-42a7-8cad-5693737e74bc]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.127051Z|runtime|ca278c36-db8d-4842-92c8-197de8142d83]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_metadata_requests.py", line 1193, in _get_default_requests
+[MFLOG|0|2023-12-12T22:32:55.127080Z|runtime|59bfb7b2-7b46-4e34-9e21-75b99822aab1]    cls._build_request_for_signature(router=requests, method=method),
+[MFLOG|0|2023-12-12T22:32:55.127108Z|runtime|b67c5eec-8a9b-48b1-8b28-16b86f0f561a]    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.127136Z|runtime|744c47f9-3bed-4128-a175-b4ea77ffa6ad]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_metadata_requests.py", line 1167, in _build_request_for_signature
+[MFLOG|0|2023-12-12T22:32:55.127165Z|runtime|24242044-8c40-459b-9836-e445270c6f94]    params = list(inspect.signature(getattr(cls, method)).parameters.items())[1:]
+[MFLOG|0|2023-12-12T22:32:55.127193Z|runtime|8420ed14-f04b-4a0f-a815-946b1cc8f715]                                    ^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.127221Z|runtime|a3c2ede6-8808-4fd1-ab6b-32a1d1db3a51]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/_available_if.py", line 26, in __get__
+[MFLOG|0|2023-12-12T22:32:55.127249Z|runtime|f48c0e0f-20df-4343-a885-de2bcf11931c]    f"This {repr(owner.__name__)} has no attribute {repr(self.attribute_name)}"
+[MFLOG|0|2023-12-12T22:32:55.127276Z|runtime|98b8b6ab-cc8a-4170-8661-f327860bc2dd]                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.127304Z|runtime|df0a6955-b4fe-4aac-8b44-073be1de025d]KeyboardInterrupt
+[MFLOG|0|2023-12-12T22:32:55.127522Z|runtime|5a856432-8d40-4674-a1ed-e4705c3b429d]Task failed.

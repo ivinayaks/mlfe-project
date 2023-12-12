@@ -1,0 +1,20 @@
+[MFLOG|0|2023-12-12T22:32:53.315862Z|runtime|53928e17-0b1d-4538-a8a6-2547236d159a][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.134292Z|runtime|dc4533cd-bd6e-4ef9-b027-647d946883ab]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.134334Z|runtime|b3a26068-b56a-42fa-a288-2bcd7661d317]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 11, in <module>
+[MFLOG|0|2023-12-12T22:32:55.134368Z|runtime|51715c78-cde0-41ce-8c62-aaa13342009d]    from sklearn.model_selection import ParameterGrid
+[MFLOG|0|2023-12-12T22:32:55.134402Z|runtime|8a5aa48b-29b5-4b1e-8ddd-ead41c89f3ef]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/__init__.py", line 83, in <module>
+[MFLOG|0|2023-12-12T22:32:55.135046Z|runtime|7a804899-2183-4b2a-8956-7f05674d51f8]    from .base import clone
+[MFLOG|0|2023-12-12T22:32:55.135086Z|runtime|1da2a0f4-04f1-41f7-a934-9cbdc1c5a483]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/base.py", line 19, in <module>
+[MFLOG|0|2023-12-12T22:32:55.135116Z|runtime|d22d832f-6fb6-40f7-b638-f4c786674755]    from .utils import _IS_32BIT
+[MFLOG|0|2023-12-12T22:32:55.135146Z|runtime|17b90518-78e0-4d84-a386-9f5aa8841008]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/sklearn/utils/__init__.py", line 15, in <module>
+[MFLOG|0|2023-12-12T22:32:55.135176Z|runtime|9ff688de-27ee-46a5-87ea-7c1a3cf1c4ae]    from scipy.sparse import issparse
+[MFLOG|0|2023-12-12T22:32:55.135204Z|runtime|f484a050-c3ed-4c88-9eb5-47a1f8a189b4]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/sparse/__init__.py", line 287, in <module>
+[MFLOG|0|2023-12-12T22:32:55.135233Z|runtime|ebb3384d-677b-4252-b2eb-da247f8c14bf]    from . import csgraph
+[MFLOG|0|2023-12-12T22:32:55.135261Z|runtime|8020feca-0487-4797-a1d3-bb5db6512e83]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/sparse/csgraph/__init__.py", line 186, in <module>
+[MFLOG|0|2023-12-12T22:32:55.135289Z|runtime|9ed43786-ad58-4795-beb0-e945e162ee19]    from ._shortest_path import (
+[MFLOG|0|2023-12-12T22:32:55.135318Z|runtime|e2e3efeb-6c90-460e-a8dc-81462c708d2b]  File "_shortest_path.pyx", line 18, in init scipy.sparse.csgraph._shortest_path
+[MFLOG|0|2023-12-12T22:32:55.135346Z|runtime|766773d7-f78e-40c7-82df-0a691b607197]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/scipy/sparse/csgraph/_validation.py", line 3, in <module>
+[MFLOG|0|2023-12-12T22:32:55.135374Z|runtime|b4d645d1-b41b-4254-9960-7b11fff842c4]    from ._tools import csgraph_to_dense, csgraph_from_dense,\
+[MFLOG|0|2023-12-12T22:32:55.135404Z|runtime|c1723a0b-9fa1-44ee-805e-7b2e617c68d4]  File "<frozen importlib._bootstrap>", line 405, in parent
+[MFLOG|0|2023-12-12T22:32:55.135437Z|runtime|e06167c9-60c2-4423-bd1c-408b60d502d0]KeyboardInterrupt
+[MFLOG|0|2023-12-12T22:32:55.135614Z|runtime|0e9eb83e-2ac4-4227-859e-b8782499b675]Task failed.

@@ -1,0 +1,47 @@
+[MFLOG|0|2023-12-12T22:32:53.316063Z|runtime|9779b1d5-ee84-4b0b-b2e6-3fbe18bab9ec][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.143949Z|runtime|7abcd50a-1c73-4929-ac5e-ba2c1e5108da]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.143989Z|runtime|230cdd76-d82e-4cd6-a319-f1f93aa5f689]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 9, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144021Z|runtime|6ab0ca9d-5282-4caa-ac6d-53fc772aa728]    from comet_ml import Experiment
+[MFLOG|0|2023-12-12T22:32:55.144051Z|runtime|f3cc267c-9a94-45fc-96e7-e6fcb84b36d2]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/__init__.py", line 25, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144081Z|runtime|71a12ae1-217b-41f6-958e-1c4e5b66d3ba]    from ._online import ExistingExperiment, Experiment
+[MFLOG|0|2023-12-12T22:32:55.144110Z|runtime|7ac52da4-6429-4646-832f-909bd434590e]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/_online.py", line 32, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144139Z|runtime|14060469-521a-4e63-9468-5b5b9399df9d]    from .artifacts import (
+[MFLOG|0|2023-12-12T22:32:55.144168Z|runtime|44c6e233-f7cf-4263-a741-49efe795312a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/artifacts.py", line 30, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144197Z|runtime|66ff0d93-8551-42dc-976d-0fd82d832b2d]    from .api import APIExperiment
+[MFLOG|0|2023-12-12T22:32:55.144225Z|runtime|47bfc1b9-637a-48b9-a3cd-e7d856c86230]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/api.py", line 39, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144253Z|runtime|084d541e-ca69-4162-b4c2-b7672679c57c]    from .experiment import CommonExperiment
+[MFLOG|0|2023-12-12T22:32:55.144281Z|runtime|13498784-1aca-45f7-9181-fd5ebfa5d474]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/experiment.py", line 96, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144309Z|runtime|6a3b9035-a3d6-4856-8ef9-27b0d3296759]    from .console import get_std_logger
+[MFLOG|0|2023-12-12T22:32:55.144337Z|runtime|585999ad-b490-45ec-b77e-950c75ef776b]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/console.py", line 41, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144365Z|runtime|5784d492-4ab0-4d48-97a2-fd3129406640]    import ipykernel  # noqa
+[MFLOG|0|2023-12-12T22:32:55.144393Z|runtime|801f2445-d2bf-4397-be74-c9021fe27cc5]    ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.144421Z|runtime|923ea756-8c5e-4a55-8c2e-ead89a728fd4]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/ipykernel/__init__.py", line 5, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144449Z|runtime|ba5e882d-7d33-4b64-aee7-6cc16417c2c3]    from .connect import *  # noqa
+[MFLOG|0|2023-12-12T22:32:55.144477Z|runtime|382ad7e9-a81d-43cd-93a7-724be83d86ec]    ^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.144504Z|runtime|81ef5a9e-7dd0-4763-9f64-80f60a413717]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/ipykernel/connect.py", line 12, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144533Z|runtime|12061e4d-e604-41b2-8b5f-af0daf62ae91]    import jupyter_client
+[MFLOG|0|2023-12-12T22:32:55.144560Z|runtime|1d67973b-26d3-451a-8315-6cbd55f3e093]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/jupyter_client/__init__.py", line 3, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144587Z|runtime|03e8ca64-f8fc-4986-94de-445e9143ca73]    from .asynchronous import AsyncKernelClient
+[MFLOG|0|2023-12-12T22:32:55.144615Z|runtime|d21fda3c-cb68-4325-8c38-0d089d982a5a]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/jupyter_client/asynchronous/__init__.py", line 1, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144643Z|runtime|528a0549-9a29-4838-9209-8645b80b58d3]    from .client import AsyncKernelClient  # noqa
+[MFLOG|0|2023-12-12T22:32:55.144670Z|runtime|1e5892a1-63f4-49cf-a858-377eec12bd0f]    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.144698Z|runtime|4d1fac87-d9ec-4104-ab20-ba5ee18f2cd4]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/jupyter_client/asynchronous/client.py", line 11, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144725Z|runtime|bf65e275-5166-42f5-b12d-5143287d6770]    from ..channels import AsyncZMQSocketChannel, HBChannel
+[MFLOG|0|2023-12-12T22:32:55.144753Z|runtime|3c554f51-ffe3-4301-9c68-6618c3e0ab98]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/jupyter_client/channels.py", line 16, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144781Z|runtime|50f1b0c3-9ce0-49a4-bc9a-c7c3db739961]    from .session import Session
+[MFLOG|0|2023-12-12T22:32:55.144808Z|runtime|27f5dbb4-7061-4ce8-96d9-85c6b6b19d32]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/jupyter_client/session.py", line 31, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144835Z|runtime|88cf67c4-6254-4b6e-898d-b5d05779c15b]    from tornado.ioloop import IOLoop
+[MFLOG|0|2023-12-12T22:32:55.144862Z|runtime|9dd14e1e-ac3d-4848-b23d-7415af9b8e9d]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/tornado/ioloop.py", line 39, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144890Z|runtime|69e0361c-3853-4e70-a45d-868df52d3ad9]    from tornado.concurrent import (
+[MFLOG|0|2023-12-12T22:32:55.144917Z|runtime|25edab96-e62f-4617-9afb-da9289fc5d6d]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/tornado/concurrent.py", line 34, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144944Z|runtime|e9c31a27-bd9b-43c8-8073-8b190e5ef0e5]    from tornado.log import app_log
+[MFLOG|0|2023-12-12T22:32:55.144971Z|runtime|9f37ec93-add3-4d21-9a18-61199eaabc45]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/tornado/log.py", line 34, in <module>
+[MFLOG|0|2023-12-12T22:32:55.144998Z|runtime|c0438a36-dd75-4ab2-8498-2456105aa99f]    from tornado.escape import _unicode
+[MFLOG|0|2023-12-12T22:32:55.145026Z|runtime|6f468b07-2a7c-40b5-8938-fe91afacde50]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/tornado/escape.py", line 402, in <module>
+[MFLOG|0|2023-12-12T22:32:55.145053Z|runtime|ce215713-0d0e-4c8c-bda3-1f5cf3783d53]    _HTML_UNICODE_MAP = _build_unicode_map()
+[MFLOG|0|2023-12-12T22:32:55.145081Z|runtime|641fa091-079f-4c63-a334-c6bae31b24a0]                        ^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.145108Z|runtime|8e415c88-1a28-4d1f-b509-d46aaff51bdb]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/tornado/escape.py", line 397, in _build_unicode_map
+[MFLOG|0|2023-12-12T22:32:55.145135Z|runtime|f308f319-08ee-4339-a613-92d272588292]    for name, value in html.entities.name2codepoint.items():
+[MFLOG|0|2023-12-12T22:32:55.145163Z|runtime|50427037-4e97-417b-a902-4ccd28d18b90]                       ^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.145191Z|runtime|adcb5fef-2dbb-4f6d-8e24-a5eaaef067fa]AttributeError: module 'html' has no attribute 'entities'
+[MFLOG|0|2023-12-12T22:32:55.145331Z|runtime|57356145-751a-48a5-949f-1aa8ff936118]Task failed.

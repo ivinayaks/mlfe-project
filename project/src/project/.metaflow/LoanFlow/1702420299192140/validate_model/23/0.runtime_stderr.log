@@ -1,0 +1,32 @@
+[MFLOG|0|2023-12-12T22:32:53.315636Z|runtime|27d05c1c-bad2-4c63-9745-d133de7d6db9][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.124163Z|runtime|0196c1d9-49ad-41f9-97af-287d107d5959]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.124306Z|runtime|9ba6cd10-9634-4458-8cf0-b3f00b74e623]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 12, in <module>
+[MFLOG|0|2023-12-12T22:32:55.124362Z|runtime|d37994b0-8b13-42e0-a798-b3afc7bc9bba]    import matplotlib.pyplot as plt
+[MFLOG|0|2023-12-12T22:32:55.124422Z|runtime|e15e6b83-72df-49d0-8738-89368576d1cf]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/pyplot.py", line 61, in <module>
+[MFLOG|0|2023-12-12T22:32:55.124469Z|runtime|dfc91933-2367-434d-b69f-e1e3b2f70b9d]    from matplotlib.figure import Figure, FigureBase, figaspect
+[MFLOG|0|2023-12-12T22:32:55.124506Z|runtime|1dc03e68-e469-4979-bdc1-a18e76e3ea04]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/figure.py", line 43, in <module>
+[MFLOG|0|2023-12-12T22:32:55.124540Z|runtime|d76ef120-ee9e-4ec8-a607-9332f5f5b2c6]    from matplotlib import _blocking_input, backend_bases, _docstring, projections
+[MFLOG|0|2023-12-12T22:32:55.124571Z|runtime|793cd2d9-4ac8-4b37-b544-c38560b21042]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/projections/__init__.py", line 55, in <module>
+[MFLOG|0|2023-12-12T22:32:55.124600Z|runtime|b38eb410-dbfe-49f4-916d-38384610c2c1]    from .. import axes, _docstring
+[MFLOG|0|2023-12-12T22:32:55.124632Z|runtime|1696370f-dc23-44d6-836b-bf155ff2cc9f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/axes/__init__.py", line 1, in <module>
+[MFLOG|0|2023-12-12T22:32:55.124667Z|runtime|deb52fee-04fe-42f3-bb62-eeb8aea04139]    from . import _base
+[MFLOG|0|2023-12-12T22:32:55.124695Z|runtime|a7389db0-1b1f-420a-9313-90b3034f8168]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/axes/_base.py", line 14, in <module>
+[MFLOG|0|2023-12-12T22:32:55.124724Z|runtime|6b91ab18-1363-4e86-9554-13a5e2a44f39]    from matplotlib import _api, cbook, _docstring, offsetbox
+[MFLOG|0|2023-12-12T22:32:55.124759Z|runtime|8c303a73-856d-46f7-971f-7fece493410b]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/offsetbox.py", line 208, in <module>
+[MFLOG|0|2023-12-12T22:32:55.124789Z|runtime|e33e812a-a64a-46ac-b8d9-3bf2b5538b79]    class OffsetBox(martist.Artist):
+[MFLOG|0|2023-12-12T22:32:55.124817Z|runtime|6906c808-063a-4cdc-bcd7-c1a935639517]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/artist.py", line 150, in __init_subclass__
+[MFLOG|0|2023-12-12T22:32:55.124848Z|runtime|99294927-29bb-453e-9d15-e26bb4ef6b84]    cls._update_set_signature_and_docstring()
+[MFLOG|0|2023-12-12T22:32:55.124877Z|runtime|8558de8f-79ed-40b3-b40a-83c2a14a5ab5]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/artist.py", line 178, in _update_set_signature_and_docstring
+[MFLOG|0|2023-12-12T22:32:55.124909Z|runtime|6709ec97-2d65-459b-b38e-6637cb3c07da]    + kwdoc(cls))
+[MFLOG|0|2023-12-12T22:32:55.124938Z|runtime|74281602-db67-4123-9f82-d159a6a00d13]      ^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.124967Z|runtime|3ce727fe-fcfa-4e27-ae38-cd4380e4ad79]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/artist.py", line 1860, in kwdoc
+[MFLOG|0|2023-12-12T22:32:55.124994Z|runtime|9c190eb2-9209-4aa8-b948-6afaa8ed7833]    'Properties:\n' + '\n'.join(ai.pprint_setters(leadingspace=4)))
+[MFLOG|0|2023-12-12T22:32:55.125022Z|runtime|4d93ff72-57a2-497b-b128-259629464873]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.125049Z|runtime|666cd1ef-8225-42b0-a8a7-1e1112e7550d]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/artist.py", line 1621, in pprint_setters
+[MFLOG|0|2023-12-12T22:32:55.125077Z|runtime|de9a8568-5eb2-4257-adfa-9d1f62cecd78]    accepts = self.get_valid_values(prop)
+[MFLOG|0|2023-12-12T22:32:55.125104Z|runtime|5bdbe6a5-3887-4d2f-910e-beb5043a70d1]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.125132Z|runtime|0dfaa206-8c90-4a3b-8e9e-e4e0ad675823]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/matplotlib/artist.py", line 1495, in get_valid_values
+[MFLOG|0|2023-12-12T22:32:55.125160Z|runtime|413084cc-c1bb-47f7-a4f8-c5b49c1bfa02]    match = self._get_valid_values_regex.search(docstring)
+[MFLOG|0|2023-12-12T22:32:55.125187Z|runtime|85ca3966-6804-448e-9abe-0a6a3dbb0772]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.125214Z|runtime|276efe36-513f-4f60-b2be-ca526b9ba439]KeyboardInterrupt
+[MFLOG|0|2023-12-12T22:32:55.125780Z|runtime|d057e2bf-0680-4134-b732-9a577281d9a7]Task failed.

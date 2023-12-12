@@ -1,0 +1,44 @@
+[MFLOG|0|2023-12-12T22:32:53.315309Z|runtime|ece96f5a-9200-49cd-b741-45fd2e8e5fcc][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2023-12-12T22:32:55.127927Z|runtime|122acaf0-36a9-4b98-b2ae-724d075ee4d8]Traceback (most recent call last):
+[MFLOG|0|2023-12-12T22:32:55.127974Z|runtime|3a0557e0-0420-4cf0-8c96-c1ab1deedab4]  File "/Users/devanshjoshi/mlfe-project/project/src/project/loanv3.py", line 9, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128008Z|runtime|f1e37937-ab4e-4980-bf41-03e94ac3d222]    from comet_ml import Experiment
+[MFLOG|0|2023-12-12T22:32:55.128048Z|runtime|906ac9d5-3140-428a-af0b-2d058f954566]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/__init__.py", line 25, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128085Z|runtime|d8a1de7f-afaf-4402-817c-776bfb932f94]    from ._online import ExistingExperiment, Experiment
+[MFLOG|0|2023-12-12T22:32:55.128126Z|runtime|3ae4a4e1-cae7-4af8-8c37-76fb57a14e51]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/_online.py", line 24, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128155Z|runtime|b5c69626-7e84-47a7-a48d-d26033099afa]    from ._error_tracking import _setup_sentry_error_tracker
+[MFLOG|0|2023-12-12T22:32:55.128184Z|runtime|1ec90d6c-311a-455f-b39b-74d7347683d0]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/_error_tracking.py", line 21, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128211Z|runtime|5c3578de-0b97-489e-8346-0ac4c300edf6]    from .env_logging import _get_non_pii_env_details
+[MFLOG|0|2023-12-12T22:32:55.128243Z|runtime|606b4f10-4240-49ff-9506-7f5850df9b6f]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/env_logging.py", line 38, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128271Z|runtime|c607eedc-084c-4a01-83ef-e46065117544]    from .connection import get_backend_address
+[MFLOG|0|2023-12-12T22:32:55.128298Z|runtime|8dda8b61-2579-4814-8291-a9889d514e68]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/connection.py", line 36, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128326Z|runtime|8f7da291-7bdb-4c34-a369-ab0292159d7b]    import comet_ml.api_objects.model
+[MFLOG|0|2023-12-12T22:32:55.128353Z|runtime|cd32cc85-b8f4-4406-b6ed-86ec9f324e0e]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/api_objects/model.py", line 24, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128381Z|runtime|07a421f6-f8cf-4750-b184-9492c91fb5f4]    import comet_ml.config
+[MFLOG|0|2023-12-12T22:32:55.128412Z|runtime|f025622d-be1d-4268-b3f5-cbdeadcd37e0]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/comet_ml/config.py", line 26, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128443Z|runtime|0c6b5ddb-aa1d-415e-a62f-efd095f723b7]    from everett.ext.inifile import ConfigIniEnv
+[MFLOG|0|2023-12-12T22:32:55.128477Z|runtime|bf12eabc-c7ec-4ed9-b860-5c82b62627cd]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/everett/ext/inifile.py", line 17, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128506Z|runtime|8ad2d912-5a69-4e4a-8f5c-c0c69cf3a66f]    from configobj import ConfigObj
+[MFLOG|0|2023-12-12T22:32:55.128535Z|runtime|5256dff6-9d0b-4fe6-b772-c70aa599eb2b]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/configobj/__init__.py", line 1071, in <module>
+[MFLOG|0|2023-12-12T22:32:55.128563Z|runtime|5a46056d-d41d-4792-abe8-d7a4decd5c8f]    class ConfigObj(Section):
+[MFLOG|0|2023-12-12T22:32:55.128591Z|runtime|a22edf64-b0eb-4f6b-b207-7af84a22f234]  File "/Users/devanshjoshi/mlfe-project/project/.venv/lib/python3.11/site-packages/configobj/__init__.py", line 1131, in ConfigObj
+[MFLOG|0|2023-12-12T22:32:55.128619Z|runtime|4271336e-f51f-490f-8aae-c3a075bc0a2c]    _listvalueexp = re.compile(r'''
+[MFLOG|0|2023-12-12T22:32:55.128647Z|runtime|ab4927e4-9164-49e2-b8ef-cca946eafc6e]                    ^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.128675Z|runtime|93277a61-ed9f-40ff-b79b-89afcdf88fff]  File "/Users/devanshjoshi/.rye/py/cpython@3.11.5/install/lib/python3.11/re/__init__.py", line 227, in compile
+[MFLOG|0|2023-12-12T22:32:55.128703Z|runtime|bda7bc70-4d48-4307-9be4-b1870c57a837]    return _compile(pattern, flags)
+[MFLOG|0|2023-12-12T22:32:55.128731Z|runtime|606d8fb3-1d68-4ea2-90e6-36b3197037d0]           ^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.128759Z|runtime|fd0f36e6-685c-4915-aced-5b6853a857c8]  File "/Users/devanshjoshi/.rye/py/cpython@3.11.5/install/lib/python3.11/re/__init__.py", line 294, in _compile
+[MFLOG|0|2023-12-12T22:32:55.128787Z|runtime|a82284c2-a059-45e1-8afa-04cffbfdd017]    p = _compiler.compile(pattern, flags)
+[MFLOG|0|2023-12-12T22:32:55.128814Z|runtime|456cdd5b-b438-45f1-a0c1-67cc5f4fd11f]        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.128842Z|runtime|c9cc9cdc-374c-4c56-8268-4aba2347969d]  File "/Users/devanshjoshi/.rye/py/cpython@3.11.5/install/lib/python3.11/re/_compiler.py", line 743, in compile
+[MFLOG|0|2023-12-12T22:32:55.128870Z|runtime|bb17cbf9-8452-4c17-bb10-bada318941bb]    p = _parser.parse(p, flags)
+[MFLOG|0|2023-12-12T22:32:55.128898Z|runtime|dcf59d2f-7cfa-4d45-bea8-4ab89773f26f]        ^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.128925Z|runtime|e83041eb-a2f2-483e-82d9-3ea1c77aaed8]  File "/Users/devanshjoshi/.rye/py/cpython@3.11.5/install/lib/python3.11/re/_parser.py", line 982, in parse
+[MFLOG|0|2023-12-12T22:32:55.128952Z|runtime|b354e715-5382-4f91-bf99-de950f1a1a09]    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+[MFLOG|0|2023-12-12T22:32:55.128980Z|runtime|969ac0fe-3484-47aa-a5e5-0fb780573cb1]        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.129008Z|runtime|55c8ef3d-1c03-44d5-a837-6d0aa5dc0e47]  File "/Users/devanshjoshi/.rye/py/cpython@3.11.5/install/lib/python3.11/re/_parser.py", line 457, in _parse_sub
+[MFLOG|0|2023-12-12T22:32:55.129035Z|runtime|571befe3-9d38-43a2-9e52-f1b6f67d321c]    itemsappend(_parse(source, state, verbose, nested + 1,
+[MFLOG|0|2023-12-12T22:32:55.129063Z|runtime|20d9c359-58da-4e07-b70c-b36217317ab1]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-12-12T22:32:55.129091Z|runtime|139d2dc1-3302-4716-ae77-67618045fc15]  File "/Users/devanshjoshi/.rye/py/cpython@3.11.5/install/lib/python3.11/re/_parser.py", line 532, in _parse
+[MFLOG|0|2023-12-12T22:32:55.129118Z|runtime|2202624f-3a7a-452a-9212-7f88cbc58bc4]    continue
+[MFLOG|0|2023-12-12T22:32:55.129146Z|runtime|05abc4d4-bbbf-4627-b263-b5efb841a9dd]KeyboardInterrupt
+[MFLOG|0|2023-12-12T22:32:55.129315Z|runtime|3b0e9274-852d-4087-b077-f2ec230ab3a0]Task failed.

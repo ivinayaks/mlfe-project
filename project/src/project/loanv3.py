@@ -114,7 +114,8 @@ class LoanFlow(FlowSpec):
         plt.bar(term_counts.index,term_counts.values)
         plt.show()
         le_term=LabelEncoder()
-        self.df['term']=le_term.fit_transform(self.df['term'])
+        le_term.fit(self.df['term'])
+        self.df['term']=le_term.transform(self.df['term'])
         term_counts=self.df['term'].value_counts()
         print(term_counts)
         pickled_encoders.append(le_term)
@@ -129,7 +130,8 @@ class LoanFlow(FlowSpec):
         plt.bar(grade_counts.index,grade_counts.values)
         plt.show()
         oe_grade= OneHotEncoder()
-        onehot = oe_grade.fit_transform(self.df[['grade']])
+        oe_grade.fit(self.df[['grade']])
+        onehot = oe_grade.transform(self.df[['grade']])
         feature_names = oe_grade.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
@@ -174,7 +176,8 @@ class LoanFlow(FlowSpec):
         plt.bar(home_counts.index,home_counts.values)
         plt.show()
         oe_home= OneHotEncoder()
-        onehot = oe_home.fit_transform(self.df[['home']])
+        oe_home.fit(self.df[['home']])
+        onehot = oe_home.transform(self.df[['home']])
         feature_names = oe_home.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
@@ -192,7 +195,8 @@ class LoanFlow(FlowSpec):
         plt.bar(verified_counts.index,verified_counts.values)
         plt.show()
         oe_verified= OneHotEncoder()
-        onehot = oe_verified.fit_transform(self.df[['verified']])
+        oe_verified.fit(self.df[['verified']])
+        onehot = oe_verified.transform(self.df[['verified']])
         feature_names = oe_verified.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
@@ -229,7 +233,8 @@ class LoanFlow(FlowSpec):
         plt.bar(counts.index,counts.values)
         plt.show()
         oe_reason= OneHotEncoder()
-        onehot = oe_reason.fit_transform(self.df[['reason']])
+        oe_reason.fit(self.df[['reason']])
+        onehot = oe_reason.transform(self.df[['reason']])
         feature_names = oe_reason.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
@@ -244,7 +249,8 @@ class LoanFlow(FlowSpec):
         counts=self.df['state'].value_counts()
         print(counts)
         oe_state= OneHotEncoder()
-        onehot = oe_state.fit_transform(self.df[['state']])
+        oe_state.fit(self.df[['state']])
+        onehot = oe_state.transform(self.df[['state']])
         feature_names = oe_state.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
@@ -255,8 +261,6 @@ class LoanFlow(FlowSpec):
 
         with open(pickle_path,'wb') as file:
             pickle.dump(pickled_encoders,file)
-
-      
 
         nan_columns=[]
         for col in num_columns:
