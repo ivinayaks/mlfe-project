@@ -25,35 +25,36 @@ def get_prediction(data):
 st.title("Loan Prediction App")
 
 # Creating input fields for each feature
-amount = st.number_input("Loan Amount in USD", min_value=0)
-term = st.selectbox("Loan Term", ["36 months", "60 months"])
-rate = st.number_input("Interest Rate as a decimal", min_value=0.0, max_value=1.0, step=0.01)
-payment = st.number_input("Monthly Payment Amount", min_value=0.0)
-grade = st.selectbox("Grade of loan", ["A", "B", "C", "D", "E", "F", "G"])
+amount = st.number_input("Loan Amount in USD", min_value=0, value = 7000)
+term = st.selectbox("Loan Term", ["36 months", "60 months"], index = 0)
+rate = st.number_input("Interest Rate as a decimal", min_value=0.0, max_value=1.0, step=0.01, value = 0.12)
+payment = st.number_input("Monthly Payment Amount", min_value=0.0 , value = 234.15
+                          )
+grade = st.selectbox("Grade of loan", ["A", "B", "C", "D", "E", "F", "G"], index = 0)
 length = st.selectbox("Length of Employment", ["< 1 year", "1 year", "2 years", "3 years", "4 years", "5 years",
-                                               "6 years", "7 years", "8 years", "9 years", "10+ years"])
-home = st.selectbox("Home Ownership", ["RENT", "OWN", "MORTGAGE"])
-income = st.number_input("Annual Income", min_value=0)
-verified = st.selectbox("Verification Status of Annual Income", ["Not Verified", "Source Verified", "Verified"])
-reason = st.selectbox("Applicant's Purpose for the Loan", ["credit_card", "debt_consolidation", "other", "home_improvement", "car","major_purchase","medical","moving","vacation","house","renewable_energy"])
-state = st.selectbox("State Of Residence", ["CA", "PA", "NY", "TX", "FL", "OH", "WA", "VA", "MN", "NC", "RI", "LA", "WI", "NJ", "AK", "AL", "AR", "AZ", "CO", "CT", "DC", "DE", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "MA", "MD", "ME", "MI", "MO", "MS", "MT", "ND", "NE", "NH", "NM", "NV", "OK", "OR", "SC", "SD", "TN", "UT", "VT", "WV", "WY"])
-debtIncRat = st.number_input("Monthly Non-Mortgage Debt Payment to Monthly Income Ratio", min_value=0.0, step=0.01)
-delinq2yr = st.number_input("Number of 30+ day late payments in last two year", min_value=0)
-inq6mth = st.number_input("Credit Checks in Last 6 Months", min_value=0)
-openAcc = st.number_input("Number of Open Credit Lines", min_value=0)
-pubRec = st.number_input("Number of Derogatory Public Records such as Bankruptcy", min_value=0)
-revolRatio = st.number_input("Revolving Line Utilization Rate", min_value=0.0, max_value=1.0, step=0.01)
-totalAcc = st.number_input("Total Number of Credit Lines in File", min_value=0)
-totalBal = st.number_input("Total Current Balance of All Credit Accounts", min_value=0.0)
-totalRevLim = st.number_input("Total Revolving Credit Limit", min_value=0.0)
-accOpen24 = st.number_input("Accounts Opened in Last 24 Months", min_value=0)
-avgBal = st.number_input("Average Account Balance", min_value=0.0)
-bcOpen = st.number_input("Total Unused Credit on Credit Card", min_value=0)
-bcRatio = st.number_input("Ratio of total credit card balance to total credit card lmits", min_value=0.0, max_value=100.0, step=0.01)
-totalLim = st.number_input("Total Credit Limit", min_value=0.0)
-totalRevBal = st.number_input("Total Credit Balance Except Mortgages", min_value=0.0)
-totalBcLim = st.number_input("Total Credit Limit of Credit Cards", min_value=0.0)
-totalIlLim = st.number_input("Total Credit Limit for Installment Accounts", min_value=0.0)
+                                               "6 years", "7 years", "8 years", "9 years", "10+ years"], index = 10)
+home = st.selectbox("Home Ownership", ["RENT", "OWN", "MORTGAGE"], index = 0)
+income = st.number_input("Annual Income", min_value=0, value = 100000)
+verified = st.selectbox("Verification Status of Annual Income", ["Not Verified", "Source Verified", "Verified"], index = 1)
+reason = st.selectbox("Applicant's Purpose for the Loan", ["credit_card", "debt_consolidation", "other", "home_improvement", "car","major_purchase","medical","moving","vacation","house","renewable_energy"], index = 0)
+state = st.selectbox("State Of Residence", ["CA", "PA", "NY", "TX", "FL", "OH", "WA", "VA", "MN", "NC", "RI", "LA", "WI", "NJ", "AK", "AL", "AR", "AZ", "CO", "CT", "DC", "DE", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "MA", "MD", "ME", "MI", "MO", "MS", "MT", "ND", "NE", "NH", "NM", "NV", "OK", "OR", "SC", "SD", "TN", "UT", "VT", "WV", "WY"], index =0)
+debtIncRat = st.number_input("Monthly Non-Mortgage Debt Payment to Monthly Income Ratio", min_value=0.0, step=0.01, value = 9.01)
+delinq2yr = st.number_input("Number of 30+ day late payments in last two year", min_value=0.0 , max_value=10.0, step=1.0, value=1.0)
+inq6mth = st.number_input("Credit Checks in Last 6 Months", min_value=0.0, max_value=10.0, step=1.0, value = 0.0)
+openAcc = st.number_input("Number of Open Credit Lines", min_value=0, max_value=100, step = 1, value = 15)
+pubRec = st.number_input("Number of Derogatory Public Records such as Bankruptcy", min_value=0.0, max_value=10.0, step=1.0, value = 1.0)
+revolRatio = st.number_input("Revolving Line Utilization Rate", min_value=0.0, max_value=1.0, step=0.01, value = 0.46)
+totalAcc = st.number_input("Total Number of Credit Lines in File", min_value=0, max_value=1000, step=1, value = 38)
+totalBal = st.number_input("Total Current Balance of All Credit Accounts", min_value=0.0 , max_value=10000000.0, step=0.1, value = 503941.0)
+totalRevLim = st.number_input("Total Revolving Credit Limit", min_value=0.0 , max_value=10000000.0, step=0.1,value = 28000.0)
+accOpen24 = st.number_input("Accounts Opened in Last 24 Months", min_value=0 , max_value=100, step=1, value = 9)
+avgBal = st.number_input("Average Account Balance", min_value=0.0 , max_value=10000000.0, step=0.1, value = 33596.0)
+bcOpen = st.number_input("Total Unused Credit on Credit Card", min_value=0.0 ,max_value=10000000.0, step=0.1, value = 2064.0)
+bcRatio = st.number_input("Ratio of total credit card balance to total credit card lmits", min_value=0.0, max_value=100.0, step=0.01, value = 82.4)
+totalLim = st.number_input("Total Credit Limit", min_value=0.0 , max_value=10000000.0, step=0.1,value = 534490.0)
+totalRevBal = st.number_input("Total Credit Balance Except Mortgages", min_value=0.0 , max_value=10000000.0, step=0.1,value = 31295.0)
+totalBcLim = st.number_input("Total Credit Limit of Credit Cards", min_value=0.0 , max_value=10000000.0, step=0.1,value = 11700.0 )
+totalIlLim = st.number_input("Total Credit Limit for Installment Accounts", min_value=0.0 ,max_value=10000000.0, step=0.1, value = 19960.0)
 
 # Button to make prediction
 if st.button('Predict Loan Status'):
@@ -95,3 +96,6 @@ if st.button('Predict Loan Status'):
 
     # Display the result
     st.write(f"Prediction: {prediction['prediction']}")
+
+
+
