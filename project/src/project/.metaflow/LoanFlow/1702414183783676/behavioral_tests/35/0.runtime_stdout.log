@@ -1,0 +1,177 @@
+[MFLOG|0|2023-12-12T20:51:30.305073Z|runtime|dc1a9df9-da7a-43f3-ab42-460908fb7896]
+[MFLOG|0|2023-12-12T20:51:30.313901Z|runtime|fcc42b78-e0d0-49cb-b945-8304605a8ad3]--- Qualitative Check ---
+[MFLOG|0|2023-12-12T20:51:30.313993Z|runtime|11a6dbef-2eb4-4e7d-832c-6183028c789a]Test Sample 633:
+[MFLOG|0|2023-12-12T20:51:30.314647Z|runtime|057e8dce-94e7-4b33-bf21-3bf762d12438]Features: amount      6800.0
+[MFLOG|0|2023-12-12T20:51:30.572951Z|runtime|4c1c0956-7fd0-4a17-8434-d2a38c6b8d68]term             0
+[MFLOG|0|2023-12-12T20:51:30.573070Z|runtime|79a9e22c-8e17-45c2-9579-182c60884f0b]rate          0.16
+[MFLOG|0|2023-12-12T20:51:30.573104Z|runtime|67ae1683-be4c-44a7-9861-893a464b6735]payment     240.05
+[MFLOG|0|2023-12-12T20:51:30.573137Z|runtime|3ee10bbe-4607-40e4-a80a-cded7df32ead]length        11.0
+[MFLOG|0|2023-12-12T20:51:30.573167Z|runtime|21adc01a-8eff-411a-b211-f29204e9d813]             ...  
+[MFLOG|0|2023-12-12T20:51:30.573191Z|runtime|76b2027e-95d0-41c5-ace8-6872febc4350]state_VT     False
+[MFLOG|0|2023-12-12T20:51:30.573210Z|runtime|0c7fb170-8c56-47d8-99b6-b8829bad64ca]state_WA     False
+[MFLOG|0|2023-12-12T20:51:30.573229Z|runtime|1a7dd6b4-1f86-43ce-a943-ee90eb8de244]state_WI     False
+[MFLOG|0|2023-12-12T20:51:30.573248Z|runtime|221883de-4795-4d20-8c32-b50051bb75f6]state_WV     False
+[MFLOG|0|2023-12-12T20:51:30.573274Z|runtime|c7ec9955-641a-4305-964b-753de14d16b1]state_WY     False
+[MFLOG|0|2023-12-12T20:51:30.573293Z|runtime|2b178cc2-01be-4b53-9c61-e2dd9c718909]Name: 765, Length: 88, dtype: object
+[MFLOG|0|2023-12-12T20:51:30.573320Z|runtime|6d4b8bcb-be60-4ed3-b0f4-d115451bd14f]Actual Label: 1, Predicted Label: [0]
+[MFLOG|0|2023-12-12T20:51:30.573400Z|runtime|9b8c0f7e-bb8e-4c95-b4a2-c898b946e076]
+[MFLOG|0|2023-12-12T20:51:30.573423Z|runtime|bee8aaf4-7794-4bf7-a5d7-f2b6b271e7f6]Test Sample 2693:
+[MFLOG|0|2023-12-12T20:51:30.573450Z|runtime|1e731301-f111-4b94-91f0-f3d9013746d3]Features: amount      25000.0
+[MFLOG|0|2023-12-12T20:51:30.575221Z|runtime|96e83fd3-cbfe-4647-95b6-e0b53f0a4f4a]term              1
+[MFLOG|0|2023-12-12T20:51:30.575244Z|runtime|b54022b1-d918-4735-abb3-757e2d66b71e]rate           0.13
+[MFLOG|0|2023-12-12T20:51:30.575263Z|runtime|a95e9e27-7053-461f-9422-075f3263d66f]payment      573.06
+[MFLOG|0|2023-12-12T20:51:30.575281Z|runtime|fb93c209-843d-49a0-b160-4f73a7a0e41e]length          6.0
+[MFLOG|0|2023-12-12T20:51:30.575307Z|runtime|63a52bfd-c630-4a4c-ac83-4d9faa978ee5]             ...   
+[MFLOG|0|2023-12-12T20:51:30.575325Z|runtime|9e18a97b-5f6b-479c-9314-c894957f5abf]state_VT      False
+[MFLOG|0|2023-12-12T20:51:30.575343Z|runtime|8b1f1295-c005-47d4-ae4a-5ba53b7ceb67]state_WA      False
+[MFLOG|0|2023-12-12T20:51:30.575361Z|runtime|5179e4bc-fbfe-4822-996c-814f89b0c60f]state_WI      False
+[MFLOG|0|2023-12-12T20:51:30.575378Z|runtime|d0475d99-52df-42bd-89c6-24d2615cd5e9]state_WV      False
+[MFLOG|0|2023-12-12T20:51:30.575396Z|runtime|d6265a69-47cf-4e96-af16-68eddf2d4f31]state_WY      False
+[MFLOG|0|2023-12-12T20:51:30.575414Z|runtime|9016ed47-1153-4f07-b825-431bea2afb35]Name: 49120, Length: 88, dtype: object
+[MFLOG|0|2023-12-12T20:51:30.575434Z|runtime|f6268c02-3e7d-452b-8ac7-bbb714e1fb54]Actual Label: 1, Predicted Label: [0]
+[MFLOG|0|2023-12-12T20:51:30.575452Z|runtime|9e23e56c-ea12-489c-8404-f3f716431595]
+[MFLOG|0|2023-12-12T20:51:30.575470Z|runtime|4aae418c-919f-4360-a6e9-c7e3fdb77fe8]Test Sample 582:
+[MFLOG|0|2023-12-12T20:51:30.575489Z|runtime|45ca9885-bdb3-4b5d-b59d-c7d4b489489b]Features: amount      24000.0
+[MFLOG|0|2023-12-12T20:51:30.577113Z|runtime|6005aa8e-d64b-4d8f-988a-717f9f1e7925]term              0
+[MFLOG|0|2023-12-12T20:51:30.577135Z|runtime|bdd2607e-8fa9-484f-b6ab-e4844fc26c82]rate           0.08
+[MFLOG|0|2023-12-12T20:51:30.577153Z|runtime|7e7806b6-781d-4141-868f-929c1139f196]payment      750.86
+[MFLOG|0|2023-12-12T20:51:30.577171Z|runtime|061d6627-33b7-45fa-a8b7-86cebfdd5da5]length         11.0
+[MFLOG|0|2023-12-12T20:51:30.577189Z|runtime|3992cf20-60f0-478f-818c-1a7fadb08b7d]             ...   
+[MFLOG|0|2023-12-12T20:51:30.577207Z|runtime|bd337668-aef8-47d9-b683-3302bc7f188a]state_VT      False
+[MFLOG|0|2023-12-12T20:51:30.577225Z|runtime|acd5a803-2b83-4249-8824-cd23cc9e24ee]state_WA      False
+[MFLOG|0|2023-12-12T20:51:30.577243Z|runtime|93317bb2-9d98-4f86-be98-c307f3f0d061]state_WI      False
+[MFLOG|0|2023-12-12T20:51:30.577260Z|runtime|9378e651-91a5-4de8-8b91-132400229b88]state_WV      False
+[MFLOG|0|2023-12-12T20:51:30.577278Z|runtime|9f982f1f-0c61-4dbc-8e80-baa429a2eb89]state_WY      False
+[MFLOG|0|2023-12-12T20:51:30.577296Z|runtime|9b1b0d68-5d5f-4c20-bbd0-2474b3f22bbc]Name: 12485, Length: 88, dtype: object
+[MFLOG|0|2023-12-12T20:51:30.577315Z|runtime|18176a84-6056-4b01-8e14-eeae0f26bfe9]Actual Label: 0, Predicted Label: [0]
+[MFLOG|0|2023-12-12T20:51:30.577378Z|runtime|d3d75776-b778-4c7a-8a01-f0dbae6e5264]
+[MFLOG|0|2023-12-12T20:51:30.577435Z|runtime|44cb2300-448f-4e4e-abcc-e8a1c1ef1286]Test Sample 4685:
+[MFLOG|0|2023-12-12T20:51:30.577465Z|runtime|05d03a5a-80b4-4fe3-a5c9-e8c1c2dd48fb]Features: amount      6000.0
+[MFLOG|0|2023-12-12T20:51:30.579179Z|runtime|0dac371f-5cad-4623-8ebb-f896a268b64b]term             0
+[MFLOG|0|2023-12-12T20:51:30.579205Z|runtime|2c3b554d-c5ec-4010-a78e-7bc6a4629bc1]rate          0.13
+[MFLOG|0|2023-12-12T20:51:30.579224Z|runtime|2ab8fe7f-d18a-4dbf-b48a-24226243570f]payment     203.18
+[MFLOG|0|2023-12-12T20:51:30.579243Z|runtime|48322fc2-b6bf-4d90-ae8a-cb4d82def05d]length        11.0
+[MFLOG|0|2023-12-12T20:51:30.579261Z|runtime|89e0e2e8-1aef-460c-84c8-0357171bba4e]             ...  
+[MFLOG|0|2023-12-12T20:51:30.579280Z|runtime|98277e26-299a-4193-9dd2-84d18434cad5]state_VT     False
+[MFLOG|0|2023-12-12T20:51:30.579299Z|runtime|bf8cd22f-a094-414a-beae-3c960143990f]state_WA     False
+[MFLOG|0|2023-12-12T20:51:30.579317Z|runtime|15f9f74f-49f1-45ec-9c27-a9295e988daa]state_WI     False
+[MFLOG|0|2023-12-12T20:51:30.579335Z|runtime|1f1b93d5-5f9e-4695-88f1-2b46e2b95879]state_WV     False
+[MFLOG|0|2023-12-12T20:51:30.579353Z|runtime|61432a8f-b7d4-49c1-a82b-a4fab3a758bb]state_WY     False
+[MFLOG|0|2023-12-12T20:51:30.579370Z|runtime|79aff984-5ba9-423b-8624-e7abee43ea96]Name: 4524, Length: 88, dtype: object
+[MFLOG|0|2023-12-12T20:51:30.579391Z|runtime|79914578-75d8-45ed-827c-70de3ea7623a]Actual Label: 1, Predicted Label: [0]
+[MFLOG|0|2023-12-12T20:51:30.579410Z|runtime|6962d495-9602-4bff-9c23-ad5f73e703a9]
+[MFLOG|0|2023-12-12T20:51:30.579428Z|runtime|cdad055c-553c-4f86-886b-4908018b127a]Test Sample 4982:
+[MFLOG|0|2023-12-12T20:51:30.579448Z|runtime|40ece274-5144-4aa8-b425-4c7225ffdfcc]Features: amount      20000.0
+[MFLOG|0|2023-12-12T20:51:30.581078Z|runtime|d1791160-c929-4f30-aa0a-0315ac9857a6]term              0
+[MFLOG|0|2023-12-12T20:51:30.581101Z|runtime|ec317578-4f6d-474c-9176-ff7e752896f1]rate           0.13
+[MFLOG|0|2023-12-12T20:51:30.581120Z|runtime|71e9c162-bf03-4fab-80ff-d506771fee22]payment       670.9
+[MFLOG|0|2023-12-12T20:51:30.581139Z|runtime|2c79c40c-d78d-4d16-b4e1-ac1a8a1c1a08]length         11.0
+[MFLOG|0|2023-12-12T20:51:30.581157Z|runtime|2ee29274-875a-43a3-ab67-44205f668e30]             ...   
+[MFLOG|0|2023-12-12T20:51:30.581176Z|runtime|78e1b9b1-f2d1-4b0f-96c0-5ffd43ce11fb]state_VT      False
+[MFLOG|0|2023-12-12T20:51:30.581194Z|runtime|056adf41-3ad4-4a0c-876a-20e325acdd02]state_WA      False
+[MFLOG|0|2023-12-12T20:51:30.581212Z|runtime|fcb142fd-c4c7-4f6f-9509-7b355c0d09ed]state_WI      False
+[MFLOG|0|2023-12-12T20:51:30.581230Z|runtime|0f4a2099-61c8-4791-b66f-b43eebd435d7]state_WV      False
+[MFLOG|0|2023-12-12T20:51:30.581248Z|runtime|c4fdf9a6-3b75-4171-88d3-7f0cf00f94eb]state_WY      False
+[MFLOG|0|2023-12-12T20:51:30.581267Z|runtime|06b8fdc4-43fc-4f14-869d-8f1ab15a2349]Name: 25210, Length: 88, dtype: object
+[MFLOG|0|2023-12-12T20:51:30.581287Z|runtime|390fe901-7b67-458f-aaef-96cd2797d39a]Actual Label: 1, Predicted Label: [0]
+[MFLOG|0|2023-12-12T20:51:30.581411Z|runtime|0003c65c-e3d2-4bff-bdf6-d2e28f4704db]
+[MFLOG|0|2023-12-12T20:51:30.581435Z|runtime|9544cdda-c13c-4d0b-a88b-1e901c456b2f]
+[MFLOG|0|2023-12-12T20:51:30.581454Z|runtime|8578e323-d397-41ab-b21a-e6be2839a31e]--- Data Slice Analysis on 'grade' ---
+[MFLOG|0|2023-12-12T20:51:30.581473Z|runtime|47efc334-9e70-4e92-9a4d-5ecbe3e06130]Performance for grade_A:
+[MFLOG|0|2023-12-12T20:51:30.602053Z|runtime|0c516d5f-6172-45e9-9a31-585d8e2481e1]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:30.618967Z|runtime|b709cacc-38ef-4f6c-b352-8eb5e3dd14b3]
+[MFLOG|0|2023-12-12T20:51:30.619062Z|runtime|c0df66cf-2967-4ace-8666-4cbbb8bb379e]           0       0.94      1.00      0.97      1290
+[MFLOG|0|2023-12-12T20:51:30.619088Z|runtime|aa557f78-916f-4837-97d9-6515860ee53f]           1       0.00      0.00      0.00        88
+[MFLOG|0|2023-12-12T20:51:30.619108Z|runtime|1f1c05f2-bcc1-4900-be9f-cf099c13bd01]
+[MFLOG|0|2023-12-12T20:51:30.619127Z|runtime|53959954-e304-4d25-9a9c-ef98da4b1c50]    accuracy                           0.94      1378
+[MFLOG|0|2023-12-12T20:51:30.619146Z|runtime|46f9c766-b4e6-412a-b236-f468e3f7f54f]   macro avg       0.47      0.50      0.48      1378
+[MFLOG|0|2023-12-12T20:51:30.619164Z|runtime|0123eecb-6558-49aa-a8a9-8e7fe6924896]weighted avg       0.88      0.94      0.91      1378
+[MFLOG|0|2023-12-12T20:51:30.619183Z|runtime|88cf3d5e-b7c7-4db9-86a5-5a34acd1e02c]
+[MFLOG|0|2023-12-12T20:51:30.619203Z|runtime|b2865e15-a112-4106-a8e2-0fefa39b8eab]Accuracy: 0.9361393323657474 
+[MFLOG|0|2023-12-12T20:51:30.652656Z|runtime|dc820096-c717-4608-9cbe-1c064fa86f1e]
+[MFLOG|0|2023-12-12T20:51:30.652723Z|runtime|b53794c5-68ce-4674-b61c-d9ede770a7b4]Performance for grade_B:
+[MFLOG|0|2023-12-12T20:51:30.652746Z|runtime|9fccff96-5189-4e48-b72c-83511d90fb7b]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:30.683732Z|runtime|7fe90845-942c-4c9f-acbd-66e3c1d00065]
+[MFLOG|0|2023-12-12T20:51:30.683830Z|runtime|993e114f-3b29-4fa3-ad89-c686f32f571f]           0       0.87      1.00      0.93      1975
+[MFLOG|0|2023-12-12T20:51:30.683853Z|runtime|375cbb84-96e0-43eb-a851-f2505cd923da]           1       1.00      0.00      0.01       286
+[MFLOG|0|2023-12-12T20:51:30.683873Z|runtime|71c2259a-dfa6-4c70-84f1-e54bfc18cc34]
+[MFLOG|0|2023-12-12T20:51:30.683892Z|runtime|0fb00669-98e3-4f9e-a1cc-ba1949ec7698]    accuracy                           0.87      2261
+[MFLOG|0|2023-12-12T20:51:30.683910Z|runtime|9c8fd5b3-1d5e-4aee-b1cf-1818c2ea0c0b]   macro avg       0.94      0.50      0.47      2261
+[MFLOG|0|2023-12-12T20:51:30.683929Z|runtime|2757d8ef-f3bc-4d4a-9104-74da26c7ffa4]weighted avg       0.89      0.87      0.82      2261
+[MFLOG|0|2023-12-12T20:51:30.683947Z|runtime|32ed8007-670b-4498-8fe7-8bbc919b51b6]
+[MFLOG|0|2023-12-12T20:51:30.683966Z|runtime|dd7cd0ed-c193-4307-88c0-0536c73c0674]Accuracy: 0.8739495798319328 
+[MFLOG|0|2023-12-12T20:51:30.720389Z|runtime|a691f243-0d8c-400a-ac1b-27c1822866f8]
+[MFLOG|0|2023-12-12T20:51:30.720607Z|runtime|877c3ed0-39bb-42ee-9958-fdf2f36cbc4d]Performance for grade_C:
+[MFLOG|0|2023-12-12T20:51:30.720653Z|runtime|0c3ea962-64f7-4037-8268-8b8b0e15afa0]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:30.754809Z|runtime|5032b05c-baa2-4898-9f8d-49e44bf5eef7]
+[MFLOG|0|2023-12-12T20:51:30.754895Z|runtime|cc80b7a9-2d46-4b24-b7fe-c44e5f7841fe]           0       0.76      0.99      0.86      1704
+[MFLOG|0|2023-12-12T20:51:30.754920Z|runtime|6a6499e4-2164-4be0-ba06-545038f4a652]           1       0.40      0.02      0.04       531
+[MFLOG|0|2023-12-12T20:51:30.754940Z|runtime|f71383c5-419f-4b01-8d11-1b8363b95d61]
+[MFLOG|0|2023-12-12T20:51:30.754959Z|runtime|0acf3903-531c-4f6e-ac03-630220d70284]    accuracy                           0.76      2235
+[MFLOG|0|2023-12-12T20:51:30.754978Z|runtime|4776aec5-0e91-4d43-87a4-2fb5c3ffc0e6]   macro avg       0.58      0.51      0.45      2235
+[MFLOG|0|2023-12-12T20:51:30.754996Z|runtime|3a11b296-d58c-4d11-b724-9662f82ab052]weighted avg       0.68      0.76      0.67      2235
+[MFLOG|0|2023-12-12T20:51:30.755014Z|runtime|6ddaecc2-489f-460a-93aa-96efaa9eb73f]
+[MFLOG|0|2023-12-12T20:51:30.755035Z|runtime|7d0569e2-a87e-4ee7-a940-4b6f36bf36c7]Accuracy: 0.7597315436241611 
+[MFLOG|0|2023-12-12T20:51:30.779908Z|runtime|5320575a-e053-4f36-adc6-6bc7706b48ec]
+[MFLOG|0|2023-12-12T20:51:30.779985Z|runtime|d63af540-6d2f-405b-a365-2f4de3cc3950]Performance for grade_D:
+[MFLOG|0|2023-12-12T20:51:30.780011Z|runtime|c6df890d-768d-49d2-b773-e6dc9ac18791]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:30.800903Z|runtime|3af2acf9-6208-4886-bbfa-6573cd42e0ad]
+[MFLOG|0|2023-12-12T20:51:30.800988Z|runtime|e8e3b04a-68d8-4820-9086-7efee491ceb6]           0       0.70      0.91      0.79       938
+[MFLOG|0|2023-12-12T20:51:30.801013Z|runtime|d066624f-cf7c-4fff-9da1-30c8397d0e7c]           1       0.43      0.16      0.23       424
+[MFLOG|0|2023-12-12T20:51:30.801033Z|runtime|923c95c0-fd1b-44a6-ad6c-35a524a60d91]
+[MFLOG|0|2023-12-12T20:51:30.801052Z|runtime|0e56acff-617f-4a32-8ae0-3bb3a8e18dbd]    accuracy                           0.67      1362
+[MFLOG|0|2023-12-12T20:51:30.801071Z|runtime|ca4e1442-9b4c-4472-b434-d5ba4777ca60]   macro avg       0.56      0.53      0.51      1362
+[MFLOG|0|2023-12-12T20:51:30.801090Z|runtime|c8a161ca-c658-4f95-a1bb-db1666d93730]weighted avg       0.62      0.67      0.62      1362
+[MFLOG|0|2023-12-12T20:51:30.801108Z|runtime|42e2360d-c3b7-4fa8-b2d7-ad89c95011e2]
+[MFLOG|0|2023-12-12T20:51:30.801128Z|runtime|90815b2b-768e-4337-a695-07165bbfac09]Accuracy: 0.6718061674008811 
+[MFLOG|0|2023-12-12T20:51:30.814782Z|runtime|a682151d-50ae-4aa7-bfb4-bb694b2aff42]
+[MFLOG|0|2023-12-12T20:51:30.814866Z|runtime|1515a748-5361-42c4-9815-e238537043f4]Performance for grade_E:
+[MFLOG|0|2023-12-12T20:51:30.814892Z|runtime|35fa14c6-fdd8-4c8d-a81b-0d9726a3d54a]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:30.827432Z|runtime|c49ebe15-56ea-40d0-8669-d9c66260fc82]
+[MFLOG|0|2023-12-12T20:51:30.827539Z|runtime|e844347d-67ee-4d74-9fec-4672b3a6ecd1]           0       0.62      0.65      0.63       406
+[MFLOG|0|2023-12-12T20:51:30.827571Z|runtime|818fd70f-644c-43f8-ae51-779d8151dcaa]           1       0.43      0.40      0.42       272
+[MFLOG|0|2023-12-12T20:51:30.827598Z|runtime|26cac5c4-7474-49ab-a12e-61b0eb4f2269]
+[MFLOG|0|2023-12-12T20:51:30.827675Z|runtime|741ea698-5966-408c-8639-02218f6cc21c]    accuracy                           0.55       678
+[MFLOG|0|2023-12-12T20:51:30.827704Z|runtime|36327965-08a1-41a9-89b0-6caa938c06a7]   macro avg       0.53      0.52      0.52       678
+[MFLOG|0|2023-12-12T20:51:30.827724Z|runtime|85f37c92-3025-46ee-8d00-98a05ca42836]weighted avg       0.54      0.55      0.55       678
+[MFLOG|0|2023-12-12T20:51:30.827777Z|runtime|f9a8d3a8-0402-446b-8add-fbf042b9975e]
+[MFLOG|0|2023-12-12T20:51:30.827803Z|runtime|e357fffd-6404-4160-b219-9bdd2b5515b0]Accuracy: 0.5486725663716814 
+[MFLOG|0|2023-12-12T20:51:30.835894Z|runtime|bbf43ae7-a72e-48a9-b4aa-d29e324ff98f]
+[MFLOG|0|2023-12-12T20:51:30.835968Z|runtime|ef953c2f-d3a7-435d-925d-a27cbe3691cc]Performance for grade_F:
+[MFLOG|0|2023-12-12T20:51:30.835993Z|runtime|cccc7024-6820-479a-8fe4-d77bf37fda47]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:30.841834Z|runtime|da5763ed-4f3a-4c61-90bd-60af78770035]
+[MFLOG|0|2023-12-12T20:51:30.841890Z|runtime|071a7cb1-23f7-43d5-97db-1ccb69a90d44]           0       0.60      0.45      0.52       132
+[MFLOG|0|2023-12-12T20:51:30.841910Z|runtime|fb97cc2a-20b5-4d02-90ad-ed1f6bc758c7]           1       0.51      0.65      0.57       114
+[MFLOG|0|2023-12-12T20:51:30.841929Z|runtime|3a48995d-1faf-4c01-a4f6-81af9ae5ecb6]
+[MFLOG|0|2023-12-12T20:51:30.841948Z|runtime|dafe9555-b4b8-4279-af0b-41ca9a6ad039]    accuracy                           0.54       246
+[MFLOG|0|2023-12-12T20:51:30.841966Z|runtime|9db355c2-df77-47ac-97d4-44c75ae7ff72]   macro avg       0.55      0.55      0.54       246
+[MFLOG|0|2023-12-12T20:51:30.841985Z|runtime|87892190-bd6e-4e69-a0a4-cd07ff162d0c]weighted avg       0.56      0.54      0.54       246
+[MFLOG|0|2023-12-12T20:51:30.842003Z|runtime|845e8001-b8b0-4939-b509-527a65b4cb05]
+[MFLOG|0|2023-12-12T20:51:30.842026Z|runtime|563c4757-70bf-43c5-a80b-603c8a824ac2]Accuracy: 0.5447154471544715 
+[MFLOG|0|2023-12-12T20:51:30.846899Z|runtime|3d4141c1-f8e6-4f6f-bd0b-5aa5fa10afda]
+[MFLOG|0|2023-12-12T20:51:30.847013Z|runtime|f1e2a08c-1358-49fb-b14a-f71540923dd5]Performance for grade_G:
+[MFLOG|0|2023-12-12T20:51:30.847044Z|runtime|465e22a3-da17-4e01-acd8-e7ed70e66f45]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:30.850048Z|runtime|0721cb9d-1fce-4f9f-878c-bd0dfa57a7c3]
+[MFLOG|0|2023-12-12T20:51:30.850090Z|runtime|da373f54-18ff-4adc-bec0-9ddfdc418e37]           0       0.48      0.72      0.58        18
+[MFLOG|0|2023-12-12T20:51:30.850110Z|runtime|30ef7c0d-ee3b-492e-89d0-a16d290b57e9]           1       0.76      0.53      0.63        30
+[MFLOG|0|2023-12-12T20:51:30.850129Z|runtime|e59b5e9e-5d6c-49bb-af9c-701955d23ddb]
+[MFLOG|0|2023-12-12T20:51:30.850148Z|runtime|618463b2-cfd1-4b0d-8319-609e21878d03]    accuracy                           0.60        48
+[MFLOG|0|2023-12-12T20:51:30.850167Z|runtime|82ff2034-ae82-4339-8e01-e34c8dfd03ae]   macro avg       0.62      0.63      0.60        48
+[MFLOG|0|2023-12-12T20:51:30.850186Z|runtime|e51dfe34-3013-4827-8af6-6c916cf17309]weighted avg       0.66      0.60      0.61        48
+[MFLOG|0|2023-12-12T20:51:30.850205Z|runtime|969ae70b-2a0f-40c9-94d1-d424410c8c4f]
+[MFLOG|0|2023-12-12T20:51:30.850224Z|runtime|743b071e-cd2f-4a66-a929-48eece5c96b5]Accuracy: 0.6041666666666666 
+[MFLOG|0|2023-12-12T20:51:30.850691Z|runtime|fd70869d-0394-412f-ab59-30f58a7969b5]
+[MFLOG|0|2023-12-12T20:51:30.850715Z|runtime|e0443156-626c-4b0c-bdf7-d3d6d4ab8eaf]
+[MFLOG|0|2023-12-12T20:51:30.850733Z|runtime|744b284a-5eee-46e4-ac00-5e8093b503e9]--- Robustness Check on 'rate' ---
+[MFLOG|0|2023-12-12T20:51:30.850752Z|runtime|7df50c4a-9d00-46f3-b0cb-1d3d081527c8]Performance on perturbed 'loan_amount' data:
+[MFLOG|0|2023-12-12T20:51:30.960911Z|runtime|2a26271f-fa5f-4e15-9a2c-adef3ac6d389]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-12T20:51:31.064390Z|runtime|0a1984db-38d4-4a4c-8de8-207ecfe5f6bd]
+[MFLOG|0|2023-12-12T20:51:31.064478Z|runtime|51c63f19-9536-4fd9-9fbf-d76a4a775dea]           0       0.82      0.85      0.83      6463
+[MFLOG|0|2023-12-12T20:51:31.064503Z|runtime|aed01875-f53d-455f-bec2-774714326e9f]           1       0.36      0.31      0.33      1745
+[MFLOG|0|2023-12-12T20:51:31.064523Z|runtime|f60844ac-06cd-48e4-bfc6-124f7aef87c5]
+[MFLOG|0|2023-12-12T20:51:31.064542Z|runtime|3bb99017-4bc4-4ef1-9ac3-ca1da5aa770b]    accuracy                           0.73      8208
+[MFLOG|0|2023-12-12T20:51:31.064561Z|runtime|933e0455-0351-4e8d-bb91-fde128c56c23]   macro avg       0.59      0.58      0.58      8208
+[MFLOG|0|2023-12-12T20:51:31.064579Z|runtime|25b5d94c-efd5-44ba-9d31-5895ee0b6ba0]weighted avg       0.72      0.73      0.73      8208
+[MFLOG|0|2023-12-12T20:51:31.064597Z|runtime|c2a35595-9326-4128-8b0f-fadac89ae58b]
+[MFLOG|0|2023-12-12T20:51:31.064617Z|runtime|5ea8d811-44fc-44b7-b2ec-5724360138d2]Accuracy: 0.7337962962962963 
+[MFLOG|0|2023-12-12T20:51:32.091706Z|runtime|c2e21264-22bf-4493-8847-23c692a5b93b]

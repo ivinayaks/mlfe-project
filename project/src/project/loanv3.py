@@ -500,13 +500,20 @@ class LoanFlow(FlowSpec):
     def data_slice_analysis(self):
         from sklearn.metrics import accuracy_score, classification_report
         print("\n--- Data Slice Analysis on 'grade' ---")
-        # Analyze performance based on a categorical feature like 'grade'
-        if 'grade' in self.X_test.columns:
-            for grade in self.X_test['grade'].unique():
-                mask = self.X_test['grade'] == grade
-                print(f"Performance for loan grade {grade}:")
+
+        # List of grade columns
+        grade_columns = [col for col in self.X_test.columns if col.startswith('grade_')]
+
+        for grade_col in grade_columns:
+            # Only consider rows where the grade column is 1 (i.e., the grade is applicable)
+            mask = self.X_test[grade_col] == 1
+            if mask.any():  # Check if there is any data for this grade
+                print(f"Performance for {grade_col}:")
                 print(classification_report(self.y_test[mask], self.best_model.predict(self.X_test[mask])))
                 print("Accuracy:", accuracy_score(self.y_test[mask], self.best_model.predict(self.X_test[mask])), "\n")
+            else:
+                print(f"No data available for {grade_col}")
+
 
     def robustness_check(self):
         from sklearn.metrics import accuracy_score, classification_report
