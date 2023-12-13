@@ -18,9 +18,11 @@ with open(encoders_path, 'rb') as file:
      encoders=pickle.load(file)
 
 def preprocess_data(df):
-
-        le_term=encoders[0]
-        df['term']=le_term.transform(df['term'])
+        
+        if(df['term'][0]=="36 months"):
+             df['term']=0.0
+        else:
+             df['term']=1.0
 
         oe_grade=encoders[1]
         onehot = oe_grade.transform(df[['grade']])
