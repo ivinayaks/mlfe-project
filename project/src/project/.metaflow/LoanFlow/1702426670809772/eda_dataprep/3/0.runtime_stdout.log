@@ -1,0 +1,263 @@
+[MFLOG|0|2023-12-13T00:17:55.634479Z|runtime|aa754d4f-e6d6-462c-b0a6-ef9f3cd539d8]Column Name: amount | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.634732Z|runtime|b19393ca-426f-4b0b-a835-65030e7d9664]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.634772Z|runtime|7e18a3f8-3679-4838-b059-f20efa861acc]Column Name: term | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.634797Z|runtime|01c89889-4a01-4cd8-8ebe-f184a9ec9502]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.634843Z|runtime|cacb7f67-a411-4d98-a6d2-3fcf99d9de66]Column Name: rate | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.634870Z|runtime|18b84f5f-26ac-4d99-ac7b-43c10eacc90a]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.634898Z|runtime|5de92cf1-0e36-4476-80f2-85a4413b430e]Column Name: payment | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.634917Z|runtime|2ad73422-9f6a-478a-80dd-30914c7853e6]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.634936Z|runtime|b9b9afc9-db71-4460-8836-cddb9f418609]Column Name: grade | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.634960Z|runtime|c6dc2724-9fd8-4efd-aeba-d1322c32fe9f]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.634982Z|runtime|0c0b6235-43fe-44b8-82b8-42744480a9fe]Column Name: employment | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.635006Z|runtime|072a80b8-712c-4c82-97de-a96a98d4ba17]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635029Z|runtime|5efbf781-c328-4f8e-8acb-90b020c90e87]Column Name: length | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.635047Z|runtime|ce2454db-9335-40c1-997f-fba8adfe9bbc]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635070Z|runtime|5715f2b5-cd14-4275-9a9b-ed27a099b9dc]Column Name: home | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.635088Z|runtime|25352852-bbf6-4c51-903e-66fe3bd71cc0]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635110Z|runtime|f82c08ff-f7c2-48a4-9bd0-16417f90cf85]Column Name: income | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.635130Z|runtime|01f08c62-a9ab-4b49-86ff-93e67062275a]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635151Z|runtime|425e8dd7-8b67-4012-b32a-1c6eae484777]Column Name: verified | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.635171Z|runtime|850956ee-a614-4f1c-9052-65248fdee498]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635189Z|runtime|94dfacd9-42a5-4ca6-960d-51eba7097945]Column Name: status | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.635207Z|runtime|dc028b99-861e-4811-afc3-3481ce489a34]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635225Z|runtime|a97a7187-c9b6-4889-b647-ed2ee3d7f887]Column Name: reason | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.635246Z|runtime|2648869d-05c3-452d-91fc-70a271bbe7f4]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635264Z|runtime|ae2995b0-5539-4073-94b0-3863f6c29103]Column Name: state | Column type: object
+[MFLOG|0|2023-12-13T00:17:55.635282Z|runtime|897f7c3e-9a89-4044-9d6a-86312651dadc]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635300Z|runtime|0b4e8620-07f3-401c-b746-1884f55f10ae]Column Name: debtIncRat | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.635323Z|runtime|ddcee1b5-dfad-4336-827c-a4cda4cb65ec]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635341Z|runtime|7569573f-476a-4a4d-a845-7fa462194197]Column Name: delinq2yr | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.635359Z|runtime|4cd66846-46f3-4229-9653-fba877d27ace]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635379Z|runtime|04179849-5fa7-407c-b42c-0e31fd6eceb2]Column Name: inq6mth | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.635397Z|runtime|4192b97d-bf23-45be-a42d-569b1b06ffd3]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.635416Z|runtime|e5ca5bb9-579a-4b6a-813c-3270db9c1422]Column Name: openAcc | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636291Z|runtime|9313f287-e178-4efd-a0b8-05e936b04344]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636316Z|runtime|f3dc963e-825e-4fa5-9121-2ddb23ed6b5e]Column Name: pubRec | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636337Z|runtime|83a307e9-076e-46b0-b685-e5e29255239b]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636355Z|runtime|5dfb9548-fa2c-41c4-a276-966e91b7c802]Column Name: revolRatio | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636373Z|runtime|e9f5b061-2cb2-4119-9724-44f977e7db14]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636392Z|runtime|7082eb90-a431-4f07-9ff1-d2e500ea9f2d]Column Name: totalAcc | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636410Z|runtime|e6ff89e7-3846-4f63-b558-bd3f410c132a]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636430Z|runtime|1ab2e779-d51a-4569-9efb-78ee099d2d2a]Column Name: totalBal | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636449Z|runtime|2447f36d-9c90-4f6d-ba75-60d9082b7b09]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636467Z|runtime|57ec1f4c-2a7d-4d57-aa7a-5558783450d4]Column Name: totalRevLim | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636487Z|runtime|fff96b20-4c57-45d8-93b0-c9426d2b4e8a]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636509Z|runtime|1a2ce344-be26-4a9f-9515-09e063da78a6]Column Name: accOpen24 | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636530Z|runtime|57daf016-372b-4c6e-add5-a34964dbece0]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636551Z|runtime|8c9c42d6-9b05-440f-81ae-b98625d2ce89]Column Name: avgBal | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636570Z|runtime|bf5f0577-8cd4-44de-815a-693e7418cfe9]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636588Z|runtime|2db3ffe4-7af4-41f5-83c3-a53831853734]Column Name: bcOpen | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636607Z|runtime|6807d0f9-8881-4f00-b378-a68a9aaacaef]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636625Z|runtime|b08207db-35a8-42e5-917c-112b64791a32]Column Name: bcRatio | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636644Z|runtime|95b37ab8-b455-47e4-a7f8-018147de1e08]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636662Z|runtime|c7b984e6-46bb-4418-a20b-5edb6b82f3b7]Column Name: totalLim | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636683Z|runtime|88539e41-de83-4c31-b47b-7dc2289cceba]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636700Z|runtime|7006fa82-be44-4a85-a52a-7a59717b8912]Column Name: totalRevBal | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636719Z|runtime|b6fa9280-2ebb-4f3f-96ba-bfb2948fa4fa]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636738Z|runtime|150b057d-71db-462f-b589-1dfe524cc579]Column Name: totalBcLim | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636756Z|runtime|384addc4-5824-4362-b8ea-734a6fca8b84]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636774Z|runtime|ec30b412-d399-45ce-82d3-f2ea9bcc4614]Column Name: totalIlLim | Column type: float64
+[MFLOG|0|2023-12-13T00:17:55.636791Z|runtime|56e80510-c48f-499f-95bd-eff30911cb46]-----------------------------------
+[MFLOG|0|2023-12-13T00:17:55.636809Z|runtime|5b1cf5fe-8796-456d-905d-a9bcf8b6ac40]Columns of type object are: ['term', 'grade', 'employment', 'length', 'home', 'verified', 'status', 'reason', 'state']
+[MFLOG|0|2023-12-13T00:17:55.636830Z|runtime|c71eb057-c904-45f6-be70-a8f8a0312088]COL:term
+[MFLOG|0|2023-12-13T00:17:55.636849Z|runtime|dab44959-4b25-4bbd-a7c0-78ec9550e037]-------------
+[MFLOG|0|2023-12-13T00:17:55.636870Z|runtime|b35975a1-8d3a-4405-a2e7-7b8010855e0a]Number of NaNs: 1
+[MFLOG|0|2023-12-13T00:17:55.645476Z|runtime|5b70bc7d-e9d0-4299-b8c6-2c4205adb1cb]term
+[MFLOG|0|2023-12-13T00:17:57.103406Z|runtime|dbf68334-d1d1-47e9-a4a2-9e2f019228a0] 36 months    33753
+[MFLOG|0|2023-12-13T00:17:57.104103Z|runtime|568286ed-2541-4a80-98e0-0c902388204f] 60 months    16246
+[MFLOG|0|2023-12-13T00:17:57.104178Z|runtime|e374bff3-9fad-4cfe-9e82-c3620030622b]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:17:57.104238Z|runtime|6eeb1a7c-e8fe-4195-a7ed-56bbef404887]term
+[MFLOG|0|2023-12-13T00:17:57.104967Z|runtime|e0bc0f86-461c-480a-bd8e-458b743d0c70]0    33753
+[MFLOG|0|2023-12-13T00:17:57.105104Z|runtime|f4c90bdd-4035-4a5b-a102-d036d9ae7732]1    16246
+[MFLOG|0|2023-12-13T00:17:57.105182Z|runtime|6803effc-87e6-4d83-9442-5a79b01cbc47]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:17:57.105224Z|runtime|47eb312f-66b0-4c86-8119-12c7ec1e1fc8]COL:grade
+[MFLOG|0|2023-12-13T00:17:57.105280Z|runtime|9653ea52-7c98-4e97-bf4b-93e69725c6aa]-------------
+[MFLOG|0|2023-12-13T00:17:57.105321Z|runtime|a407ddb3-752c-46d1-ad3f-b517bb633dea]Number of NaNs: 0
+[MFLOG|0|2023-12-13T00:17:57.107661Z|runtime|3a3439d0-42c7-4255-a942-d42de63228a7]grade
+[MFLOG|0|2023-12-13T00:17:57.776242Z|runtime|eefbb316-b534-421d-9e9d-28356b340450]C    14137
+[MFLOG|0|2023-12-13T00:17:57.776592Z|runtime|8663fa88-d82c-4690-bbcf-407b1f4390e9]B    13755
+[MFLOG|0|2023-12-13T00:17:57.776642Z|runtime|404d16b2-dbdd-4809-9cc7-0e36e7237854]A     8203
+[MFLOG|0|2023-12-13T00:17:57.776693Z|runtime|dd6091e8-d31f-447e-9a25-2e857c313032]D     8186
+[MFLOG|0|2023-12-13T00:17:57.776737Z|runtime|e3236cbd-522f-4a14-805a-9045f11aef5d]E     4200
+[MFLOG|0|2023-12-13T00:17:57.776775Z|runtime|473dbfca-58ac-4801-8df6-21a7742f7f6a]F     1240
+[MFLOG|0|2023-12-13T00:17:57.776817Z|runtime|68beee7c-6f02-49f5-887e-366b0ef51b73]G      278
+[MFLOG|0|2023-12-13T00:17:57.776852Z|runtime|672b7997-5555-4c8b-8879-3e9e5b04fac2]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:17:57.776889Z|runtime|bea882b9-bc80-4079-8c9a-d13e0f7f7379]COL:employment
+[MFLOG|0|2023-12-13T00:17:57.777962Z|runtime|213d67ce-5c63-407b-82d3-0bbf17be3a2e]-------------
+[MFLOG|0|2023-12-13T00:17:57.778011Z|runtime|eb5a6474-81bc-40b6-9beb-8acd5e191580]Number of NaNs: 2784
+[MFLOG|0|2023-12-13T00:17:57.786882Z|runtime|4349f7ff-94f3-4f3d-9b2a-446559c53f37]----------------------
+[MFLOG|0|2023-12-13T00:17:57.786929Z|runtime|6b3291b7-4f9b-4d3e-80df-e7cb9ce5c10b]employment
+[MFLOG|0|2023-12-13T00:17:57.790477Z|runtime|1a7b342d-9417-41a4-b877-a213c4fe296e]Teacher                               940
+[MFLOG|0|2023-12-13T00:17:57.790573Z|runtime|6250aa0c-f5d1-401b-85d5-f6e92c2823b7]Manager                               815
+[MFLOG|0|2023-12-13T00:17:57.790608Z|runtime|767445cb-e8e6-408d-8acf-f7b67f8131e8]RN                                    405
+[MFLOG|0|2023-12-13T00:17:57.790763Z|runtime|3379d2ec-3659-4db9-a0b3-24a87e85f319]Owner                                 390
+[MFLOG|0|2023-12-13T00:17:57.790824Z|runtime|be7b2e87-5b68-4442-8aa3-a2ca6a9ae925]Registered Nurse                      387
+[MFLOG|0|2023-12-13T00:17:57.790863Z|runtime|b1fd4719-67fc-46e9-984d-f0cbf7c67047]                                     ... 
+[MFLOG|0|2023-12-13T00:17:57.790953Z|runtime|bb224957-01a1-48c7-984f-4a14034747f3]Vice President Strategic Marketing      1
+[MFLOG|0|2023-12-13T00:17:57.790987Z|runtime|d2f1fb0d-de41-4f89-8056-c52b5a73a2a1]Finance/Business Director               1
+[MFLOG|0|2023-12-13T00:17:57.791018Z|runtime|de1d94d0-7fc6-482a-a386-6e0bd7eddb73]Integration Specialist III              1
+[MFLOG|0|2023-12-13T00:17:57.791048Z|runtime|bb5f4662-ac1a-4725-aeeb-70aa8a3cec22] cashier                                1
+[MFLOG|0|2023-12-13T00:17:57.791078Z|runtime|9ad47506-ec54-4b17-8a92-c65e8ca13e02]welding tech                            1
+[MFLOG|0|2023-12-13T00:17:57.791108Z|runtime|cae4ec66-b5ff-4b51-96a8-544a6418c268]Name: count, Length: 21400, dtype: int64
+[MFLOG|0|2023-12-13T00:17:57.791148Z|runtime|aad998d2-daf5-4edc-91e0-7423256d8170]----------------------
+[MFLOG|0|2023-12-13T00:17:57.791180Z|runtime|cdfe7233-8c0e-4a83-8157-e43251012e3b]Unique Values: 21401
+[MFLOG|0|2023-12-13T00:17:57.797655Z|runtime|121d831c-686a-4fad-bea0-8609b1f6c0b1]COL:length
+[MFLOG|0|2023-12-13T00:17:57.799079Z|runtime|bf6a62cb-0dbc-4589-ba17-56b809916d07]-------------
+[MFLOG|0|2023-12-13T00:17:57.799127Z|runtime|bc901d04-8be5-4cf6-a598-16f603724259]Number of NaNs: 2680
+[MFLOG|0|2023-12-13T00:17:57.808844Z|runtime|3d74aee8-42bc-4c19-9571-0079e2a59fbd]length
+[MFLOG|0|2023-12-13T00:17:57.808925Z|runtime|76fcb576-d621-4aba-a135-74311f3621f3]10+ years    16896
+[MFLOG|0|2023-12-13T00:17:57.808954Z|runtime|a28914b6-3253-41ea-bdfb-9fc88d59040d]2 years       4456
+[MFLOG|0|2023-12-13T00:17:57.809134Z|runtime|4c36dd0b-d491-4f54-b5bf-63107baeb624]< 1 year      3985
+[MFLOG|0|2023-12-13T00:17:57.809221Z|runtime|c693693f-dafd-4935-9f89-b92904bd4474]3 years       3939
+[MFLOG|0|2023-12-13T00:17:57.809256Z|runtime|69e0cd1b-f048-4653-bdab-197e65ed5447]1 year        3215
+[MFLOG|0|2023-12-13T00:17:57.809282Z|runtime|e458156d-d077-40cd-a305-65cd2b06fd2e]5 years       2946
+[MFLOG|0|2023-12-13T00:17:57.809332Z|runtime|586c45ba-3501-41e4-b1a9-4e2e776bf287]4 years       2944
+[MFLOG|0|2023-12-13T00:17:57.809379Z|runtime|a4c7012f-57b2-4864-9805-642a4968f102]8 years       2528
+[MFLOG|0|2023-12-13T00:17:57.809421Z|runtime|beba7287-77a0-4191-932d-8823e2815aa9]7 years       2333
+[MFLOG|0|2023-12-13T00:17:57.809450Z|runtime|aaee609a-1e89-4d5a-a278-6526835cd2e3]6 years       2185
+[MFLOG|0|2023-12-13T00:17:57.809473Z|runtime|54e9a90f-bfb9-4430-b3fa-44a81c52a8fe]9 years       1892
+[MFLOG|0|2023-12-13T00:17:57.809536Z|runtime|d978f4e6-bf82-431c-8e50-b000807d9431]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:17:57.809579Z|runtime|dd1ab4be-1111-44eb-ad89-b2689d2e80a1]Index(['10+ years', '2 years', '< 1 year', '3 years', '1 year', '5 years',
+[MFLOG|0|2023-12-13T00:17:59.504099Z|runtime|13a70c13-1f11-441c-97d4-d1df9de7781c]       '4 years', '8 years', '7 years', '6 years', '9 years'],
+[MFLOG|0|2023-12-13T00:17:59.504423Z|runtime|77253c42-6d3f-41cb-aa20-4c064f292250]      dtype='object', name='length')
+[MFLOG|0|2023-12-13T00:17:59.504518Z|runtime|ab391462-c52a-40fc-8157-e5823fb83855]COL:home
+[MFLOG|0|2023-12-13T00:17:59.506950Z|runtime|7aa42ef1-386d-4fbd-8e02-5e05e7a0044a]-------------
+[MFLOG|0|2023-12-13T00:17:59.507072Z|runtime|66033d6f-ddbd-4110-af18-7ae00a0d6eb7]Number of NaNs: 0
+[MFLOG|0|2023-12-13T00:17:59.511780Z|runtime|7dd25ee6-81aa-40b8-8bda-f408158c09cf]home
+[MFLOG|0|2023-12-13T00:18:00.036145Z|runtime|ae9a77f1-9b8d-45c9-b010-30df4eef2342]MORTGAGE    23852
+[MFLOG|0|2023-12-13T00:18:00.036293Z|runtime|0a871c14-4f98-4e0b-bf1b-252b619eb83b]RENT        18762
+[MFLOG|0|2023-12-13T00:18:00.036337Z|runtime|b051016a-8a97-4ed3-b806-e4eaa5b9ea0b]OWN          4705
+[MFLOG|0|2023-12-13T00:18:00.036372Z|runtime|86d5905e-3f7a-4035-8159-16b1f1ea9ee7]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:00.036430Z|runtime|e4f5b46e-d124-4bd8-a6cd-f21d58029c35]COL:verified
+[MFLOG|0|2023-12-13T00:18:00.037468Z|runtime|a06debe6-bdea-41da-ab13-7805087eea2f]-------------
+[MFLOG|0|2023-12-13T00:18:00.037513Z|runtime|4d096bcb-052c-4c77-a0b9-ee4d097b8ba0]Number of NaNs: 0
+[MFLOG|0|2023-12-13T00:18:00.039971Z|runtime|2fe24ffa-9e9b-45c7-8670-c7da6e3e9d19]verified
+[MFLOG|0|2023-12-13T00:18:00.467984Z|runtime|42c0ef5d-2341-42c9-a29a-c62e502adf57]Source Verified    20617
+[MFLOG|0|2023-12-13T00:18:00.468143Z|runtime|a3aea327-9f3a-4a6d-b591-bfc609c9672a]Not Verified       14103
+[MFLOG|0|2023-12-13T00:18:00.468182Z|runtime|e55159f5-4bd5-4de3-bd6e-d5c47d95909a]Verified           12599
+[MFLOG|0|2023-12-13T00:18:00.468225Z|runtime|ee4eb82e-1053-418d-b9cc-44cfb365285d]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:00.468271Z|runtime|a23d7a05-5965-4a71-ae1a-6db79a191542]Number of NaNs: 0
+[MFLOG|0|2023-12-13T00:18:00.470328Z|runtime|54792f9b-1b1e-4122-8b45-a13a8f699e9b]status
+[MFLOG|0|2023-12-13T00:18:00.477739Z|runtime|b863ae38-dad6-4d9d-970a-e1b7e535ac04]Fully Paid            25771
+[MFLOG|0|2023-12-13T00:18:00.477861Z|runtime|854acf54-2a5b-4f80-9252-d514989fa530]Current               13722
+[MFLOG|0|2023-12-13T00:18:00.477925Z|runtime|6651307b-566a-4c39-ba38-323276bc0c72]Charged Off            7059
+[MFLOG|0|2023-12-13T00:18:00.477963Z|runtime|1313efd8-8b7f-4506-8769-57b2b76ab381]Late (31-120 days)      420
+[MFLOG|0|2023-12-13T00:18:00.477989Z|runtime|17a0c0f4-9cd0-4aaf-b99d-3d2215021143]In Grace Period         252
+[MFLOG|0|2023-12-13T00:18:00.478014Z|runtime|95660c0f-d1dd-4c30-acdd-ced0e6259816]Late (16-30 days)        93
+[MFLOG|0|2023-12-13T00:18:00.478039Z|runtime|8ceaebf0-46c5-451c-b686-cec22dd61192]Default                   2
+[MFLOG|0|2023-12-13T00:18:00.478063Z|runtime|b2c16bac-bf0d-4e53-b912-ac384cc34ccc]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:00.478089Z|runtime|7b284a41-687e-452e-ac1d-633d72d396e2]status
+[MFLOG|0|2023-12-13T00:18:00.868535Z|runtime|f94c4868-c5ba-4588-b507-4750dd7408a9]Fully Paid     25771
+[MFLOG|0|2023-12-13T00:18:00.868650Z|runtime|709dad27-e1f3-46ad-bd25-a90f3e05fdf2]Charged Off     7059
+[MFLOG|0|2023-12-13T00:18:00.868701Z|runtime|8fe94567-7119-489b-9588-f1b5c83e5ef0]Default            2
+[MFLOG|0|2023-12-13T00:18:00.868733Z|runtime|2623d54f-6ad8-4515-bef3-8010b88b0f7d]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:00.868765Z|runtime|373c93b1-fc64-4b28-90d8-1b98b6627b7c]status
+[MFLOG|0|2023-12-13T00:18:00.869526Z|runtime|83335247-36da-4353-a807-f2481e969c3b]0    25771
+[MFLOG|0|2023-12-13T00:18:00.869565Z|runtime|1a0fdc86-8ce3-4197-bcd6-e8e1fa58533d]1     7061
+[MFLOG|0|2023-12-13T00:18:00.869595Z|runtime|1b1f7813-9b2d-4a7a-a2b7-cacd5c7e5357]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:00.869624Z|runtime|a83e7af6-8ffc-4776-a4b9-86c8bdc3f1c2]COL:reason
+[MFLOG|0|2023-12-13T00:18:00.869660Z|runtime|2d046234-b678-47d0-b44e-ec9810474449]-------------
+[MFLOG|0|2023-12-13T00:18:00.869687Z|runtime|ed0cc80f-da6e-4b08-bb78-1b23fc98f053]Number of NaNs: 0
+[MFLOG|0|2023-12-13T00:18:00.871183Z|runtime|a6936751-a35b-4521-abfd-b2b7ed8e90e5]reason
+[MFLOG|0|2023-12-13T00:18:00.875488Z|runtime|dfde519e-08ab-4056-b9f0-440576628ab7]debt_consolidation    19993
+[MFLOG|0|2023-12-13T00:18:00.875522Z|runtime|4ee3b488-1396-425f-be93-f7ad4cbbd9c0]credit_card            7409
+[MFLOG|0|2023-12-13T00:18:00.875559Z|runtime|865a4688-a6bb-4f86-ab84-707a4e87aa82]home_improvement       1886
+[MFLOG|0|2023-12-13T00:18:00.875585Z|runtime|881aa31b-fbe8-491d-b7ce-0c2547eda97f]other                  1474
+[MFLOG|0|2023-12-13T00:18:00.875611Z|runtime|f81e1058-6d03-4464-b6d8-599caee6e9e4]major_purchase          582
+[MFLOG|0|2023-12-13T00:18:00.875636Z|runtime|086dd575-d124-4438-8b1e-f9d1b3dc8989]medical                 356
+[MFLOG|0|2023-12-13T00:18:00.875663Z|runtime|3c387de6-0b0f-47b8-ac74-7bc3c44297fb]small_business          309
+[MFLOG|0|2023-12-13T00:18:00.875689Z|runtime|a9f53b50-4570-4202-8af1-700ce66940e5]car                     267
+[MFLOG|0|2023-12-13T00:18:00.875714Z|runtime|f078d350-41a4-4fe0-b2e8-f90dbdd0d669]moving                  203
+[MFLOG|0|2023-12-13T00:18:00.875740Z|runtime|0fb3d2a7-419e-4535-aaa9-046ba20fef3e]vacation                200
+[MFLOG|0|2023-12-13T00:18:00.875765Z|runtime|a4ebf86b-8337-4de2-8215-157badd8b440]house                   124
+[MFLOG|0|2023-12-13T00:18:00.875795Z|runtime|c809088e-24a7-44ab-885f-208953eb84af]renewable_energy         27
+[MFLOG|0|2023-12-13T00:18:00.875820Z|runtime|3bea8c3a-b5fc-434e-b56c-a4841b2318c9]wedding                   2
+[MFLOG|0|2023-12-13T00:18:00.875844Z|runtime|57c39598-7104-4b03-95c5-14961575efcf]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:00.875871Z|runtime|1338b1df-d32e-463e-b0a0-58e8be69951e]reason
+[MFLOG|0|2023-12-13T00:18:01.277116Z|runtime|131909e1-bb02-4dc7-8a23-35be7c1620e4]debt_consolidation    19993
+[MFLOG|0|2023-12-13T00:18:01.277226Z|runtime|6a47e09b-299c-4284-88fb-834d9347edc7]credit_card            7409
+[MFLOG|0|2023-12-13T00:18:01.277257Z|runtime|c9c92c8a-a1d8-4308-a034-675e29e454ed]other                  5430
+[MFLOG|0|2023-12-13T00:18:01.277284Z|runtime|9a73fba3-90ea-47f1-a5e4-430efec89cc1]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:01.277313Z|runtime|1e6f3e27-f732-4d37-b51b-71967f02a089]COL:state
+[MFLOG|0|2023-12-13T00:18:01.277986Z|runtime|27203985-e5c7-47bd-8d9d-3a4e05f1dea3]-------------
+[MFLOG|0|2023-12-13T00:18:01.278024Z|runtime|57c8c14f-dba0-4d20-a652-33531cd9ed93]Number of NaNs: 0
+[MFLOG|0|2023-12-13T00:18:01.279559Z|runtime|932ccc29-4c6e-4670-bc0f-03c16867c296]state
+[MFLOG|0|2023-12-13T00:18:01.300646Z|runtime|7b8e5b22-eddc-457f-9fc3-92d195a64fca]CA    4797
+[MFLOG|0|2023-12-13T00:18:01.300710Z|runtime|64d6e938-ecc4-4fd6-abad-d816a325c80a]TX    2698
+[MFLOG|0|2023-12-13T00:18:01.300731Z|runtime|a9ea2d54-b34e-44ca-b381-a00079f39997]NY    2689
+[MFLOG|0|2023-12-13T00:18:01.300752Z|runtime|e720309f-5b83-4f0e-a7e5-3a5b1bef5ad4]FL    2203
+[MFLOG|0|2023-12-13T00:18:01.300771Z|runtime|8980f835-3f10-4450-8193-f6149b9eb73f]IL    1250
+[MFLOG|0|2023-12-13T00:18:01.300792Z|runtime|996d64da-7307-43c3-a074-67c02651ba6f]NJ    1171
+[MFLOG|0|2023-12-13T00:18:01.300811Z|runtime|3e1a3766-2fb5-473f-bf71-f6031dad682d]PA    1165
+[MFLOG|0|2023-12-13T00:18:01.300831Z|runtime|a99c55dd-95bc-401e-8dbc-5b7edf5cbb88]OH    1079
+[MFLOG|0|2023-12-13T00:18:01.300850Z|runtime|8f405ddd-3cd4-4e73-9040-19987eda7824]GA    1047
+[MFLOG|0|2023-12-13T00:18:01.300870Z|runtime|e7b3dc4e-e06d-4b69-9cae-d24b0635c4f0]VA     998
+[MFLOG|0|2023-12-13T00:18:01.300889Z|runtime|02e5df51-d8bc-47ff-830c-b3f12e32e659]NC     878
+[MFLOG|0|2023-12-13T00:18:01.300909Z|runtime|87a908de-f1cb-4106-8a39-9dbc1924fcdc]MI     863
+[MFLOG|0|2023-12-13T00:18:01.300928Z|runtime|0ed40653-d90c-4c2c-9f2b-aa5b314389e2]MD     774
+[MFLOG|0|2023-12-13T00:18:01.300948Z|runtime|13e5ea86-ab90-4b36-8d17-1a5bcae7c8f0]CO     767
+[MFLOG|0|2023-12-13T00:18:01.300967Z|runtime|8a767dee-a69e-47c5-b1de-60bf41ce58aa]AZ     756
+[MFLOG|0|2023-12-13T00:18:01.300987Z|runtime|2e4917d6-2964-4b81-a52e-b024b1d7c2d0]WA     750
+[MFLOG|0|2023-12-13T00:18:01.301006Z|runtime|995ea412-f213-4a27-8512-d1ba60c54d52]MA     724
+[MFLOG|0|2023-12-13T00:18:01.301025Z|runtime|8b55d06f-811b-42e0-be62-664a9e7ae8d2]MN     588
+[MFLOG|0|2023-12-13T00:18:01.301045Z|runtime|b4d7dccd-8f16-491a-bcfc-253e294c6c76]IN     561
+[MFLOG|0|2023-12-13T00:18:01.301064Z|runtime|9fa8add4-68d2-4f32-996d-260304c3f055]TN     527
+[MFLOG|0|2023-12-13T00:18:01.301084Z|runtime|2e40de48-cca1-448e-b205-368a30925624]MO     521
+[MFLOG|0|2023-12-13T00:18:01.301103Z|runtime|0fdd29a2-df58-42c0-a844-2b3175f00f4f]NV     467
+[MFLOG|0|2023-12-13T00:18:01.301122Z|runtime|6c11a4e4-5fa5-4bbd-8c9a-b20bb4ee3537]CT     458
+[MFLOG|0|2023-12-13T00:18:01.301142Z|runtime|0f87ef4b-c18b-44b0-9751-c4ae30e842ca]OR     432
+[MFLOG|0|2023-12-13T00:18:01.301162Z|runtime|b2d48c47-2b93-43a4-96f8-1bb44307c4a4]WI     426
+[MFLOG|0|2023-12-13T00:18:01.301182Z|runtime|77813a2a-72ec-4b24-b563-4b1a954d03c5]SC     401
+[MFLOG|0|2023-12-13T00:18:01.301201Z|runtime|1afddb88-5d19-43da-a575-51a60653d009]AL     388
+[MFLOG|0|2023-12-13T00:18:01.301221Z|runtime|84b5228f-5517-4c42-8be3-7b1067aac978]LA     380
+[MFLOG|0|2023-12-13T00:18:01.301240Z|runtime|6391a70e-833f-4c29-bb8f-131d46d28e10]OK     321
+[MFLOG|0|2023-12-13T00:18:01.301260Z|runtime|0aed3cb9-66f2-4873-a189-705ea31499ed]KY     310
+[MFLOG|0|2023-12-13T00:18:01.301279Z|runtime|61bc8df9-893f-4c1d-9651-4278c53fdb13]KS     308
+[MFLOG|0|2023-12-13T00:18:01.301299Z|runtime|8dd1e119-8f3e-4ade-a5d4-4361d866aeae]AR     233
+[MFLOG|0|2023-12-13T00:18:01.301318Z|runtime|78a557a3-a25f-493a-9160-db8cd0feef61]UT     231
+[MFLOG|0|2023-12-13T00:18:01.301337Z|runtime|b5106306-de72-45fd-a152-b1a63524c368]HI     187
+[MFLOG|0|2023-12-13T00:18:01.301357Z|runtime|846db5ce-9146-4796-9eeb-5d29d18d8bd5]NM     185
+[MFLOG|0|2023-12-13T00:18:01.301377Z|runtime|f84471af-e416-45b6-8947-de47ef4c87c2]RI     169
+[MFLOG|0|2023-12-13T00:18:01.301396Z|runtime|6ad4cd5a-83b2-4252-b427-794b638ff549]WV     167
+[MFLOG|0|2023-12-13T00:18:01.301415Z|runtime|bbad343c-0e83-4581-b6a2-1a8f51d17831]MS     157
+[MFLOG|0|2023-12-13T00:18:01.301435Z|runtime|1a8130b4-86eb-4927-a027-85e56b90191c]NH     152
+[MFLOG|0|2023-12-13T00:18:01.301454Z|runtime|60ebbc39-2450-4027-b3bb-5cfb79b80933]DC     100
+[MFLOG|0|2023-12-13T00:18:01.301474Z|runtime|c62a6f4d-7679-47aa-a0f6-9f2941abcbb5]MT      99
+[MFLOG|0|2023-12-13T00:18:01.301493Z|runtime|fb6ae6d4-6c9a-426b-968a-0ac814f71470]DE      87
+[MFLOG|0|2023-12-13T00:18:01.301512Z|runtime|22537f0f-aa31-4538-8a5b-bc1cdba4499b]AK      79
+[MFLOG|0|2023-12-13T00:18:01.301531Z|runtime|ea12d6c7-636d-406b-932c-eebcd351e068]SD      67
+[MFLOG|0|2023-12-13T00:18:01.301551Z|runtime|1aaf2513-58a8-450e-887a-872debf22cd9]VT      66
+[MFLOG|0|2023-12-13T00:18:01.301570Z|runtime|03c02847-1047-4c05-86a9-dfceaaa02cf8]WY      62
+[MFLOG|0|2023-12-13T00:18:01.301590Z|runtime|acfeb13e-a201-4c3c-b976-1f5fca5a7844]NE      57
+[MFLOG|0|2023-12-13T00:18:01.301609Z|runtime|81384fc9-0d17-4b64-978c-5639115ec1ea]ME      20
+[MFLOG|0|2023-12-13T00:18:01.301628Z|runtime|e9103a2d-5140-4a26-8166-54674f59376f]ND      17
+[MFLOG|0|2023-12-13T00:18:01.301647Z|runtime|1069b0f6-297a-426a-a2c0-6294811f60cc]Name: count, dtype: int64
+[MFLOG|0|2023-12-13T00:18:01.301668Z|runtime|27057bd9-5475-4a8b-b495-9e090e030aad]count    32818.000000
+[MFLOG|0|2023-12-13T00:18:01.302230Z|runtime|bc40ce9d-9c9a-4caf-870e-87a273a7dde4]mean         0.538935
+[MFLOG|0|2023-12-13T00:18:01.302258Z|runtime|2b8bbbc7-6884-42e2-8847-b1c0ed0e805f]std          0.237466
+[MFLOG|0|2023-12-13T00:18:01.302278Z|runtime|c1f5cd18-833d-4c29-97fa-c26a07d9374e]min          0.000000
+[MFLOG|0|2023-12-13T00:18:01.302297Z|runtime|3bcb6c99-6b80-421d-b73f-a4859a64bb40]25%          0.360000
+[MFLOG|0|2023-12-13T00:18:01.302317Z|runtime|2afd0605-2f37-4a79-94d1-1548b7066650]50%          0.540000
+[MFLOG|0|2023-12-13T00:18:01.302337Z|runtime|47148b2b-3fc5-4b46-addf-6ad0703c49c8]75%          0.720000
+[MFLOG|0|2023-12-13T00:18:01.302356Z|runtime|5dbef8f8-e419-4a9b-89f9-b0415028a435]max          1.290000
+[MFLOG|0|2023-12-13T00:18:01.302376Z|runtime|ef2fa12a-5f82-4e55-84fc-cf659f300a37]Name: revolRatio, dtype: float64
+[MFLOG|0|2023-12-13T00:18:01.302397Z|runtime|0bd41150-c7ae-4b9f-884f-429dfde09491]count     32499.000000
+[MFLOG|0|2023-12-13T00:18:01.303711Z|runtime|d9161154-332d-437c-aae7-8c0494fa82e4]mean       8974.010000
+[MFLOG|0|2023-12-13T00:18:01.303738Z|runtime|329146ae-061e-4d71-8f2f-4a238536d97a]std       13832.553766
+[MFLOG|0|2023-12-13T00:18:01.303758Z|runtime|22bff040-b2fa-4c03-9211-c5e6fcb2184f]min           0.000000
+[MFLOG|0|2023-12-13T00:18:01.303777Z|runtime|c24f8485-daf5-49e1-a321-f7378f06b68b]25%        1219.000000
+[MFLOG|0|2023-12-13T00:18:01.303797Z|runtime|5de56e49-f294-4ed7-badf-620f7d44a25f]50%        4008.000000
+[MFLOG|0|2023-12-13T00:18:01.303817Z|runtime|25d1cde0-ba4e-4188-a61c-8491d9f20811]75%       10669.500000
+[MFLOG|0|2023-12-13T00:18:01.303837Z|runtime|2ebcb606-eb94-4f22-92f3-5d87714c2e1f]max      225313.000000
+[MFLOG|0|2023-12-13T00:18:01.303856Z|runtime|cfa34b9c-09a2-4249-8fbc-d62429d81ca9]Name: bcOpen, dtype: float64
+[MFLOG|0|2023-12-13T00:18:01.303877Z|runtime|eb35ecc5-129e-4030-99f3-9c043fe6dcc7]count    32475.000000
+[MFLOG|0|2023-12-13T00:18:10.472699Z|runtime|5618aede-dc3d-4a1e-a759-c9d118d88dbd]mean        62.497370
+[MFLOG|0|2023-12-13T00:18:10.473784Z|runtime|ad175ac9-4831-4ddf-9617-982ea5423ebf]std         27.407538
+[MFLOG|0|2023-12-13T00:18:10.473880Z|runtime|44060fbc-37bc-4e6e-bab0-7f25db341d3f]min          0.000000
+[MFLOG|0|2023-12-13T00:18:10.473949Z|runtime|d7362a55-af31-4808-94e2-37af4e2a67b5]25%         42.100000
+[MFLOG|0|2023-12-13T00:18:10.474010Z|runtime|221ba6aa-40e2-49f4-9620-6d9cc90b3c2a]50%         66.000000
+[MFLOG|0|2023-12-13T00:18:10.474069Z|runtime|85b40b89-7c32-4d65-898b-b237ece860b3]75%         86.400000
+[MFLOG|0|2023-12-13T00:18:10.474126Z|runtime|c86cfe8a-d92e-4d98-8ebf-a127b2ef57c0]max        158.400000
+[MFLOG|0|2023-12-13T00:18:10.474182Z|runtime|1596d24d-2723-4c17-bbf4-5e3095a030bb]Name: bcRatio, dtype: float64
+[MFLOG|0|2023-12-13T00:18:10.474259Z|runtime|ebcd0464-dae0-477a-b09c-935e2afce9c6]Percentage of defaults: 0.21506457115009747
+[MFLOG|0|2023-12-13T00:18:20.214953Z|runtime|bb9674d7-c506-44b0-943e-cfa36d091da8]Percentage of non-defaults: 0.7849354288499025

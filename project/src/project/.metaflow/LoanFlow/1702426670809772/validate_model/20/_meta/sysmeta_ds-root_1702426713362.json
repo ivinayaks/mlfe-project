@@ -1,0 +1,1 @@
+{"flow_id": "LoanFlow", "run_number": "1702426670809772", "step_name": "validate_model", "task_id": "20", "field_name": "ds-root", "type": "ds-root", "value": "/Users/vinayak/Documents/GitHub/forked/mlfe-project/project/src/project/.metaflow", "tags": ["attempt_id:0"], "user_name": "vinayak", "ts_epoch": 1702426713362}

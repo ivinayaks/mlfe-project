@@ -1,0 +1,10 @@
+[MFLOG|0|2023-12-13T00:19:35.472013Z|runtime|a18e593b-5b0e-43ef-8ae7-fa89cd9d94e4]              precision    recall  f1-score   support
+[MFLOG|0|2023-12-13T00:19:35.472617Z|runtime|b23c5622-2788-41fb-b8bb-7ff0622186cf]
+[MFLOG|0|2023-12-13T00:19:35.472659Z|runtime|1e2315f9-d7df-4fb0-bb93-a1519765265b]           0       0.80      0.97      0.88      6463
+[MFLOG|0|2023-12-13T00:19:35.472685Z|runtime|93694550-19ea-4227-b6be-9a97881fd29c]           1       0.47      0.11      0.18      1745
+[MFLOG|0|2023-12-13T00:19:35.472732Z|runtime|66db1ed0-3b37-4872-9acc-d499110a24f8]
+[MFLOG|0|2023-12-13T00:19:35.472762Z|runtime|d9162e06-1668-44ff-92dc-bdf60c708987]    accuracy                           0.78      8208
+[MFLOG|0|2023-12-13T00:19:35.472789Z|runtime|c2627ec6-9896-4655-b4f3-ddfabc420970]   macro avg       0.63      0.54      0.53      8208
+[MFLOG|0|2023-12-13T00:19:35.472811Z|runtime|1a8dafbc-e4b5-4263-89c2-b5df4401865b]weighted avg       0.73      0.78      0.73      8208
+[MFLOG|0|2023-12-13T00:19:35.472831Z|runtime|53c94eeb-7828-46e8-ba7d-b4fa2ccb156f]
+[MFLOG|0|2023-12-13T00:19:35.478441Z|runtime|5425b1b6-3876-4d14-a090-b9e9233cd4ea]ROC AUC Score:  0.7066278534146544

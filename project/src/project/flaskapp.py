@@ -81,7 +81,11 @@ def predict():
     try:
         data = request.get_json()
         df = pd.DataFrame([data])
-        df = preprocess_data(df)
+        print(df)
+        #print(type[df])
+        print(type[df['term']])
+        df=preprocess_data(df)
+        print(df)
         prediction = model.predict(df)
         return jsonify({'prediction': prediction.tolist()})
     except Exception as e:
