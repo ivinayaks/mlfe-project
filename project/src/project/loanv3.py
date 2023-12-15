@@ -42,7 +42,7 @@ class LoanFlow(FlowSpec):
     
     # Hyperparameter grid for RandomForestClassifier
     hyperparams = {
-        "n_estimators": [100],
+        "n_estimators": [100,300,500,1000],
         "criterion": ["gini","entropy","log_loss"],
         "max_depth": [None,3,6],
         "max_features": [None,"sqrt","log2"],
@@ -81,9 +81,12 @@ class LoanFlow(FlowSpec):
     def eda_dataprep(self):
         import pickle 
         
+        # Print information about each column in the dataframe
         for col in self.df.columns:
             print("Column Name:",col,"| Column type:",self.df[col].dtype)
             print('-----------------------------------')
+        
+        # Identify columns of type 'object' (categorical)
         col_object=[]
         for col in self.df.columns:
             if(self.df[col].dtype not in (np.dtype("int64"), np.dtype("float64"))):
@@ -91,6 +94,7 @@ class LoanFlow(FlowSpec):
         print("Columns of type object are:",col_object)   
         self.col_object=col_object
 
+        # Separate numerical and categorical columns
         num_columns=[]
         cat_columns=[]
         for col in self.df.columns:
@@ -101,9 +105,11 @@ class LoanFlow(FlowSpec):
             else:
                 cat_columns.append(col)
 
+        # Set the path to pickle file for encoder objects
         pickle_path='setsnmodels/pickle_path.pkl'
         pickled_encoders=[]
 
+        # Data preparation for 'term' column
         print("COL:term")
         print('-------------')
         print("Number of NaNs:",self.df['term'].isnull().sum())
@@ -121,171 +127,246 @@ class LoanFlow(FlowSpec):
         pickled_encoders.append(le_term)
 
 
+        # Process 'grade' column
         print("COL:grade")
         print('-------------')
-        print("Number of NaNs:",self.df['grade'].isnull().sum())
-        grade_counts=self.df['grade'].value_counts()
+
+        # Check and print the number of NaNs in the 'grade' column
+        print("Number of NaNs:", self.df['grade'].isnull().sum())
+
+        # Get value counts of each category in the 'grade' column
+        grade_counts = self.df['grade'].value_counts()
         print(grade_counts)
+
+        # Plot bar chart for the distribution of grades
         plt.title("COL:grade")
-        plt.bar(grade_counts.index,grade_counts.values)
+        plt.bar(grade_counts.index, grade_counts.values)
         plt.show()
-        oe_grade= OneHotEncoder()
+
+        # One-hot encode the 'grade' column
+        oe_grade = OneHotEncoder()
         oe_grade.fit(self.df[['grade']])
         onehot = oe_grade.transform(self.df[['grade']])
         feature_names = oe_grade.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
         onehot_df.reset_index(drop=True, inplace=True)
-        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df = pd.concat([self.df, onehot_df], axis=1)
         self.df.drop(columns=['grade'], axis=1, inplace=True)
         pickled_encoders.append(oe_grade)
 
+        # Process 'employment' column
         print("COL:employment")
         print('-------------')
-        print("Number of NaNs:",self.df['employment'].isnull().sum())
+
+        # Check and print the number of NaNs in the 'employment' column
+        print("Number of NaNs:", self.df['employment'].isnull().sum())
         print('----------------------')
-        emp_counts=self.df['employment'].value_counts()
+
+        # Get value counts of each category in the 'employment' column
+        emp_counts = self.df['employment'].value_counts()
         print(emp_counts)
         print('----------------------')
-        print("Unique Values:",len(self.df['employment'].unique()))
-        self.df.drop(columns=['employment'],axis=1,inplace=True)
 
+        # Print the number of unique values in the 'employment' column
+        print("Unique Values:", len(self.df['employment'].unique()))
+
+        # Drop the 'employment' column from the dataframe
+        self.df.drop(columns=['employment'], axis=1, inplace=True)
+
+        # Process 'length' column
         print("COL:length")
         print('-------------')
-        print("Number of NaNs:",self.df['length'].isnull().sum())
+
+        # Check and print the number of NaNs in the 'length' column
+        print("Number of NaNs:", self.df['length'].isnull().sum())
+
+        # Drop rows with NaN values in the 'length' column
         self.df.dropna(subset=['length'], inplace=True)
-        length_counts=self.df['length'].value_counts()
+
+        # Get value counts of each category in the 'length' column
+        length_counts = self.df['length'].value_counts()
         print(length_counts)
         print(length_counts.index)
-        oe_length= OrdinalEncoder(categories=[[None,'< 1 year','1 year','2 years','3 years','4 years','5 years',
-                             '6 years','7 years','8 years','9 years','10+ years']])
+
+        # Ordinally encode the 'length' column
+        oe_length = OrdinalEncoder(categories=[[None,'< 1 year','1 year','2 years','3 years','4 years','5 years',
+                                '6 years','7 years','8 years','9 years','10+ years']])
         oe_length.fit(asarray(self.df['length']).reshape(-1,1))
         self.df['length'] = oe_length.transform(asarray(self.df['length']).reshape(-1,1))
-        length_counts=self.df['length'].value_counts()
-        plt.bar(length_counts.index,length_counts.values)
+
+        # Plot bar chart for the distribution of 'length' values
+        length_counts = self.df['length'].value_counts()
+        plt.bar(length_counts.index, length_counts.values)
         plt.figure(figsize=(10,6))
         plt.show()
         pickled_encoders.append(oe_length)
 
+        # Process 'home' column
         print("COL:home")
         print('-------------')
-        print("Number of NaNs:",self.df['home'].isnull().sum())
-        home_counts=self.df['home'].value_counts()
+
+        # Check and print the number of NaNs in the 'home' column
+        print("Number of NaNs:", self.df['home'].isnull().sum())
+
+        # Get value counts of each category in the 'home' column
+        home_counts = self.df['home'].value_counts()
         print(home_counts)
+
+        # Plot bar chart for the distribution of 'home' values
         plt.title("COL:home")
-        plt.bar(home_counts.index,home_counts.values)
+        plt.bar(home_counts.index, home_counts.values)
         plt.show()
-        oe_home= OneHotEncoder()
+
+        # One-hot encode the 'home' column
+        oe_home = OneHotEncoder()
         oe_home.fit(self.df[['home']])
         onehot = oe_home.transform(self.df[['home']])
         feature_names = oe_home.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
         onehot_df.reset_index(drop=True, inplace=True)
-        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df = pd.concat([self.df, onehot_df], axis=1)
         self.df.drop(columns=['home'], axis=1, inplace=True)
         pickled_encoders.append(oe_home)
 
+
+        # Process 'verified' column
         print("COL:verified")
         print('-------------')
-        print("Number of NaNs:",self.df['verified'].isnull().sum())
-        verified_counts=self.df['verified'].value_counts()
+
+        # Check and print the number of NaNs in the 'verified' column
+        print("Number of NaNs:", self.df['verified'].isnull().sum())
+
+        # Get value counts of each category in the 'verified' column
+        verified_counts = self.df['verified'].value_counts()
         print(verified_counts)
+
+        # Plot bar chart for the distribution of 'verified' values
         plt.title("COL:verified")
-        plt.bar(verified_counts.index,verified_counts.values)
+        plt.bar(verified_counts.index, verified_counts.values)
         plt.show()
-        oe_verified= OneHotEncoder()
+
+        # One-hot encode the 'verified' column
+        oe_verified = OneHotEncoder()
         oe_verified.fit(self.df[['verified']])
         onehot = oe_verified.transform(self.df[['verified']])
         feature_names = oe_verified.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
         onehot_df.reset_index(drop=True, inplace=True)
-        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df = pd.concat([self.df, onehot_df], axis=1)
         self.df.drop(columns=['verified'], axis=1, inplace=True)
         pickled_encoders.append(oe_verified)
 
-        print("Number of NaNs:",self.df['status'].isnull().sum())
-        counts=self.df['status'].value_counts()
-        print(counts)
-        self.df = self.df[~self.df['status'].isin(['Current','Late (31-120 days)','In Grace Period',
-                                    'Late (16-30 days)'])]
-        
-        counts=self.df['status'].value_counts()
-        print(counts)
-        plt.title("COL:status")
-        plt.bar(counts.index,counts.values)
-        plt.show()
-        self.df['status']=[1 if val in ['Charged Off','Default'] else 0 for val in self.df['status']]
-        counts=self.df['status'].value_counts()
+        # Process 'status' column
+        print("Number of NaNs:", self.df['status'].isnull().sum())
+        counts = self.df['status'].value_counts()
         print(counts)
 
+        # Remove specific values from the 'status' column
+        self.df = self.df[~self.df['status'].isin(['Current','Late (31-120 days)','In Grace Period',
+                                        'Late (16-30 days)'])]
+
+        counts = self.df['status'].value_counts()
+        print(counts)
+
+        # Plot bar chart for the distribution of 'status' values
+        plt.title("COL:status")
+        plt.bar(counts.index, counts.values)
+        plt.show()
+
+        # Convert 'status' values to binary (1 for 'Charged Off' or 'Default', 0 otherwise)
+        self.df['status'] = [1 if val in ['Charged Off','Default'] else 0 for val in self.df['status']]
+        counts = self.df['status'].value_counts()
+        print(counts)
+
+        # Process 'reason' column
         print("COL:reason")
         print('-------------')
-        print("Number of NaNs:",self.df['reason'].isnull().sum())
-        counts=self.df['reason'].value_counts()
+
+        # Check and print the number of NaNs in the 'reason' column
+        print("Number of NaNs:", self.df['reason'].isnull().sum())
+        counts = self.df['reason'].value_counts()
         print(counts)
-        self.df['reason']=['debt_consolidation' if val=='debt_consolidation' else 'credit_card' if val=='credit_card'
-             else 'other' for val in self.df['reason']]
-        counts=self.df['reason'].value_counts()
+
+        # Map specific values in the 'reason' column to new categories
+        self.df['reason'] = ['debt_consolidation' if val=='debt_consolidation' else 'credit_card' if val=='credit_card'
+                else 'other' for val in self.df['reason']]
+
+        counts = self.df['reason'].value_counts()
         print(counts)
+
+        # Plot bar chart for the distribution of 'reason' values
         plt.title("COL:reason")
-        plt.bar(counts.index,counts.values)
+        plt.bar(counts.index, counts.values)
         plt.show()
-        oe_reason= OneHotEncoder()
+
+        # One-hot encode the 'reason' column
+        oe_reason = OneHotEncoder()
         oe_reason.fit(self.df[['reason']])
         onehot = oe_reason.transform(self.df[['reason']])
         feature_names = oe_reason.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
         onehot_df.reset_index(drop=True, inplace=True)
-        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df = pd.concat([self.df, onehot_df], axis=1)
         self.df.drop(columns=['reason'], axis=1, inplace=True)
         pickled_encoders.append(oe_reason)
 
+        # Process 'state' column
         print("COL:state")
         print('-------------')
-        print("Number of NaNs:",self.df['state'].isnull().sum())
-        counts=self.df['state'].value_counts()
+
+        # Check and print the number of NaNs in the 'state' column
+        print("Number of NaNs:", self.df['state'].isnull().sum())
+        counts = self.df['state'].value_counts()
         print(counts)
-        oe_state= OneHotEncoder()
+
+        # One-hot encode the 'state' column
+        oe_state = OneHotEncoder()
         oe_state.fit(self.df[['state']])
         onehot = oe_state.transform(self.df[['state']])
         feature_names = oe_state.categories_[0]
         onehot_df = pd.DataFrame(onehot.toarray(), columns=feature_names)
         self.df.reset_index(drop=True, inplace=True)
         onehot_df.reset_index(drop=True, inplace=True)
-        self.df= pd.concat([self.df, onehot_df], axis=1)
+        self.df = pd.concat([self.df, onehot_df], axis=1)
         self.df.drop(columns=['state'], axis=1, inplace=True)
         pickled_encoders.append(oe_state)
 
-        with open(pickle_path,'wb') as file:
-            pickle.dump(pickled_encoders,file)
+        # Save pickled encoders
+        with open(pickle_path, 'wb') as file:
+            pickle.dump(pickled_encoders, file)
 
-        nan_columns=[]
+        # Identify columns with NaN values in numerical columns
+        nan_columns = []
         for col in num_columns:
-            if(self.df[col].isnull().sum()>0):
+            if self.df[col].isnull().sum() > 0:
                 nan_columns.append(col)
 
+        # Display descriptive statistics for columns with NaN values
         for col in nan_columns:
             print(self.df[col].describe())
 
+        # Impute missing values in numerical columns using mean imputation
         imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
         for col in nan_columns:
-            self.df[col]=imputer.fit_transform(self.df[col].values.reshape(-1,1))[:,0]
+            self.df[col] = imputer.fit_transform(self.df[col].values.reshape(-1, 1))[:, 0]
 
+        # Plot boxplots for numerical columns
+        def plot_boxplots(df, columns):
+            fig, axes = plt.subplots(nrows=3, ncols=2, constrained_layout=True)
+            fig.subplots_adjust(left=0, bottom=0, right=3, top=6, wspace=0.04, hspace=0.1)
+            for ax, column in zip(axes.flatten(), columns):
+                sns.boxplot(df[column], ax=ax)
 
-        def plot_boxplots(df,colums):
-            fig , axes = plt.subplots(nrows=3, ncols=2, constrained_layout=True)       
-            fig.subplots_adjust(left= 0, bottom=0, right=3, top=6, wspace=0.04, hspace=0.1)
-            for ax, column in zip(axes.flatten(),colums):
-                sns.boxplot(df[column],ax=ax)
-        
-        plot_boxplots(self.df,num_columns[:6])
-        plot_boxplots(self.df,num_columns[6:12])
-        plot_boxplots(self.df,num_columns[12:18])
-        plot_boxplots(self.df,num_columns[18:])
+        plot_boxplots(self.df, num_columns[:6])
+        plot_boxplots(self.df, num_columns[6:12])
+        plot_boxplots(self.df, num_columns[12:18])
+        plot_boxplots(self.df, num_columns[18:])
 
+        # Plot numerical distributions for each category of the target column
         def plot_numerical_distributions(df, columns, target_column):
             fig = plt.figure(figsize=(10, 15))
             for i, column in enumerate(columns):
@@ -295,45 +376,50 @@ class LoanFlow(FlowSpec):
                 plt.legend()
             plt.show()
 
-        plot_numerical_distributions(self.df,num_columns[:6],'status')
-        plot_numerical_distributions(self.df,num_columns[6:12],'status')
-        plot_numerical_distributions(self.df,num_columns[12:18],'status')
-        plot_numerical_distributions(self.df,num_columns[18:],'status')
+        plot_numerical_distributions(self.df, num_columns[:6], 'status')
+        plot_numerical_distributions(self.df, num_columns[6:12], 'status')
+        plot_numerical_distributions(self.df, num_columns[12:18], 'status')
+        plot_numerical_distributions(self.df, num_columns[18:], 'status')
 
+        # Create a copy of the dataframe for further analysis
+        self.df_ = self.df.copy()
 
-
-        self.df_=self.df.copy()
-        # self.df_.drop(columns=cat_columns,axis=1,inplace=True)
-       
-        plt.figure(figsize=(10,10))
+        # Display heatmap of correlations in the dataframe
+        plt.figure(figsize=(10, 10))
         plt.title("Heatmap of correlations")
         sns.heatmap(self.df_.corr())
 
-        labels=['defaults','no defaults']
-        show=[self.df['status'].value_counts().values[1]/self.df['status'].value_counts().values.sum(),
-            self.df['status'].value_counts().values[0]/self.df['status'].value_counts().values.sum()]
+        # Plot a pie chart to visualize data imbalance
+        labels = ['defaults', 'no defaults']
+        show = [self.df['status'].value_counts().values[1] / self.df['status'].value_counts().values.sum(),
+                self.df['status'].value_counts().values[0] / self.df['status'].value_counts().values.sum()]
         fig1, ax1 = plt.subplots()
-        ax1.pie(show,labels=labels,startangle=110)
+        ax1.pie(show, labels=labels, startangle=110)
         ax1.axis('equal')
-        plt.title('Data imbalance',fontsize=25)
+        plt.title('Data imbalance', fontsize=25)
         plt.show()
-        print("Percentage of defaults:",self.df['status'].value_counts().values[1]/self.df['status'].value_counts().values.sum())
-        print("Percentage of non-defaults:",self.df['status'].value_counts().values[0]/self.df['status'].value_counts().values.sum())
 
-        y=self.df['status']
-        X=self.df.copy()
-        X.drop(columns=['status'],axis=1,inplace=True)
+        # Display percentage of defaults and non-defaults
+        print("Percentage of defaults:", self.df['status'].value_counts().values[1] / self.df['status'].value_counts().values.sum())
+        print("Percentage of non-defaults:", self.df['status'].value_counts().values[0] / self.df['status'].value_counts().values.sum())
+
+        # Split data into training and testing sets, and perform SMOTE for class imbalance
+        y = self.df['status']
+        X = self.df.copy()
+        X.drop(columns=['status'], axis=1, inplace=True)
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.25, random_state=26)
         sm = SMOTE()
         self.X_train, self.y_train = sm.fit_resample(self.X_train, self.y_train)
 
+        # Train a Random Forest Classifier and plot feature importances
         from sklearn.ensemble import RandomForestClassifier
         model = RandomForestClassifier()
-        model.fit(self.X_train,self.y_train)
+        model.fit(self.X_train, self.y_train)
         feat_importances = pd.Series(model.feature_importances_, index=self.X_train.columns)
         feat_importances.nlargest(10).plot(kind='barh')
         plt.title("Feature Importances")
         plt.show()
+
 
         # serialize datasets
         with open('setsnmodels/X_train.pkl', 'wb') as file:
