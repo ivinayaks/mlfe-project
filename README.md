@@ -22,4 +22,4 @@ Instructions to run the model:
 2. Run the Flask back-end in one terminal: python flaskapp.py
 3. Use the following command to run the streamlit app in another terminal: streamlit run streamlit.py
 4. Play around with the inputs on the Streamlit app. Loans with grade 'A' are likely to not default, while loan with grade 'G' are likely to default.
-![image](https://github.com/ivinayaks/mlfe-project/assets/54876656/00cb736e-3c23-4be1-a26d-5391e962ac19)
+
