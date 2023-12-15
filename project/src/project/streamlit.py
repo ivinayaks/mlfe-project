@@ -14,6 +14,10 @@ def get_prediction(data):
         # Check if 'prediction' key exists in the response
         if 'prediction' in prediction:
             st.write(f"Prediction (Will Default?): {prediction['prediction']}")
+            if prediction['prediction'] == [1]:
+                st.subheader("The model predicts that the loan will default.")
+            else:
+                st.subheader("The model predicts that the loan will not default.")
             #st.write(type(prediction['prediction']))
             
        
