@@ -19,5 +19,7 @@ Model Accuracy: To evaluate model accuracy, we computed the ROC AUC Score, Accur
 Instructions to run the model:
 1. Use the following command to run the model: COMET_API_KEY='Insert API Key' python loanv3.py run --max-num-splits=150
     The loanv3.py runs the LoanFLow metaflow. Within the metaflow, there are steps related to EDA, data preprocessing, hyperparameter tuning, and testing. 
-2. Use the following command to run the streamlit app: streamlit run streamlit.py
+2. Run the Flask back-end in one terminal: python flaskapp.py
+3. Use the following command to run the streamlit app in another terminal: streamlit run streamlit.py
+4. Play around with the inputs on the Streamlit app. Loans with grade 'A' are likely to not default, while loan with grade 'G' are likely to default.
 ![image](https://github.com/ivinayaks/mlfe-project/assets/54876656/00cb736e-3c23-4be1-a26d-5391e962ac19)
