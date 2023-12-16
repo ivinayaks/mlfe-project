@@ -1,12 +1,14 @@
 # Project on Credit Default Prediction built for Machine Learning and Financial Engineering course at NYU
-Credit Default Prediction Model 
 
-In this project, we created a model used to predict mortgage loan default. 
+## Credit Default Prediction Model 
+
+### In this project, we created a model used to predict mortgage loan default. 
 
 The dataset that we used was acquired from the following website: https://datascienceuwl.github.io/Project2018/loans50k.csv. 
+
 The dataset is comprised of 50,000 lines of 50,000 loans with the following variables: loanID,amount,term,rate,payment,grade,employment,length,home,income,verified,status,reason,state,debtIncRat,delinq2yr,inq6mth,openAcc,pubRec,revolRatio,totalAcc,totalPaid,totalBal,totalRevLim,accOpen24,avgBal,bcOpen,bcRatio,totalLim,totalRevBal,totalBcLim,totalIlLim. 
 
-The predicted label is status. 
+The predicted label is <b>status</b>. 
 
 More information on the description of the dataset can be found at: https://datascienceuwl.github.io/Project2018/TheData.html . 
 
@@ -16,10 +18,11 @@ Qualitative & Robustness Checks: We performed a data slice analysis on a categor
 
 Model Accuracy: To evaluate model accuracy, we computed the ROC AUC Score, Accuracy, Precision, Recall, F1-Score, ROC Curves, and Confusion Matrices. 
 
-Instructions to run the model:
-1. Use the following command to run the model: COMET_API_KEY='Insert API Key' python loanv3.py run --max-num-splits=150
+## Instructions to run the model:
+1. Use rye sync to install dependancies once in the mlfe-project directory.
+2. Use the following command to run the model: COMET_API_KEY='Insert API Key' python loanv3.py run --max-num-splits=150
     The loanv3.py runs the LoanFLow metaflow. Within the metaflow, there are steps related to EDA, data preprocessing, hyperparameter tuning, and testing. 
-2. Run the Flask back-end in one terminal: python flaskapp.py
-3. Use the following command to run the streamlit app in another terminal: streamlit run streamlit.py
-4. Play around with the inputs on the Streamlit app. Loans with grade 'A' are likely to not default, while loan with grade 'G' are likely to default.
-![image](https://github.com/ivinayaks/mlfe-project/assets/54876656/00cb736e-3c23-4be1-a26d-5391e962ac19)
+3. Run the Flask back-end in one terminal: "python flaskapp.py"
+4. Use the following command to run the streamlit app in another terminal: "rye run streamlit run streamlit.py"
+5. Play around with the inputs on the Streamlit app. Loans with grade 'A' are likely to not default, while loan with grade 'G' are likely to default.
+
